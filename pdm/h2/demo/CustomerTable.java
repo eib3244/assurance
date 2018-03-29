@@ -12,11 +12,14 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class CustomerTable {
+//TODO make SSN UNIQUE along with OTHER prom keys in other tables
+    //TODO ADD foreign keys to tables !
+
 
     public static void createCustomerTable(Connection conn){
         try{
             String query = "CREATE TABLE IF NOT EXISTS customer("
-                    + "SSN VARCHAR(11)PRIMARY KEY,"
+                    + "SSN VARCHAR(11) PRIMARY KEY,"
                     + "Name VARCHAR(50),"
                     + "Gender VARCHAR(6),"
                     + "Income INT,"
@@ -123,7 +126,8 @@ public class CustomerTable {
             Statement stmt = conn.createStatement();
             stmt.execute(query);
         }catch (SQLException e){
-            e.printStackTrace();
+            //e.printStackTrace();
+            e.getLocalizedMessage();
         }
     }
 
