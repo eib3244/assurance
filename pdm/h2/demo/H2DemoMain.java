@@ -173,27 +173,7 @@ public class H2DemoMain {
 		// use juan1@aol.com and 000001 or 000000 to test
 		// you should get juan #1 or #2
 
-		Scanner userin = new Scanner(System.in);
-		System.out.println("Enter in a email:");
-		String email = userin.nextLine();
-		System.out.println("Enter in a password:");
-		String passwordLogin = userin.nextLine();
-
-		String query = "SELECT * FROM customer WHERE Email=\'"+email +"\' AND Password=\'" + passwordLogin + "\';";
-
-		System.out.println(query);
-		try {
-			Statement stmt = demo.getConnection().createStatement();
-			ResultSet result = stmt.executeQuery(query);
-
-			// need .next !!
-			result.next();
-			System.out.printf("Customer %s: %s %s %d\n",
-					result.getString(1),
-					result.getString(2),
-					result.getString(3),
-					result.getInt(4));
-		} catch (SQLException e) {e.printStackTrace();}
+	userLoginMain.main(null);
 
 	}
 }
