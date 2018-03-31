@@ -19,11 +19,17 @@ public class CustomerSaleTable {
     public static void createCustomerSaleTable(Connection conn){
         try{
             String query = "CREATE TABLE IF NOT EXISTS customer_sale_table("
-                    + "Sale_ID VARCHAR(7) PRIMARY KEY,"
-                    + "SSN VARCHAR (11),"
-                    + "Dealer_ID VARCHAR(5),"
-                    + "Date Long,"
-                    + "Total INT"
+                    + "Sale_ID VARCHAR(7) NOT NULL PRIMARY KEY,"
+                    + "SSN VARCHAR (11) NOT NULL,"
+                    + "Dealer_ID VARCHAR(5) NOT NULL,"
+                    + "Date Long NOT NULL,"
+                    + "Total INT NOT NULL,"
+                    + "UNIQUE (Sale_ID),"
+
+                    // why does this 1 work but not the other ?!
+                    +"FOREIGN KEY (SSN) REFERENCES customer(SSN)"
+                    //TODO CANT ADD CAUSES ERROR !
+                    //+"FOREIGN KEY (Dealer_ID) REFERENCES dealer(Dealer_ID)"
                     + ");";
 
             Statement stmt = conn.createStatement();

@@ -18,10 +18,16 @@ public class DealerVehicleInventoryTable {
     public static void createDealerVehicleInventoryTable(Connection conn){
         try{
             String query = "CREATE TABLE IF NOT EXISTS DealerVehicleInventory("
-                    + "Dealer_ID VARCHAR(5),"
-                    + "VIN VARCHAR(17),"
+                    + "Dealer_ID VARCHAR(5) NOT NULL,"
+                    + "VIN VARCHAR(17) NOT NULL,"
                     // composite primary key
-                    +"PRIMARY KEY (Dealer_ID, VIN)"
+                    +"PRIMARY KEY (Dealer_ID, VIN),"
+                    + "UNIQUE (Dealer_ID, VIN),"
+
+                    // why does this 1 work ?!
+                    + "FOREIGN KEY (Dealer_ID) REFERENCES dealer(Dealer_ID)"
+                    //TODO CANT ADD CAUSES ERROR !
+                    // + "FOREIGN KEY (VIN) REFERENCES vehicles(VIN)"
                     + ");";
 
             Statement stmt = conn.createStatement();

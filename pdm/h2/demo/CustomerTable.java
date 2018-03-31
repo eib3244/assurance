@@ -19,8 +19,8 @@ public class CustomerTable {
     public static void createCustomerTable(Connection conn){
         try{
             String query = "CREATE TABLE IF NOT EXISTS customer("
-                    + "SSN VARCHAR(11) PRIMARY KEY,"
-                    + "Name VARCHAR(50),"
+                    + "SSN VARCHAR(11) NOT NULL PRIMARY KEY,"
+                    + "Name VARCHAR(50) NOT NULL,"
                     + "Gender VARCHAR(6),"
                     + "Income INT,"
                     + "House_Num INT,"
@@ -28,8 +28,8 @@ public class CustomerTable {
                     + "City VARCHAR(20),"
                     + "State VARCHAR(2),"
                     + "ZIP VARCHAR(5),"
-                    + "Email VARCHAR(40),"
-                    + "Password VARCHAR(20),"
+                    + "Email VARCHAR(40) NOT NULL,"
+                    + "Password VARCHAR(20) NOT NULL,"
                     + "UNIQUE (SSN)"
                     + ");";
 

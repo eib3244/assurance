@@ -17,9 +17,12 @@ public class ManufacturerVehiclesTable {
     public static void createManufacturerVehiclesTable(Connection conn){
         try{
             String query = "CREATE TABLE IF NOT EXISTS ManufacturerVehicles("
-                    + "M_ID VARCHAR(8),"
-                    + "VIN VARCHAR(17),"
-                    +"PRIMARY KEY(M_ID, VIN)"
+                    + "M_ID VARCHAR(8) NOT NULL,"
+                    + "VIN VARCHAR(17) NOT NULL,"
+                    +"PRIMARY KEY(M_ID, VIN),"
+                    + "UNIQUE (M_ID, VIN)" //, needed for FK statement
+                    // TODO creates ERROR !!!
+                    //+"FOREIGN KEY (VIN) REFERENCES vehicles(VIN)"
                     + ");";
             Statement stmt = conn.createStatement();
             stmt.execute(query);

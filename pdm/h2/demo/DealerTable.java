@@ -16,16 +16,16 @@ public class DealerTable {
     public static void createDealerTable(Connection conn){
         try{
             String query = "CREATE TABLE IF NOT EXISTS dealer("
-                    + "Dealer_ID VARCHAR(5) PRIMARY KEY,"
-
+                    + "Dealer_ID VARCHAR(5) NOT NULL PRIMARY KEY,"
                     // !!!!!!! NO ' in name !
-                    + "Name VARCHAR(40),"
+                    + "Name VARCHAR(40) NOT NULL,"
                     + "Street_Number INT,"
                     + "Street VARCHAR(50),"
                     + "City VARCHAR(20),"
                     + "State VARCHAR(2),"
                     + "Zip VARCHAR(5),"
-                    + "Phone_num VARCHAR(12)"
+                    + "Phone_num VARCHAR(12),"
+                    + "UNIQUE (Dealer_ID)"
                     + ");";
 
             Statement stmt = conn.createStatement();

@@ -17,11 +17,17 @@ public class DealerSaleTable {
     public static void createDealerSaleTable(Connection conn){
         try{
             String query = "CREATE TABLE IF NOT EXISTS Dealer_Sale("
-                    + "Dealer_Sale_ID VARCHAR(7)PRIMARY KEY,"
-                    + "Dealer_ID VARCHAR(5),"
-                    + "M_ID VARCHAR(8),"
-                    + "Date LONG,"
-                    + "Total INT"
+                    + "Dealer_Sale_ID VARCHAR(7) NOT NULL PRIMARY KEY,"
+                    + "Dealer_ID VARCHAR(5) NOT NULL,"
+                    + "M_ID VARCHAR(8) NOT NULL,"
+                    + "Date LONG NOT NULL,"
+                    + "Total INT NOT NULL,"
+                    + "UNIQUE (Dealer_Sale_ID),"
+
+                    // why does this 1 work ?!
+                    + "FOREIGN KEY (Dealer_ID) REFERENCES dealer(Dealer_ID)"
+                    //TODO CANT ADD CAUSES ERROR !
+                    // + "FOREIGN KEY (M_ID) REFERENCES Manufacturer(M_ID)"
                     + ");";
             Statement stmt = conn.createStatement();
             stmt.execute(query);

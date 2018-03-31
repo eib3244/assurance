@@ -17,8 +17,9 @@ public class ManufacturerTable {
     public static void createManufacturerTable(Connection conn){
         try{
             String query = "CREATE TABLE IF NOT EXISTS Manufacturer("
-                    + "M_ID VARCHAR(8)PRIMARY KEY,"
-                    + "Name VARCHAR(30)"
+                    + "M_ID VARCHAR(8) NOT NULL PRIMARY KEY,"
+                    + "Name VARCHAR(30) NOT NULL,"
+                    + "UNIQUE (M_ID)"
                     + ");";
 
             Statement stmt = conn.createStatement();

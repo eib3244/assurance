@@ -16,17 +16,18 @@ public class VehicleTable {
     public static void createVehicleTable(Connection conn){
         try{
             String query = "CREATE TABLE IF NOT EXISTS vehicles("
-                    + "VIN VARCHAR(17) PRIMARY KEY,"
-                    + "Make VARCHAR(20),"
-                    + "Model VARCHAR(30),"
-                    + "Brand VARCHAR(20),"
-                    + "Year INT,"
-                    + "Engine VARCHAR(10),"
-                    + "Color VARCHAR(20),"
-                    + "Transmission VARCHAR(10),"
-                    + "Drive_Type VARCHAR(3),"
-                    + "Price INT,"
-                    + "Miles INT"
+                    + "VIN VARCHAR(17) NOT NULL PRIMARY KEY,"
+                    + "Make VARCHAR(20) NOT NULL,"
+                    + "Model VARCHAR(30) NOT NULL,"
+                    + "Brand VARCHAR(20) NOT NULL,"
+                    + "Year INT NOT NULL,"
+                    + "Engine VARCHAR(10) NOT NULL,"
+                    + "Color VARCHAR(20) NOT NULL,"
+                    + "Transmission VARCHAR(10) NOT NULL,"
+                    + "Drive_Type VARCHAR(3) NOT NULL,"
+                    + "Price INT NOT NULL,"
+                    + "Miles INT NOT NULL,"
+                    + "UNIQUE (VIN)"
                     + ");";
 
             Statement stmt = conn.createStatement();

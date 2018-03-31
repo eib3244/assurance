@@ -16,9 +16,12 @@ public class VehiclesSoldToDealersTable {
     public static void createVehiclesSoldToDealersTable(Connection conn){
         try{
             String query = "CREATE TABLE IF NOT EXISTS VehiclesSoldToDealers("
-                    + "Dealer_Sale_ID VARCHAR(7),"
-                    + "VIN VARCHAR(17),"
-                    + "PRIMARY KEY(Dealer_Sale_ID, VIN)"
+                    + "Dealer_Sale_ID VARCHAR(7) NOT NULL,"
+                    + "VIN VARCHAR(17) NOT NULL,"
+                    + "PRIMARY KEY(Dealer_Sale_ID, VIN),"
+                    + "UNIQUE (Dealer_Sale_ID, VIN)"
+                    // TODO creates ERROR !!!
+                    //+"FOREIGN KEY (VIN) REFERENCES vehicles(VIN)"
                     + ");";
 
             Statement stmt = conn.createStatement();
