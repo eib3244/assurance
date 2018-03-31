@@ -120,11 +120,34 @@ public class userLoginMain {
                 String gender = userin.next();
                 gender = gender.substring(0, Math.min(6, gender.length()));
 
-                System.out.print("Input Your income (Must be a whole number. Ex: 15000): ");
-                int income = userin.nextInt();
+                System.out.print("Input Your income (Must be a whole number \ngreater than or equal to zero. Ex: 15000): ");
+                int income = -1;
+                // loop to ensure a number is inputted / no crash
+                while(true) {
+                    String incomeInput = userin.next();
 
-                System.out.print("Input House Number: ");
-                int houseNumber = userin.nextInt();
+                    try{
+                        income = Integer.parseInt(incomeInput);
+                    } catch (java.lang.NumberFormatException e){}
+                    if (income >= 0)
+                        break;
+                    System.out.print("Please input a whole number \ngreater than or equal to 0 for your income: ");
+                }
+                
+                System.out.print("Input House Number (Must be a whole number \ngreater than or equal to zero. Ex: 154): ");
+                int houseNumber = -1;
+                // loop to ensure a number is inputted / no crash
+                while(true) {
+                    String houseNumInput = userin.next();
+
+                    try{
+                        houseNumber = Integer.parseInt(houseNumInput);
+                    } catch (java.lang.NumberFormatException e){}
+
+                    if (houseNumber >= 0)
+                    break;
+                    System.out.print("Please input a whole number \ngreater than or equal to 0 for your House Number: ");
+                }
 
                 System.out.print("Input Street (max length 50): ");
                 String street = userin.next();
