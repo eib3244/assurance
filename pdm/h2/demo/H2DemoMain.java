@@ -90,8 +90,8 @@ public class H2DemoMain {
 		try{
 			CustomerTable.createCustomerTable(demo.getConnection());
 			CustomerTable.populateCustomerTableFromCSV(demo.getConnection(),"1_Customer_Data.csv");
-            CustomerTable.addCustomer(demo.getConnection(),"000-00-0000","juan remirez #1", "Male", 25000, 10, "South Park", "WestHempstead" , "NY", "11552","juan1@aol.com","000001" );
-            CustomerTable.addCustomer(demo.getConnection(),"000-00-0000","juan remirez #2", "Male", 25000, 10, "South Park", "WestHempstead" , "NY", "11552","juan1@aol.com","000000" );
+            CustomerTable.addCustomer(demo.getConnection(),"000-00-0001","juan remirez #1", "Male", 25000, 10, "South Park", "WestHempstead" , "NY", "11552","juan@aol.com","0" );
+            CustomerTable.addCustomer(demo.getConnection(),"000-00-0002","juan remirez #2", "Male", 25000, 10, "South Park", "WestHempstead" , "NY", "11552","juan@aol.com","0" );
          	//   System.out.println("/////\nCustomer Table: \n/////");
            	// CustomerTable.printCustomerTable(demo.getConnection());
 		}catch (SQLException e) {e.printStackTrace();}

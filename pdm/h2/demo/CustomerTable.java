@@ -29,7 +29,8 @@ public class CustomerTable {
                     + "State VARCHAR(2),"
                     + "ZIP VARCHAR(5),"
                     + "Email VARCHAR(40),"
-                    + "Password VARCHAR(20)"
+                    + "Password VARCHAR(20),"
+                    + "UNIQUE (SSN)"
                     + ");";
 
             Statement stmt = conn.createStatement();
@@ -144,12 +145,23 @@ public class CustomerTable {
                         result.getString(3),
                         result.getInt(4));
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
+        } catch (SQLException e) {e.printStackTrace();}
     }
 
+
+    public static boolean checkIfInTable (Connection conn, String SSN){
+        String query = "SELECT * FROM customer WHERE SSN = \'" +SSN +"\';";
+
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet result = stmt.executeQuery(query);
+            if(result.first()){
+                return true;
+            }
+        }
+         catch (SQLException e) {e.printStackTrace();}
+        return false;
+    }
 
 }
 
