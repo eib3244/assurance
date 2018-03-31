@@ -21,7 +21,6 @@ public class ManufacturerTable {
                     + "Name VARCHAR(30) NOT NULL,"
                     + "UNIQUE (M_ID)"
                     + ");";
-
             Statement stmt = conn.createStatement();
             stmt.execute(query);
         }catch (SQLException e){e.printStackTrace();}
@@ -45,9 +44,7 @@ public class ManufacturerTable {
                 Manufacturers.add(new Manufacturer(split));
             }
             br.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        } catch (IOException e) {e.printStackTrace();}
 
         /**
          * Creates the SQL query to do a bulk add of all people

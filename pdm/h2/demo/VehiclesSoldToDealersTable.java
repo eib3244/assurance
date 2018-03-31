@@ -19,16 +19,13 @@ public class VehiclesSoldToDealersTable {
                     + "Dealer_Sale_ID VARCHAR(7) NOT NULL,"
                     + "VIN VARCHAR(17) NOT NULL,"
                     + "PRIMARY KEY(Dealer_Sale_ID, VIN),"
-                    + "UNIQUE (Dealer_Sale_ID, VIN)"
-                    // TODO creates ERROR !!!
-                    //+"FOREIGN KEY (VIN) REFERENCES vehicles(VIN)"
+                    + "UNIQUE (Dealer_Sale_ID, VIN),"
+                    +"FOREIGN KEY (Dealer_Sale_ID) REFERENCES Dealer_Sale(Dealer_Sale_ID),"
+                    +"FOREIGN KEY (VIN) REFERENCES vehicles(VIN)"
                     + ");";
-
             Statement stmt = conn.createStatement();
             stmt.execute(query);
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
+        }catch (SQLException e){e.printStackTrace();}
     }
 
     public static void populateVehiclesSoldToDealersTableFromCSV(Connection conn, String fileName) throws SQLException{

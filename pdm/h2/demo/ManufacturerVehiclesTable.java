@@ -20,15 +20,12 @@ public class ManufacturerVehiclesTable {
                     + "M_ID VARCHAR(8) NOT NULL,"
                     + "VIN VARCHAR(17) NOT NULL,"
                     +"PRIMARY KEY(M_ID, VIN),"
-                    + "UNIQUE (M_ID, VIN)" //, needed for FK statement
-                    // TODO creates ERROR !!!
-                    //+"FOREIGN KEY (VIN) REFERENCES vehicles(VIN)"
+                    + "UNIQUE (M_ID, VIN),"
+                    +"FOREIGN KEY (VIN) REFERENCES vehicles(VIN)"
                     + ");";
             Statement stmt = conn.createStatement();
             stmt.execute(query);
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
+        }catch (SQLException e){e.printStackTrace();}
     }
 
     public static void populateDealerVehicleInventoryTableFromCSV(Connection conn, String fileName) throws SQLException{

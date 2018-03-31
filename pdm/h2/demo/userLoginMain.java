@@ -1,8 +1,6 @@
 package pdm.h2.demo;
 
-import pdm.h2.demo.objects.Customer;
-import pdm.h2.demo.objects.DealerSale;
-import pdm.h2.demo.objects.DealerVehicleInventory;
+import pdm.h2.demo.objects.*;
 
 import javax.tools.JavaFileManager;
 import java.nio.file.Path;
@@ -10,7 +8,6 @@ import java.nio.file.Paths;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-import pdm.h2.demo.objects.cls;
 
 /*
  * Main Driver for user interaction (the "web ui" used to buy cars)
@@ -123,7 +120,7 @@ public class userLoginMain {
                 String gender = userin.next();
                 gender = gender.substring(0, Math.min(6, gender.length()));
 
-                System.out.print("Input Your income: ");
+                System.out.print("Input Your income (Must be a whole number. Ex: 15000): ");
                 int income = userin.nextInt();
 
                 System.out.print("Input House Number: ");
@@ -146,6 +143,17 @@ public class userLoginMain {
                 System.out.print("Input Zip-Code (Ex: 13021, 53066): ");
                 String zipcode = userin.next();
                 zipcode = zipcode.substring(0, Math.min(5, zipcode.length()));
+
+
+                System.out.print("Enter Phone Numbers (Ex: 315-111-1111,315-222-3333)\nSeparate Each one by a comma: ");
+                String phoneNumbers;
+                phoneNumbers = userin.next();
+                String[] phoneNumArray = phoneNumbers.split(",");
+                int i = 0;
+                while(i < phoneNumArray.length){
+                    phoneNumArray[i] = phoneNumArray[i].substring(0, Math.min(12, phoneNumArray[i].length()));
+                    i++;
+                }
 
                 System.out.print("Input Email (max length 40): ");
                 String email = userin.next();

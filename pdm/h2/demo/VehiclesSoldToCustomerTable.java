@@ -19,16 +19,12 @@ public class VehiclesSoldToCustomerTable {
                     + "Sale_ID VARCHAR(7) NOT NULL,"
                     + "VIN VARCHAR (17) NOT NULL,"
                     + "PRIMARY KEY(Sale_ID, VIN),"
-                    + "UNIQUE (Sale_ID, VIN)"
-                    // TODO causes error !
-                    //+"FOREIGN KEY (VIN) REFERENCES vehicles(VIN)"
+                    + "UNIQUE (Sale_ID, VIN),"
+                    +"FOREIGN KEY (VIN) REFERENCES vehicles(VIN)"
                     + ");";
-
             Statement stmt = conn.createStatement();
             stmt.execute(query);
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
+        }catch (SQLException e){e.printStackTrace();}
     }
 
     public static void populateVehiclesSoldToCustomerTableFromCSV(Connection conn, String fileName) throws SQLException{

@@ -23,18 +23,13 @@ public class DealerVehicleInventoryTable {
                     // composite primary key
                     +"PRIMARY KEY (Dealer_ID, VIN),"
                     + "UNIQUE (Dealer_ID, VIN),"
-
-                    // why does this 1 work ?!
-                    + "FOREIGN KEY (Dealer_ID) REFERENCES dealer(Dealer_ID)"
-                    //TODO CANT ADD CAUSES ERROR !
-                    // + "FOREIGN KEY (VIN) REFERENCES vehicles(VIN)"
+                    + "FOREIGN KEY (Dealer_ID) REFERENCES dealer(Dealer_ID),"
+                    + "FOREIGN KEY (VIN) REFERENCES vehicles(VIN)"
                     + ");";
 
             Statement stmt = conn.createStatement();
             stmt.execute(query);
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
+        }catch (SQLException e){e.printStackTrace();}
     }
 
     public static void populateDealerVehicleInventoryTableFromCSV(Connection conn, String fileName) throws SQLException{

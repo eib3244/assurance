@@ -27,12 +27,9 @@ public class DealerTable {
                     + "Phone_num VARCHAR(12),"
                     + "UNIQUE (Dealer_ID)"
                     + ");";
-
             Statement stmt = conn.createStatement();
             stmt.execute(query);
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
+        }catch (SQLException e){e.printStackTrace();}
     }
 
     public static void populateDealerTableFromCSV(Connection conn, String fileName) throws SQLException{
@@ -53,9 +50,7 @@ public class DealerTable {
                 Dealers.add(new Dealer(split));
             }
             br.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        } catch (IOException e) {e.printStackTrace();}
 
         /**
          * Creates the SQL query to do a bulk add of all people
@@ -72,7 +67,6 @@ public class DealerTable {
         Statement stmt = conn.createStatement();
         stmt.execute(sql);
     }
-
 
     public static String createDealerInsertSQL(ArrayList<Dealer> Dealers){
         StringBuilder sb = new StringBuilder();
@@ -104,11 +98,8 @@ public class DealerTable {
                 sb.append(";");
             }
         }
-
         return sb.toString();
     }
-
-
 
     public static void addDealer(Connection conn, String dealer_id, String name,
                                      int street_num, String street,
@@ -119,10 +110,7 @@ public class DealerTable {
         try{
             Statement stmt = conn.createStatement();
             stmt.execute(query);
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-
+        }catch (SQLException e){e.printStackTrace();}
     }
 
     public static void printDealerTable(Connection conn){
@@ -143,10 +131,7 @@ public class DealerTable {
                         result.getString(8));
 
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
+        } catch (SQLException e) {e.printStackTrace();}
     }
 
 }

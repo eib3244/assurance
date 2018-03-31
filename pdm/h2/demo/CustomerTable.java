@@ -12,9 +12,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class CustomerTable {
-//TODO make SSN UNIQUE along with OTHER prom keys in other tables
-    //TODO ADD foreign keys to tables !
-
 
     public static void createCustomerTable(Connection conn){
         try{
@@ -35,9 +32,7 @@ public class CustomerTable {
 
             Statement stmt = conn.createStatement();
             stmt.execute(query);
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
+        }catch (SQLException e){e.printStackTrace();}
     }
 
     public static void populateCustomerTableFromCSV(Connection conn, String fileName) throws SQLException{

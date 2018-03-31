@@ -19,14 +19,13 @@ public class CustomerPhoneTable {
                     + "SSN VARCHAR(11),"
                     + "Phone_Num VARCHAR(12),"
                     // composite primary key
-                    + "PRIMARY KEY (SSN, Phone_Num)"
+                    + "PRIMARY KEY (SSN, Phone_Num),"
+                    +"FOREIGN KEY (SSN) REFERENCES customer(SSN)"
                     + ");";
 
             Statement stmt = conn.createStatement();
             stmt.execute(query);
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
+        }catch (SQLException e){e.printStackTrace(); }
     }
 
 	 public static void populateCustomerPhoneTableFromCSV(Connection conn, String fileName) throws SQLException{
@@ -47,9 +46,7 @@ public class CustomerPhoneTable {
                 customerPhones.add(new CustomerPhone(split));
             }
             br.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        } catch (IOException e) {e.printStackTrace();}
 
         /**
          * Creates the SQL query to do a bulk add of all people
@@ -108,9 +105,7 @@ public class CustomerPhoneTable {
         try{
             Statement stmt = conn.createStatement();
             stmt.execute(query);
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
+        }catch (SQLException e){e.printStackTrace();}
     }
 	
 	public static void printCustomerPhoneTable(Connection conn){
@@ -124,13 +119,7 @@ public class CustomerPhoneTable {
                         result.getString(1),
                         result.getString(2));
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
+        } catch (SQLException e) {e.printStackTrace();}
     }
-	
-	
-	
 	
 }

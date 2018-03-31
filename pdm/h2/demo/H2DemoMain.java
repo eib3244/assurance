@@ -107,7 +107,7 @@ public class H2DemoMain {
 // if we don't delete the database file at the start
 		try{
 			CustomerTable.populateCustomerTableFromCSV(demo.getConnection(),"1_Customer_Data.csv");
-            CustomerTable.addCustomer(demo.getConnection(),"000-00-0001","juan remirez #1", "Male", 25000, 10, "South Park", "WestHempstead" , "NY", "11552","juan@aol.com","0" );
+            CustomerTable.addCustomer(demo.getConnection(),"000-00-0000","juan remirez #0", "Male", 25000, 10, "South Park", "WestHempstead" , "NY", "11552","juan@aol.com","0" );
             CustomerTable.addCustomer(demo.getConnection(),"000-00-0002","juan remirez #2", "Male", 25000, 10, "South Park", "WestHempstead" , "NY", "11552","juan@aol.com","0" );
          	//   System.out.println("/////\nCustomer Table: \n/////");
            	// CustomerTable.printCustomerTable(demo.getConnection());
@@ -122,16 +122,34 @@ public class H2DemoMain {
            // CustomerPhoneTable.printCustomerPhoneTable(demo.getConnection());
         }catch (SQLException e) {e.printStackTrace();}
 
-// used to load customer sales into the database
-        try{
-		    CustomerSaleTable.populateCustomerSaleTableFromCSV(demo.getConnection(), "3_Customer_Sales_Data.csv");
-		   // CustomerSaleTable.printCustomerTable(demo.getConnection());
-        }catch (SQLException e) {e.printStackTrace();}
+// used to load vehicles into the database
+		try{
+			VehicleTable.populateVehiclesTableFromCSV(demo.getConnection(),"5_Vehicle_Data.csv" );
+			//VehicleTable.printVehiclesTable(demo.getConnection());
+		}catch (SQLException e) {e.printStackTrace();}
 
 // used to load dealers into the database
 		try{
 			DealerTable.populateDealerTableFromCSV(demo.getConnection(), "6_Dealer_Data.csv");
 			//DealerTable.printDealerTable(demo.getConnection());
+		}catch (SQLException e) {e.printStackTrace();}
+
+// used to load Manufacturers into our database
+		try{
+			ManufacturerTable.populateManufacturerTableFromCSV(demo.getConnection(), "9_Manufacturer_Data.csv");
+			//ManufacturerTable.printDealerTable(demo.getConnection());
+		}catch (SQLException e) {e.printStackTrace();}
+
+// used to load Manufacturer Vehicles into the database
+		try{
+			ManufacturerVehiclesTable.populateDealerVehicleInventoryTableFromCSV(demo.getConnection(), "10_Manufacturer_Vehicle_Data.csv");
+			//ManufacturerVehiclesTable.printCustomerTable(demo.getConnection());
+		}catch (SQLException e) {e.printStackTrace();}
+
+// used to load Dealer Inventory into the database
+		try{
+			DealerVehicleInventoryTable.populateDealerVehicleInventoryTableFromCSV(demo.getConnection(), "8_Dealer_Vehicle_Inventory_Data.csv");
+			//DealerVehicleInventoryTable.printCustomerTable(demo.getConnection());
 		}catch (SQLException e) {e.printStackTrace();}
 
 // used to load dealer sales into the database
@@ -140,42 +158,23 @@ public class H2DemoMain {
 		//DealerSaleTable.printDealerSaleTable(demo.getConnection());
 	}catch (SQLException e) {e.printStackTrace();}
 
-
-// used to load Dealer Inventory into the database
-	try{
-		DealerVehicleInventoryTable.populateDealerVehicleInventoryTableFromCSV(demo.getConnection(), "8_Dealer_Vehicle_Inventory_Data.csv");
-		//DealerVehicleInventoryTable.printCustomerTable(demo.getConnection());
-	}catch (SQLException e) {e.printStackTrace();}
-
-// used to load Manufacturers into our database
-	try{
-		ManufacturerTable.populateManufacturerTableFromCSV(demo.getConnection(), "9_Manufacturer_Data.csv");
-		//ManufacturerTable.printDealerTable(demo.getConnection());
-	}catch (SQLException e) {e.printStackTrace();}
-
-// used to load Manufacturer Vehicles into the database
-	try{
-		ManufacturerVehiclesTable.populateDealerVehicleInventoryTableFromCSV(demo.getConnection(), "10_Manufacturer_Vehicle_Data.csv");
-		//ManufacturerVehiclesTable.printCustomerTable(demo.getConnection());
-	}catch (SQLException e) {e.printStackTrace();}
-
-// used to load vehicles sold to customers into the database
-	try{
-		VehiclesSoldToCustomerTable.populateVehiclesSoldToCustomerTableFromCSV(demo.getConnection(), "4_Vehicles_Sold_To_Customers_Data.csv");
-		//VehiclesSoldToCustomerTable.printVehiclesSoldToCustomerTable(demo.getConnection());
-	}catch (SQLException e) {e.printStackTrace();}
-
 // used to load vehicles sold to dealers into the database
 		try{
 			VehiclesSoldToDealersTable.populateVehiclesSoldToDealersTableFromCSV(demo.getConnection(), "7_Vehicles_Sold_To_Dealers.csv");
 			//VehiclesSoldToDealersTable.printVehiclesSoldToDealerTable(demo.getConnection());
 		}catch (SQLException e) {e.printStackTrace();}
 
-// used to load vehicles into the database
-	try{
-		VehicleTable.populateVehiclesTableFromCSV(demo.getConnection(),"5_Vehicle_Data.csv" );
-		//VehicleTable.printVehiclesTable(demo.getConnection());
-	}catch (SQLException e) {e.printStackTrace();}
+// used to load customer sales into the database
+		try{
+			CustomerSaleTable.populateCustomerSaleTableFromCSV(demo.getConnection(), "3_Customer_Sales_Data.csv");
+			// CustomerSaleTable.printCustomerTable(demo.getConnection());
+		}catch (SQLException e) {e.printStackTrace();}
+
+// used to load vehicles sold to customers into the database
+		try{
+			VehiclesSoldToCustomerTable.populateVehiclesSoldToCustomerTableFromCSV(demo.getConnection(), "4_Vehicles_Sold_To_Customers_Data.csv");
+			//VehiclesSoldToCustomerTable.printVehiclesSoldToCustomerTable(demo.getConnection());
+		}catch (SQLException e) {e.printStackTrace();}
 
 	// simple login example
 		// use juan1@aol.com and 000001 or 000000 to test

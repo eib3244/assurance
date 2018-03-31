@@ -32,9 +32,7 @@ public class VehicleTable {
 
             Statement stmt = conn.createStatement();
             stmt.execute(query);
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
+        }catch (SQLException e){e.printStackTrace();}
     }
 
     public static void populateVehiclesTableFromCSV(Connection conn, String fileName) throws SQLException{

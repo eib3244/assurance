@@ -23,17 +23,12 @@ public class DealerSaleTable {
                     + "Date LONG NOT NULL,"
                     + "Total INT NOT NULL,"
                     + "UNIQUE (Dealer_Sale_ID),"
-
-                    // why does this 1 work ?!
-                    + "FOREIGN KEY (Dealer_ID) REFERENCES dealer(Dealer_ID)"
-                    //TODO CANT ADD CAUSES ERROR !
-                    // + "FOREIGN KEY (M_ID) REFERENCES Manufacturer(M_ID)"
+                    + "FOREIGN KEY (Dealer_ID) REFERENCES dealer(Dealer_ID),"
+                    + "FOREIGN KEY (M_ID) REFERENCES Manufacturer(M_ID)"
                     + ");";
             Statement stmt = conn.createStatement();
             stmt.execute(query);
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
+        }catch (SQLException e){e.printStackTrace();}
     }
 
     public static void populateDealerSaleTableFromCSV(Connection conn, String fileName) throws SQLException{
@@ -54,9 +49,7 @@ public class DealerSaleTable {
                 DealerSales.add(new DealerSale(split));
             }
             br.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        } catch (IOException e) {e.printStackTrace();}
 
         /**
          * Creates the SQL query to do a bulk add of all people
@@ -116,9 +109,7 @@ public class DealerSaleTable {
         try{
             Statement stmt = conn.createStatement();
             stmt.execute(query);
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
+        }catch (SQLException e){e.printStackTrace();}
     }
 
     public static void printDealerSaleTable(Connection conn){
@@ -136,10 +127,7 @@ public class DealerSaleTable {
                         d,
                         result.getInt(5));
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
+        } catch (SQLException e) {e.printStackTrace();}
     }
 
 }

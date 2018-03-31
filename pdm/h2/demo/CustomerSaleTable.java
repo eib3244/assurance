@@ -11,10 +11,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 // !!!!!! Date Must be a LONG !
-
-
-
-
 public class CustomerSaleTable {
     public static void createCustomerSaleTable(Connection conn){
         try{
@@ -34,9 +30,7 @@ public class CustomerSaleTable {
 
             Statement stmt = conn.createStatement();
             stmt.execute(query);
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
+        }catch (SQLException e){e.printStackTrace();}
     }
 
     public static void populateCustomerSaleTableFromCSV(Connection conn, String fileName) throws SQLException{
@@ -118,10 +112,7 @@ public class CustomerSaleTable {
         try{
             Statement stmt = conn.createStatement();
             stmt.execute(query);
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-
+        }catch (SQLException e){e.printStackTrace();}
     }
 
     public static void printCustomerTable(Connection conn){
@@ -139,10 +130,7 @@ public class CustomerSaleTable {
                         d,
                         result.getInt(5));
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
+        } catch (SQLException e) {e.printStackTrace();}
     }
 
-	}
+}
