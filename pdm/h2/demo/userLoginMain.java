@@ -1,5 +1,6 @@
 package pdm.h2.demo;
 
+import com.sun.org.apache.bcel.internal.generic.Select;
 import pdm.h2.demo.objects.*;
 
 import javax.jws.soap.SOAPBinding;
@@ -209,15 +210,6 @@ public class userLoginMain {
     private static void viewPastSales(H2DemoMain demo, Customer currentCustomer){
 
         try {
-/*
-            String query = "SELECT customer_sale_table.Date, customer_sale_table.Sale_ID, customer_sale_table.Total, dealer.Name, vehicles.Year, vehicles.Color, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.Drive_Type, vehicles.Miles FROM (SELECT * FROM customer "//, customer_sale_table, vehicles_sold_to_customer, vehicles, dealer "
-                    + "INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN "
-                    + "INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID "
-                    + "INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN "
-                    + "WHERE customer.SSN=\'" + currentCustomer.getSSN() + "\');";
-*/
-
-
             String query = "SELECT * FROM customer "//, customer_sale_table, vehicles_sold_to_customer, vehicles, dealer "
                     + "INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN "
                     + "INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID "
@@ -228,7 +220,6 @@ public class userLoginMain {
             Statement stmt = demo.getConnection().createStatement();
             ResultSet result = stmt.executeQuery(query);
 
-            //System.out.println(result.getMetaData().getColumnCount());
             while (result.next()){
                 Date date = new Date(result.getLong(15));
                 System.out.println("-----");
@@ -248,7 +239,6 @@ public class userLoginMain {
             }
 
         }catch (SQLException e){e.printStackTrace();}
-
     }
 
 
@@ -265,7 +255,18 @@ public class userLoginMain {
         System.out.println("Hello: " + currentCustomer.getName());
         System.out.println(currentCustomer.getSSN() + "\n");
 
-        viewPastSales(demo,currentCustomer);
+        int option;
+        System.out.println("Select an option: ");
+        System.out.println("View Past sales: 1");
 
+        option = userin.nextInt();
+
+        switch (option) {
+            case 1:
+            viewPastSales(demo, currentCustomer);
+            break;
+
+
+        }
     }
 }
