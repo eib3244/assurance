@@ -74,3 +74,530 @@ INSERT INTO Dealer_Sale (Dealer_Sale_ID, Dealer_ID, M_ID, Date, Total) VALUES('0
 2018-03-31 12:35:11 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Table "VEHICLESSOLDTODEALERS" not found; SQL statement:
 INSERT INTO VehiclesSoldToDealers (Dealer_Sale_ID, VIN) VALUES('0cuwees', 'zwc8eu2gi9495jh2s'),('acpioze', 'zvdz422w3zqnplrsf'),('uba888d', 'zsy7yxafbunm0af5a'),('gnouw82', 'zopimxohkmqqwuj1c'),('4unjyv4', 'zoco057jd9o80e607'),('z0pre7k', 'znjsup6we844sbifb'),('wp6t98k', 'zlaxxhwoho5z0z5es'),('dxfmtq3', 'zkl7m5su03ap4ibi0'),('06gyva3', 'zhyym8wb8n1byhcl7'),('aaonm6p', 'zg9ef9wpfyzk83ly0'),('dtsokfj', 'zdpr6nawdevlksg36'),('3vcs8fn', 'zcgp3uwagfswp93s2'),('53p0oed', 'zbh1ghbrktxwqhw46'),('ifsbo0p', 'zathytcz9ymsdrjfx'),('aqhk3ue', 'zaa1h63o08u14gnxk'),('8uonmxk', 'z932cbiddpeetobn4'),('r71uifq', 'z8lskwwaanuphkoo7'),('fl00vff', 'z82n1dn6cou0pkxog'),('2xehm0v', 'z49luv9pw33b48g0v'),('iclnw4h', 'z49g2pydztao2tpjb'),('jp65ypv', 'z3dcq7h3zyvn1afg4'),('oe7okjm', 'z2tyjhbi81dq45iq5'),('zdqu5rb', 'z2t41djn9kqapyxr2'),('j3t48u1', 'yzabdadm7c1142h2l'),('lwacxmn', 'yx2qi3arhu4zwp4cx'),('1mzrcfg', 'ywfbxg77a1opfyg5l'),('6na7ote', 'ywetrbtwufp2nwkz6'),('hine9p5', 'ytbd3czozi0mxk9dp'),('0iubpmu', 'yp0msva7tta4h7p6n'),('wbaqq55', 'yn05lkw13stea219j'),('47yci3a', 'ymepa3bsoo9r00khz'),('isralh4', 'ylaawarai12myclzg'),('6h5io4s', 'yknl2au38cyfkvyq8'),('irb6w4y', 'yju3yaw905ub53o3j'),('3ypzsrw', 'yi02qjkzjg4bld189'),('6jnxwz0', 'yfy9fwflv4g71i0i4'),('xqndrw2', 'yew7bbqmzknb0bbik'),('q3xcnjk', 'yes7do9caxodiw7h1'),('rfdhws5', 'yed25hdvpzl0obbl9'),('bdhi9wm', 'yb049kykggecot0me'),('y5iibli', 'yadjbnqaix62leghb'),('39dwc6a', 'y98kfo8idx8ya6b37'),('feze9iq', 'y6zr094zr32429tjw'),('dzl040m', 'y6bmvs56q0m70juj3'),('r5zbg21', 'y65kpt0hs9958n91b'),('ejg5gi9', 'y652qnl8q89zw065u'),('9tan8gw', 'y5x2l5crv37r6pbu0'),('7dbc75l', 'y5dy77lyofqvdzs2a'),('sra7bib', 'y58qyfq3opvdgetw2'),('qc5tsmd', 'y4tjefycnwvaejiaa'),('pvt1qbb', 'y3esrh0mnefo6j3aj'),('z06nazc', 'y39bymk1b4quj9ouf'),('6v9dyrb', 'xyi4ux0owsh8jugqo'),('j8j0aqi', 'xxub8sqwdyqk8ya3y'),('6h9j1z4', 'xwqj2701au1tehz5m'),('wqqbgig', 'xvyn5pcimuzoasqs1'),('v75yrrg', 'xvsetdglfeebz716s'),('p3a6vd2', 'xvs7ryfyr82s4hnpw'),('f703zfv', 'xuytmzvf7ka7abcrs'),('pffird1', 'xurpcjdkhcxms41zd'),('ofmj2yi', 'xtymh9vxv05dqgswj'),('oa4emzi', 'xsp9aimnc3lr4ucfh'),('pt8slxh', 'xqgf9vwtu82eav9cw'),('rhqlgrw', 'xpk7g2dmlex4vyvl9'),('0w6b3xn', 'xlxmf74pejla5w4r6'),('i8qerzr', 'xi6rpn8sirtc4ibf3'),('f5ffe52', 'xf8kxvjzll33uihyu'),('847xq3m', 'xf44vqylfltz0g1g1'),('qjexbbu', 'xdat6wh8c9ln6di6q'),('g7qkv2h', 'xcvrr6agd92vx3cun'),('p3mxe6b', 'xcsn3jraggylenj73'),('dhlym8j', 'xcovmge5xa4fe8h3i'),('wshbdbq', 'xckayp02mcyfxd1rz'),('5re49wy', 'xc6i4v1y4jbgw6uge'),('7ipteze', 'xayrn9du65iq5ylwb'),('avpkwtp', 'x9zlwrth1mveknqr6'),('geg0nwk', 'x9y6mxt7k5ubl79d7'),('l34eujk', 'x7xhso81ys0wp7loo'),('j5lb087', 'x4zzkeidjjhk97f31'),('lru6ips', 'x106ek0p01q7wnovm'),('dt2zhl7', 'x0mfet7ut95kod4ql'),('01utrhp', 'x06tb08de3m4fr8gb'),('e8734xm', 'wzd1l6wx8tmidyhh7'),('qcc0mxt', 'wyj8cyyoc7e7amrgh'),('v7lg7cd', 'wyhluita56byg4789'),('y5e177u', 'wxpdj4696urmmo7cb'),('cibw794', 'wwoh7h6uuzhljgnz8'),('9eeo9q8', 'wwmno1ukm859qcasg'),('au3xmoe', 'wwa7fm6mvxf2z3e6j'),('6soj3tz', 'wtcjowxjphft025cq'),('sejcfpq', 'wr3tkf2zf68mjc3yy'),('444xhf5', 'wp40e1i4x4sf834tc'),('0t3l4sm', 'wm40skxkgfiv0yw1t'),('m83ez0u', 'wm113s9dh7986d31u'),('h3c3v9d', 'wkxlh5hzhpty894lr'),('7czu43l', 'wki8y5etzja6dlx99'),('nm581og', 'wj101eudab5ho5qp0'),('yuds1pw', 'whf02p547p98b28xy'),('xbvta15', 'wgoniljkfspzmq19s'),('xoms2hj', 'wg8oqu9q1rghguni9'),('io2voxi', 'wfm8zijyochvlvazx'),('djggjmv', 'weyfvknrk3y44a1rl'),('2qxggfq', 'weujf1zz197d236a9'),('jj6etm7', 'wdldod26uw6egym52'),('u5qphkl', 'wc7vg362wlcnmnroy'),('rkpo3s5', 'wbrz1itcsqh42sd5c'),('b3o4znj', 'wbj9vbz73zc1j52w2'),('434bviy', 'waa3qdvbe9uvz189l'),('nwjmine', 'wa16031wi94gke0no'),('9noc14s', 'wa0i4dq0qjlhh1k1n'),('zuoa6dj', 'w837jrndvdc3g23jo'),('dosrran', 'w5s6ep777kd23cy7z'),('lt12isu', 'w3c4054o4xlkiuzrp'),('ku9qs2r', 'w2sofo6d3ht8rosg0'),('z2c6szy', 'w1ukikxojjx2o4do0'),('zijw44o', 'w0mwlfeoshwluped0'),('ha7wx0e', 'vzpk9bjmu3g5yrx2u'),('xdsyz9s', 'vzj5xrpferco7tgvx'),('mn0qc2y', 'vy6gdbev6yicrlvsv'),('djnsic2', 'vxaf66wxhrtbe8oqo'),('j7vv915', 'vv6ysn448qvtnq3km'),('jnch6c4', 'vum0q2haxexp80bd2'),('ilv9pof', 'vu7pr1l2p8yflxeui'),('25k6cdb', 'vqs4uywmqlxy3is29'),('l3yngcq', 'vp79b2e8o6mjcn9um'),('e2md8bi', 'vmtkqnanqwnel72zx'),('de06vc8', 'vix9p4eqr1rrq1osf'),('pwf1a6e', 'vi1n8whomgjz5sw9o'),('28qjztg', 'vhuwynplmmwzrppny'),('cfyn30k', 'vhpjpdjjtc2mt479c'),('uztu8zm', 'vhi8tkcjo61ppfd5e'),('prj3xwa', 'vg8hll9o14ok9gobk'),('f5f0psu', 'vftbuea0amh4xzir2'),('1xy5t2r', 'veyizu1hlkbk43trn'),('14vnwlr', 'vddra78j2q462eub7'),('s245gub', 'vd6x0zxxh1a6p0tj0'),('qju54gq', 'vbxagzn5a1en5wb30'),('c0zh961', 'vbuuax3rbsa08b9mm'),('37h2yq6', 'va2lwbgne6btetkrv'),('avcss9o', 'v4arpqn25430fhs4b'),('r3jcblj', 'v3the12mg0n11nhzw'),('r6s8jay', 'v0fa8f2napp1ln7dp'),('f9qnl63', 'uvtyie9p6txagw5zh'),('kxd26ql', 'uv7e0taqlgxxd0te2'),('92lz69r', 'ut6jzkjafoewp1odg'),('pecg0uv', 'ut4m7m6zq3gs26tqt'),('xqe34fy', 'ustzdz838e3smnnie'),('c76resh', 'urw5k5fkvk9jj5gzf'),('yw1fk9f', 'urb2jrfaajbzy88x3'),('epv1ifl', 'ur6y8hmiysb80jcpv'),('qneug44', 'ur6ixr6d37nyof7b8'),('bu2ni55', 'uq58tfurct0bhr10r'),('ypmeqx0', 'upckv53kobebqycbh'),('8tst4ig', 'uokq85qlnwiabgshm'),('xb33det', 'uncipgt453fihg0b7'),('o91li5k', 'um0obym5fsnbar86v'),('su7mg11', 'ujidmqh9t40qwiwqa'),('harsutx', 'ujdrnk0j42mpey312'),('jndhtpo', 'uh1ovk8t8wnoci7wt'),('q2cuvh6', 'ugkcposu7k52y65h4'),('m8h9iq8', 'u84em80tnrwxp62ks'),('ospqw2i', 'u81e0n43s953jzdyd'),('8o78yn6', 'u6nn9b8eyz05845k8'),('86p7bld', 'u63w1x4whbjecgxes'),('ycvl0fy', 'u441bk95ayrd5z314'),('vd3q47k', 'u37bjig5w3u4gok1h'),('adjqloi', 'u2n396uhx8jmid5st'),('gem3xo3', 'u0575pvqbu7nune3b'),('i15j2xq', 'u04kyivrjix8ugijj'),('45he2l3', 'txdoev5do6laz1web'),('rwzweg1', 'tvw5c4cc4qftzv78j'),('f90k1aa', 'tvi555yggwktpk40h'),('6fvui3w', 'trhpkamiiw25pjbtw'),('kxk7qyh', 'trameockoqu8g5l2u'),('l1uiq3q', 'tpt2bjz9bcxuiozu5'),('34znfwr', 'tpcritsfo28qc8s2z'),('lzcj9ck', 'tp85elrx0trba9fci'),('ypp71th', 'tol1o57648k5k92xw'),('v5zol00', 'tlb95lqnm9anmqa9t'),('qizm8kv', 'tl8cx86lzpguk2c1j'),('76nrhii', 'tkpl53piuj7qqlkbp'),('3oahm6t', 'tkby6nlbpmn64gkou'),('ovslr7s', 't9lfy2uw9p34e0nao'),('hy6xif8', 't93qkxe45j7znbphe'),('kfoorcu', 't8s2d6v4ev7546ulc'),('wevvqi7', 't88vbhxufqacldnai'),('e1wo7do', 't6x9lgg58icrq4fk5'),('lke7vo6', 't2jpeoghoc8ne56uc'),('irv7bb6', 't1ns5tevva6qjdg6f'),('zckajd4', 't09u023nyib410761'),('g02dd0m', 't00okuun8jlxueg0w'),('jxwoyyy', 'sv5x2e6k99z7bp2k4'),('pn7615r', 'stls6iazxliwf6kko'),('vd95xj2', 'st6upn91qxy7e3zr0'),('ukv55nn', 'st2242hlfgc53dsek'),('6iavcny', 'srpzf4l0m4vcznfzj'),('y9nqsk5', 'srjimzhmymj1xcm1a'),('74vj1sd', 'sr8zbsdqvjltj88fo'),('0nnljr6', 'sqwlk1zfc031aba9h'),('eu7b58i', 'sq7zztmczq10ceoud'),('4ry56n0', 'snd7bti37fz6c5c2o'),('vfnglie', 'sn84aajjdzdqmwull'),('ms8s8b4', 'smwi6gtxjfpf1gkej'),('b0bjp39', 'sm1n7iduqtnvtoddv'),('r2d53aj', 'sluwvtbqjk18i3p9m'),('ihfzb8e', 'skhz4whe9ep7vz34c'),('irldrd7', 'sh6jf4665vi78qxuo'),('4xikfrv', 'sgzoor5l2jam0vtgx'),('8tdpcqm', 'sflrx8z4feyss6o7n'),('xz5sj11', 'sfg1mgig18ztdfgtf'),('lupzvg8', 'se15y9ybiw5l743cr'),('g3lu4tt', 'sdp1ah74soxf0vvdq'),('m1ch0wc', 'sdhlma1574t0if2fo'),('kyrol66', 'sdgzam17pstanushs'),('uc4ona0', 'scbvge3fi9kqqbo65'),('2klw7dr', 'sbp77s60ec8g1t4gv'),('sucd23t', 'sauikugxm1kjrb1ot'),('lcdjb9o', 'sargh8k97rp89h8yr'),('i349woh', 'sa99iowaa6yiur6p9'),('65xevtd', 's5sg2qf2dnhhb0vl4'),('fzq8bv7', 's4fxy4gdvvlikkbgx'),('g3i8xz6', 's3alle3evx81xv3zx'),('49acsbr', 's0bh96yut56wf7vgg'),('bq6u55w', 'ryvdonpd379myj7pu'),('xceqhak', 'ryv55rktj3cnzteay'),('ydlgse1', 'ryfvmhope6mwsu99r'),('t9a6oud', 'rx5tiz34qxfi6e0ou'),('q4woory', 'rvvbk1bmpkom6thxx'),('acxhx7l', 'ru01d7dzd96d01y1s'),('9740avs', 'rtzm1jhjmjy1guo3g'),('17dgv68', 'rp9nlg7c4et7hm9zm'),('n087cgq', 'rmwummrpvn3w9h080'),('h5hnan4', 'rm58uaqigdae9kt5w'),('oplobxb', 'rlnnqjggw1zqyyz5u'),('80bc19i', 'rkc6sfebxj0mbuhxu'),('pfozk4h', 'rjbx65xycnfo8oaey'),('v605gin', 'rgtkbfqbd1ockx0qq'),('1vagx4c', 'rfssmrpai0sw6z5ga'),('hp98bh6', 'rf8oelilu4hznjtyt'),('x1txp1l', 're5jn894qhixkioeg'),('4su9dop', 'rck3cbacw419aw40b'),('x69niue', 'rc797vs7dp44c2ymg'),('fbukkn3', 'ramv7n3gnhbspgp7z'),('4pspwrc', 'r8fbk01tunlgm01r4'),('5mhn9og', 'r7rq78xgpguqwt81z'),('68easqc', 'r6u2hvltcjzx9uxzi'),('a6tjvuh', 'r6mq9n2xkzdilysyp'),('gcil5ps', 'r6lbrqj2ibc5ziomw'),('ankuc02', 'r5fntw5tzbs3m32lo'),('dokitpe', 'r38jl25c7gddlpzal'),('yqlczis', 'r2nfcgeaeogutxub2'),('1k7xcwl', 'qzu172hxtwqf6rt5p'),('80bc19i', 'qzi2adf6k7mesn6la'),('13lf7wg', 'qzht256m1vjj3b1t7'),('lzcj9ck', 'qy4j6p3bpz2mtx7eo'),('7cnt62d', 'quzvlub3e6gdaghgi'),('bq6u55w', 'qsji7ak5cndil16ex'),('fxq7xrb', 'qrs9v66659t3888ur'),('g27nb66', 'qrbajnahbvw6pgif2'),('04k063e', 'qr89bv4tsnwyrvwes'),('3vcs8fn', 'qp3xlpz4ilou8j5mb'),('06gyva3', 'qnsfs0rkz68vbv7kd'),('gnouw82', 'qlij3wgrunaogmasb'),('rel8dzl', 'qi7tv7ysl8qfx83cn'),('n087cgq', 'qeyp6lgfm927rcr74'),('8tdpcqm', 'qexkico0ybwjv7ioo'),('geg0nwk', 'qebqow2w7l52nss1x'),('jfuivss', 'qde38rri8fi03o43l'),('jitkoeq', 'qbvyxqcijfboa8o1u'),('1k7xcwl', 'qb4pu9ddbymf9fhsl'),('7tq0dzx', 'q68x2lmrfuuly2bxz'),('q2cuvh6', 'q5rys7lga51wdmags'),('8yj3rr9', 'q4qpab2sk1vp2qj4c'),('kcekurr', 'q4eshcydiu1itcnqh'),('rkpo3s5', 'q28vr752u8sl31xif'),('e7g8lln', 'pz5cm0u2116pkl1k5'),('qcc0mxt', 'pykhxrgbjcstq4dt9'),('hamsslh', 'pwssxu9ai9ed2igtm'),('3oahm6t', 'pwojczw5qwdgx7ljz'),('88201v9', 'pudk3t5o9t5cga8as'),('feze9iq', 'ptrzg940pg3tkzskh'),('ypp71th', 'psec2odbzp2x89e5w'),('n24zdlb', 'pq5dm5dnfz6zv1i02'),('irv7bb6', 'ppskn0xlcmh6ub45x'),('p8zvexj', 'pp4e56xvo3ro9zzy8'),('oxbwuwl', 'pobp81tm41bwf4lps'),('9740avs', 'pnen2fof5kpptwwhm'),('1hhqqwg', 'pkh9ccy3xlg4gonqn'),('lz2245h', 'pgcuhvbxgrnb6i0ta'),('05aq8f3', 'pck6u7k1oydew76rc'),('mn0qc2y', 'pc0ctd9yut0zs8hpc'),('15xga7l', 'p9dbxu7g1ffv7itri'),('ms8s8b4', 'p7jqgo5lzs7fa0hdt'),('rt8uxvp', 'p5uex6ipte359nqih'),('hogyo4d', 'p4tewec0gwjpo4vqr'),('y9nqsk5', 'p4p2v0mygok6dxpkb'),('f4kw0tq', 'p4npar4zoo1co39x2'),('p4qs1w1', 'p4kux7vpd4mku1msq'),('dtsokfj', 'p3xgzwcrd3ocs3ps2'),('367rgrc', 'oznx8xiu1i4yggib0'),('e7nb477', 'oy5mlaoiklkvwedke'),('p8zvexj', 'ov8gg45gyhnr0prno'),('ydrnn00', 'ouaq9nl8d524n2duc'),('qkk15y0', 'ot20eswst9zgcp1ne'),('rt8uxvp', 'opp61x1njabd1h87g'),('k2k6kyz', 'opbmq4v4lb8ha9r7w'),('n2aabl0', 'oo3vz0t1vwez2epqc'),('rhqlgrw', 'omxhizjo9faavw6tv'),('bo5obuo', 'olz7wvvke7jhpvhac'),('10ubj5z', 'ol2b6c3smng6fpeox'),('g23za2u', 'okfb02gs73xyf46vr'),('1vagx4c', 'oj3iy3d48bx6cj7qx'),('x3glcd4', 'ogt2rul3n8tgpm2h2'),('oifmqu1', 'oe5dx48qawdxjpafk'),('u5qphkl', 'ocs8eqg2ptsh4gxj5'),('1mzrcfg', 'o9jc0wk2gwqi9v30u'),('dosrran', 'o9b1534d43vsqnw7o'),('nsork0k', 'o86bygvg6w4ji2rxs'),('b0bjp39', 'o805m9cu7jvqvodso'),('qde2pys', 'o6c5n1lctje0zmnfd'),('1x5an7r', 'o54yr5mm4i2u43yt2'),('ye948dc', 'o2ee5sjtg47pnm1ep'),('jitkoeq', 'o0xz6cbz1ru4vd3y6'),('vnjb6vf', 'nyru1mciasb3aqczw'),('vd95xj2', 'nyowoax5l5oz52d53'),('l3yngcq', 'nxrydztp3hc9wzm7n'),('0w6b3xn', 'nuxwe77hb28y0po0u'),('qk1dzyb', 'nub2mjlkasa7v3wfe'),('ejg5gi9', 'nsrn90g3w0hl8bsnq'),('qqz2cpn', 'nsp0jfm7txtleoqne'),('irldrd7', 'nsf304vpid8fvgw6n'),('di0jv6o', 'nsb433y8v4ctbvysu'),('a7iakta', 'nq3ash0tu2rl20x2a'),('t9a6oud', 'npzrd07yau0bc7q0m'),('qdz4fd2', 'nojgjtzzwj7drickr'),('cii6vi8', 'noglliq8yipvv9rrd'),('3c5jekv', 'nn8zfpz9u3wqf26k1'),('au6cp0x', 'nlnng29drh9sncg5l'),('uztu8zm', 'nkgyhx3o4kynkajxi'),('bymaq50', 'nkg19mutcwtvxbegq'),('df0wo4j', 'nk7uzcxixmvbvrtns'),('mnataq9', 'ngietcof2nmkd67y4'),('7cnt62d', 'ngfxvky2x0pulzio3'),('8vyp9fe', 'nd0kdxblr1mobqare'),('pecg0uv', 'ncrppu8yqmmf4f8yr'),('5bowh5s', 'nbnouyerf2wwmabu3'),('w5hxs2o', 'n9uucjv9l7vw5r0yk'),('pz4039w', 'n8jjyf84hn448kjit'),('ejg5gi9', 'n6u3kw1svks04kuua'),('pfozk4h', 'n5vdfkge5mm3ksjec'),('m1ch0wc', 'n5u586q80yi0nz0nx'),('ankuc02', 'n58tbosce4t5t6v06'),('tuwtas4', 'n37nt5hqg2m2uaki8'),('avpkwtp', 'n2gudjl95ywuum1aj'),('vcuhxv3', 'n26gjhqtaau1vtv8k'),('qzjx4zv', 'n1gr244vyv63ukivo'),('1uyss30', 'mvbmtxcf2viv887xo'),('j9muu3x', 'muz1gyazxf9cdz92w'),('bkneju0', 'mq98s4l2eak4a5fso'),('5bowh5s', 'mptwce40n9trev7de'),('s5qoxb3', 'mmepavmkznr3q42sj'),('irb6w4y', 'mm0ul8q1zy3h5j37p'),('s9irmuf', 'mlro8unnwch64qkrv'),('q5c2kij', 'mkob7q1ej6yhkk67t'),('geg0nwk', 'mjt248ndw0noiallb'),('oxbwuwl', 'mhygaprsijcu5yk3k'),('0b06nva', 'mhj7h0ncbq5bexy8q'),('6ufmkl1', 'mhb8snge25f7j3aja'),('bdhi9wm', 'mgbpluoj4tf6sazy2'),('ms8s8b4', 'mg4mnmbw0uhewyh8u'),('9t5utsf', 'mf57t6e69so17m1f4'),('qrt41lt', 'mee0jsxvsilgpy4h8'),('0i09by6', 'mdtfrc2b83zr6blus'),('wbgsl2e', 'md3kdunsl2aa1mjd4'),('kig5pdh', 'md34x767wjee2kaj2'),('prj3xwa', 'mc16boc69e65kbgxh'),('9noc14s', 'madn21ftl6ea1r0fu'),('bjc1q9q', 'm750vv5ycnbwn0jpf'),('4ry56n0', 'm6w1s64jdmw4z9xdz'),('xqe34fy', 'm4fkcaj092eb8kl5t'),('x1txp1l', 'm0iwdgct7wny9lncz'),('feze9iq', 'lzx18hxdblb0k9k6y'),('dmsxdu9', 'lzikf3ujicwfgff9e'),('69xq0w8', 'lz0rx2kbr16jjqoc1'),('s3c2f2o', 'lwzzps1vee0qz52wv'),('ovslr7s', 'lwlj9fbpwrkbqttpn'),('e7nb477', 'lw0dxvy7h7r9x64vj'),('adjqloi', 'lvbtgzabbo9p4omai'),('e8734xm', 'lticcbxog02njlnj1'),('s5q76jn', 'lse9siz3jxkdis8mn'),('irv7bb6', 'lruwitv5cdj44lhi1'),('tuwtas4', 'lptmwi514dpqcqes9'),('3ypzsrw', 'lp0rupwy88gsco0g2'),('0a6txct', 'lmakjvgz1u4q77bt0'),('e0rarh5', 'li47f9ky9ta6souye'),('4ry56n0', 'lhu0o2siovmbql7v5'),('wbb4nae', 'lg4xdzmp83ptqu3v2'),('uba888d', 'lb3ianlb1u50whk3r'),('hwznzky', 'lak06b0ushxlgfud3'),('9tan8gw', 'l9ptjb0gjt3b52od0'),('1k7xcwl', 'l92edldfgbe6bdxl1'),('chsgvo0', 'l7ek6wljj1vajk1hu'),('vifmz75', 'l5v52eddr2qmjg4zp'),('zijw44o', 'l3dox0vcrwpid3ccp'),('17dgv68', 'l35p35rj5w4vexh3o'),('i15j2xq', 'kybiktxhaili75zs7'),('rh0vsf4', 'kxdbf7ufpoceklq18'),('yxgvib8', 'kvjxa5g378h7614qk'),('05aq8f3', 'kucunxkn918kjbxy5'),('tknkctt', 'ktuq8z3mvb6ndj2o8'),('iclnw4h', 'ktd7uc2bnzlhn25cx'),('co9kpdz', 'ks2gfxt85689ymv50'),('6yqv90z', 'kqvpz8rerv5xblexa'),('qc5tsmd', 'kpqvqvtnnhzii7jw1'),('2efvhl6', 'kp1zo74of6h84bcd2'),('2600tj7', 'knfxzhj44ej8joyn6'),('m5m59bq', 'kmcql8s5ma7hro73k'),('yg5951a', 'klxrmqjumo2m4mdi1'),('irldrd7', 'kld40iw5b6vm7vsez'),('0lwvky7', 'kk1ousbo475qktlrd'),('79g5qhb', 'kjoi08kxvxy0siwhc'),('p5orfvb', 'khoagm9udoun5c9ls'),('jeoggpi', 'khkhcc5xtb0p8al30'),('kfoorcu', 'khgj47smhm2bmnuec'),('hogyo4d', 'kh1wqh8k7y3w6oclt'),('gsocdj7', 'kggl1evj34r1kazy0'),('pv6t983', 'kgd1drfal96q10q9q'),('u5qphkl', 'kg73mml66sxh6vf6b'),('79g5qhb', 'key1rcrjzbfvsdo1u'),('wbb4nae', 'k7ekn2hlus1akpbdp'),('ihfzb8e', 'k6u4oz9pp70s3jzut'),('4t5zeh6', 'k4kl8ic2rkn84m4ne'),('0i09by6', 'jyylpvnh7arzu4rfp'),('th1kgd7', 'jyv5081gzuku59hva'),('4w5cqta', 'jww1zxjl4v1g4xc2u'),('t9a6oud', 'jv5qxl5vyltbtrcss'),('80bc19i', 'jutoybrjg1w0h3alt'),('q2cuvh6', 'jul0ttj74l43lr4tt'),('siv3qvx', 'jsfkwexd37bptgovq'),('9aukyft', 'jr5ulm5skxw23vjz8'),('6iavcny', 'jpw4l2p4rqmge7l9g'),('6il1y7w', 'jnfril6qa4s12s11a'),('15xga7l', 'jmttzeajw3gkigjkj'),('x577b50', 'jjqwbn65507akyldy'),('7w6g0t3', 'jiqejfc4ygorp9mwf'),('nci7jn1', 'jhza3cicu9hridtu0'),('tnshahk', 'jfjb55iuhlg0vll31'),('hy6xif8', 'jfhdbbc68vd92ts2z'),('6yqv90z', 'jegbo0obx213o6yee'),('dxfmtq3', 'jdndgo8ztylz4pjkv'),('snogqzd', 'jdet1ibl6wwdyclny'),('xtxtv1n', 'jdb9uwr6ha4er8ivy'),('irb6w4y', 'jbq3eg9s8h4goyc7b'),('cwd7rlq', 'j90dx43lwgcl51v0w'),('yw1fk9f', 'j84316888xcjiw6q7'),('au3xmoe', 'j69zltlo6jcnu69bv'),('adjqloi', 'j67xf1bh89e9wpr20'),('pywlez3', 'j16na6rske2556i0l'),('dokitpe', 'j0geltgyx2xvjuuf5'),('m8h9iq8', 'j02q7pg8bdbe64t42'),('lpmp9kl', 'izv3yx57tdofb0fjn'),('yuds1pw', 'ix5iho6w8gtv76nsb'),('x69niue', 'iwqmby996pad064jv'),('4fjbeyj', 'iv8cahrzv20xn93fk'),('hwznzky', 'iv3aueo0n8nam66vc'),('r6s8jay', 'iuiz3syzc1pvvr2ho'),('r6s8jay', 'iu2254oyj1i2rn0fz'),('dtjttml', 'is9yrtsmij6792bov'),('q4woory', 'ir7byzk8dt4j6b0df'),('fsop7hb', 'iqvhv9465h6lv984y'),('3ypzsrw', 'iqgyy8zj2nyfkhmkj'),('os4ogfm', 'iq2y1tweojmti6v84'),('gmh7eoi', 'ip4xsym7pes7l8y8v'),('mn0qc2y', 'im8fnrgo2n6mr56df'),('o9n49ej', 'iligbvlhtvv85fe7j'),('1abrh21', 'ilaa95mv4h4g3lngm'),('pz4039w', 'ikya6rd5xtj92muhp'),('zusp4q2', 'ik317kgnby80awmfb'),('wqzyoiu', 'ii46o8bsdohp6cp64'),('l1uiq3q', 'ihvj9zwc7lwpodhs6'),('wshbdbq', 'igs7jnzsc8k8oz9hs'),('3ypzsrw', 'igjlpiq1d52c90vus'),('bdhi9wm', 'igbgbezeebhp1wono'),('jx7d33x', 'ieevric4bcapae83i'),('72mg597', 'idsecvs6v65iorglk'),('ucc2ft2', 'iclikroo7hkmw33qp'),('dhu67fe', 'ia2ds4ogo07k1mc84'),('9eeo9q8', 'i956uptitif2sm2po'),('2600tj7', 'i955w3jji1w6wm1c8'),('tvatsdh', 'i74mxa9mqhnteg1xq'),('c0zh961', 'i4uikf4qk74nihvlw'),('o5epzkx', 'i49txa1h9eyq1gv4q'),('s1q4tpm', 'i49n7zfy2unxr2syf'),('kujmbj0', 'i3pzyyik9uq8ydf00'),('10ubj5z', 'i2pz8xv8gzbwch8j1'),('8tdpcqm', 'i2h72u5skmvonakmx'),('qdz4fd2', 'i1dwll2a054q8cpdi'),('n087cgq', 'i0ptw0cg20jww0h84'),('2xehm0v', 'hzgj673yqouh9ibr5'),('jby3vb1', 'hyai5sdy7bdsu5vjs'),('fxq7xrb', 'hy4v90vjil2qust2h'),('46851wc', 'hwmnjooj2i7mga06f'),('p03xdk9', 'httwj8v9yjvtbkfzo'),('wz9id97', 'hqsk8a1h6ry4ndphk'),('k2k6kyz', 'hl3xuaq83hx377q9e'),('q4woory', 'hjcw2qwq2c62axnsr'),('zuoa6dj', 'higuk5jkm9e3rw5ku'),('qmgk23e', 'hhxee40peeg43y0z1'),('bv6pa0f', 'hft6oyjn18nshd3xq'),('65xevtd', 'hbpkj0yztylmy9jqn'),('yxgvib8', 'hbnf3u32no6qlcypt'),('ypp71th', 'h9irwaqfj6cylbaf5'),('1t6yqwc', 'h7oc9wsjs1klvx8mv'),('l1uiq3q', 'h7mi0zb2vurpilwyd'),('bipnek8', 'h5tna90rfw2me2fmi'),('39dwc6a', 'h39p7p6axllztzf7v'),('jnch6c4', 'h2pao889vom3fqla0'),('sovcm4q', 'h1d6s3fryx4bboe5u'),('qid52dh', 'gzr9thctwy483t49w'),('i47w3la', 'gy4ds9tgjyzs08ypn'),('v2vngi8', 'gwoca5ftiknl43psb'),('l3yngcq', 'gwj5q4rmv3ohbfra2'),('uc4ona0', 'gvwtouudcg5onqkms'),('bipnek8', 'gvu6nzquh7jzsfn14'),('pwf1a6e', 'gvmns5760wkphcw3f'),('hv7klh0', 'gu3nur5zcpqsdu5sl'),('hine9p5', 'gs48ca63snmj81bkf'),('lt12isu', 'grwou7ptt06gszhky'),('0u8owxm', 'gqomsceab7v6fd39e'),('ljz9ev2', 'gqcgmq8ff71bt1tup'),('qbi8q0x', 'gp6otxytv34vpa7f8'),('pffird1', 'go49mru8p4xy3k8zv'),('iclnw4h', 'go04sjgamhv7z8011'),('g23za2u', 'gkwcmmgw0ea1fgr23'),('cfyn30k', 'gik3f3ui85r3jbqqi'),('4tsv8nj', 'ghmytwmu1pn1ym96y'),('781re1s', 'gh3hx29kxd8l70ccl'),('dtjttml', 'ggwmyk5rqnvymtyg5'),('pv6t983', 'ggd7jixz6y1u6zosz'),('75yinu4', 'gfz79k54qguzqydkf'),('zybo4a0', 'g82ilhutt9gnwhcwp'),('ypp71th', 'g7hp3x1wap0d2z41x'),('3oahm6t', 'g6zuxjztzpyhw9bq6'),('r4k7no1', 'g6to41pg9m4se3g0m'),('ni1nbsz', 'g4gve6dzfbht8qqop'),('ovslr7s', 'g4bjtn0fxg8319z25'),('dt8gzt0', 'g3x1d1rmoodth1c9r'),('xdtaiqu', 'g2ntnknmunfhsuvqu'),('rbw17za', 'g2bkynw1qji7ni8r8'),('l3yngcq', 'g1ift7zrwhqedmc4e'),('oplobxb', 'g1dor5jnbj7o0shb4'),('6na7ote', 'g0tsia9dqqfjz6n0a'),('zijw44o', 'g0qe9ryoes85pb5no'),('th1kgd7', 'g0myabildayz32fw4'),('0cuwees', 'fysuazpg60yt8c73u'),('s9irmuf', 'fymoxv28m17qu64q0'),('7tq0dzx', 'fxy1jgthxxtsvp88y'),('f75nz3c', 'fsysnfuycppdegop3'),('f90k1aa', 'fsybw8f24tj98e9q7'),('yylsf8q', 'fo6o3ufxzyg84sft6'),('m81tptr', 'fmpfkeneuyodkh5eg'),('3b9j94f', 'fmc3an7dh9q2ct4cs'),('46851wc', 'fkuzo764absxib85i'),('epv1ifl', 'fku8m3oq1mrsgdqf6'),('yhvoqoa', 'fkp9mh0b9y2urjlz1'),('e8734xm', 'ffz6wje4e0hbp3uuo'),('lz2245h', 'ffk6bep53u2r8gl7m'),('79g5qhb', 'fc3j8qseyfj1giwst'),('wbaqq55', 'fbj5jcw9z16j8x000'),('80bc19i', 'f83ugwkvyvcv1w4xa'),('qbz4w45', 'f7q0mjcktd4wp9a03'),('kig5pdh', 'f70qcvhuzpiumbznq'),('c5w47k2', 'f6unuo4n9j04k2pue'),('pr6odh0', 'f5y5rhfac2pbd9v08'),('lzpwjbx', 'f5xzub4tz36llzyu6'),('2euuwi7', 'f4kjehw9kkx2rm6iu'),('sjypfwv', 'f2nd6xqnd138ub4pz'),('pz4039w', 'f2gu9dq6oibjjkr23'),('ukv55nn', 'ewi1yk726rsgzi8e2'),('t9a6oud', 'evp9ehp46jy977vk5'),('bo5obuo', 'euuizpbcuo1sszrqj'),('ufaj8rt', 'eukslutc7rl51hc7a'),('e2md8bi', 'et2gllbo5ddf6r9v7'),('a6pbtiw', 'esyirz0obqd4eq6fd'),('sejcfpq', 'eqf6zl4sqcv7j6dt4'),('m5m59bq', 'eoo3avvsbzqmgffcy'),('17dgv68', 'eod2n5nhja5nwzo5n'),('m1ch0wc', 'emtr9m33oiv4nlvwd'),('pmtai64', 'el8c5pbpbg3zboygc'),('cwd7rlq', 'ekw21ai9bxpjm53tc'),('bp5fn2m', 'ekjjltjosvfv06mzf'),('9zfy8ce', 'ek2wdwqk8zxcpbp0s'),('zdqu5rb', 'ejh41yok2p4x4u5to'),('pihctbd', 'eh357gksgufij854z'),('gcil5ps', 'eh221xygsou1d66nl'),('ebq4lmo', 'egd9epyrto4hozvh9'),('bdxyvbr', 'ef6qqrwz72l0x3ib5'),('uxwzdu2', 'eezkl0lcydrxctvbe'),('69xq0w8', 'eey7kli745skxk9tf'),('rh0vsf4', 'eejljigydw55evges'),('8f3eatf', 'ee92yzzrfp9mabaee'),('r71uifq', 'edgojov8alnhv4qj0'),('f4kw0tq', 'ecuhkvi6s4vssf8pd'),('geg0nwk', 'ecjgh1eb1d0qag9pp'),('z2c6szy', 'ecdnhjd0han4stjm2'),('g02dd0m', 'eaylme91qufxjesi6'),('oa4emzi', 'e9sua9cdhn9fe5mnf'),('zsqbbvg', 'e9mzkpwqtmheu1qpi'),('z3pv3q6', 'e6tvp5sr5e0096olx'),('u01tlyc', 'e6f2e0h22qla6jfyf'),('qde2pys', 'e6467xljimczvideg'),('ku9qs2r', 'e4k7f9ncoykwi5ycz'),('15xga7l', 'e1q0t0t0bzy1ezsdc'),('8cej64b', 'e19zezkrm7d01ak8q'),('b2hvqmm', 'e0ixcs69zlr6ije8y'),('g27nb66', 'e0ggyhz9i52x1obds'),('q0sl9l9', 'e08k95d6oaq850rqa'),('ha7wx0e', 'dzvlahy0apnzadroi'),('umnp80f', 'dw793h9c22uvz0zgl'),('hv7klh0', 'dtod66b5zkrq1xhg7'),('89z0xhy', 'dt45vdx0osnj77cpv'),('3ahgpbm', 'dqbh7mqqmt2y25ij4'),('wevvqi7', 'dpk038ykdowwqn303'),('djggjmv', 'dpbus2syrgx457c33'),('sovcm4q', 'dobjmfnp5g4knoa16'),('7svqtip', 'do8nglwj1uwlj3b82'),('kdg8kjc', 'do8f3i8r8or755v7u'),('638zx3d', 'do51oi6fniuawrpu2'),('esmp9bv', 'dlc4dh8du2homkl37'),('3vcs8fn', 'dl3u8n8aqp88872eg'),('04k063e', 'djsf2cxyp41fokgcy'),('emfk0xe', 'djrespk6nbmn8f312'),('0lwjw24', 'dixscw3b8tz5npsf5'),('ucc2ft2', 'disyurnbf8r0vynwh'),('nqg7prm', 'di4rha3qcpux5ajlt'),('vulbiyl', 'dho6dj3awzq9w0vkb'),('bv6pa0f', 'dh1kla8pxsbunyeo1'),('dukz4ng', 'dg4on3ggb99wpl14w'),('5e62u7h', 'de6uzh1f6u81rvu0v'),('s5qoxb3', 'ddu8dje6c3nxxy4i0'),('8qw4r1z', 'dcmwvkdx1cn92wvef'),('0y4qaqs', 'dbpu2oprksxep7uio'),('lasgh7f', 'dbp0lnrsgwn2vwh04'),('lll28ww', 'db5dip5wwixm0c29k'),('gnouw82', 'dablpyhi9u57sdocu'),('fvir1l9', 'd9ywxhz7ewnl71iu2'),('3mp7pee', 'd8s2uph20z3tl0htd'),('bp5fn2m', 'd7gy4wwwfq86aj0fn'),('79g5qhb', 'd784eyz9ciy9f6rsu'),('1vqbg00', 'd41f8v4dfqjtcb5rs'),('z3pv3q6', 'd3yb1vxgonlwl4r9l'),('iclnw4h', 'd0oqoh7hpwbk4l4xp'),('ljz9ev2', 'd0lpldxybpvneyuq6'),('781re1s', 'czn9lg66zbbv2o9m5'),('bymaq50', 'czigneq0c32lxlaht'),('lasgh7f', 'czev0htt5obf9idqv'),('jx7d33x', 'cy2x17jszobveqond'),('xxcs91o', 'cy23y7beiisa29d0p'),('d6j2jq9', 'cvd5e8lrhag1xkzo1'),('crfprxo', 'cv3uhvn54xl0i108r'),('prj3xwa', 'cuzrhkx9fbvavw7ey'),('rt8uxvp', 'crqiydbg65l09pmw7'),('m97fdox', 'cnc9xjtvj2shu0b8k'),('3mlxkis', 'clorzr7jjb2dskk1w'),('vnjb6vf', 'cjovyvyvk80qnbapy'),('j36rhkx', 'ci8wcmkgousi5w1jl'),('f5ffe52', 'ce153mc5tiwu42aip'),('xy9qq4z', 'cattwwu7yim4gdrrv'),('krctk9m', 'c9ufqtvigace4aws9'),('hv8u9im', 'c9ogyh8ey6ud06j3f'),('mekc3lj', 'c7d336wzku6r5whoo'),('hl32dfl', 'c5tijgtp3r56rqgq6'),('epv1ifl', 'c3kfjehj4yu93acoc'),('ni1nbsz', 'c3g7qxhnb8d22o41l'),('8fzqzcb', 'c1we7azv1wsz6evq7'),('o5epzkx', 'c1daik31mzu5au54z'),('46851wc', 'c0tcnn47gmzy1pxwz'),('15xga7l', 'c07aglhc5be884inb'),('9zpnpg0', 'bzzjz43brbylbegfs'),('ypmeqx0', 'by1dqe1uynqr6q286'),('28qjztg', 'bx3r9yppr8bn138qq'),('ii4lg36', 'bwvc9kst5ez2g2oe5'),('ouu7jv5', 'bv8m4jld983cf6ky2'),('ofmj2yi', 'bsz0sd9g0vllk7ecz'),('sfabw1y', 'bsbmqklf4gcfllspv'),('3ypzsrw', 'bq0bzu0gvm58tqt0f'),('c5w47k2', 'bog8xy8sr781c0xxy'),('n087cgq', 'bmnumap3hk4ah0qnl'),('hp98bh6', 'bm92rs43w4lazw6mp'),('85ona3o', 'bjiebm62b38b4bnom'),('qqz2cpn', 'bipaa68kfu3bys1ko'),('28xmemb', 'bh7qcrfg90jq1nw50'),('mnataq9', 'bgee3j8e3ngipjee1'),('lwacxmn', 'bdro7bvq2mp7tk5o4'),('avpkwtp', 'b85279ibgmfbso4en'),('8d5l2x1', 'b4sbyrrzwymnfvg2c'),('yg5951a', 'b2634doin7xmlq5ce'),('1hhqqwg', 'azh6j2iqpxkurqra7'),('s1q4tpm', 'axeyu02tr53ultipq'),('jitkoeq', 'auyab0w5xc0s4rrpk'),('sovcm4q', 'athsqn5d42m3l9yoo'),('acxhx7l', 'asw2zfbtotpbj7cnz'),('e0rarh5', 'asskvyivx0rnh1iy5'),('lke7vo6', 'arr6x7cvcu4aug4nu'),('j3t48u1', 'apad4wllvyrm04u75'),('6h9j1z4', 'aovz1aq3aegfflbvh'),('xhii69r', 'ao56336cwpyzyx1sb'),('3c5jekv', 'anraj21p5c28gdhbg'),('su2gvjd', 'ajsvyjfy1xr3wn932'),('rt8uxvp', 'ajqc0lzmf90jszwyz'),('au6cp0x', 'aj1z0k2481jc6bifb'),('dp2tuu4', 'ailhca79wzcmhv8ez'),('pfozk4h', 'ai0v9xx5fb8ljg3jy'),('qzjx4zv', 'agl1xusjv2f3owjw6'),('gsocdj7', 'af043f14zhc3yorqi'),('m8h9iq8', 'aaom3jp67do5znni1'),('qju54gq', 'aao64yff0662i3cey'),('1sk4hla', 'a7po0dcrcxn8jhcve'),('4su9dop', 'a7cj11ms6ruggoi6v'),('jfuivss', 'a79evy9o50gc2pe8a'),('91p1t43', 'a78xmjz2auig8hbsl'),('lzyci36', 'a5wj7yeqgu7lp9wkg'),('46851wc', 'a3vpxpg40jupt3fvy'),('l0ep71i', 'a28hbxgpgyjj6iqgj'),('75yinu4', 'a1jlueuesgv1zpvgi'),('sfabw1y', '9z58r2cr19s3fu79t'),('6fvui3w', '9y0yutx2c945lopng'),('x1txp1l', '9x6ldb90pbz5p8hh4'),('cs8l5ra', '9v9fandi7q4lh63zp'),('rab694t', '9v4gqtm85t93z3cpv'),('qbi8q0x', '9v3m87b2s3e43evhl'),('k3egiw7', '9v341qpuca418ncgl'),('01utrhp', '9ubn165ozjbl63akx'),('2wp3kms', '9tm7i9urvt77ft1t5'),('6yl4wkt', '9t8vz190iifrxdh1o'),('wshbdbq', '9q8sji2tt1qi50cg6'),('40xz6ir', '9q7j3x7p152qsxeb5'),('iclnw4h', '9pyvqyqrfh1p9jggc'),('hamsslh', '9l8ub1we6wqd09n3z'),('g3lu4tt', '9kprtex34t3bb87vx'),('z2c6szy', '9j02cy8tlhfd6jm1p'),('subz8du', '9haeofre8c8v5axx4'),('wevvqi7', '9ephbydneb13nb8do'),('r4k7no1', '9e5pt9yxg8ce1grr3'),('7zgibwl', '9d1lryxrli4xr2scl'),('g02zfzi', '9ahq7vsemxwh9y69v'),('g3lu4tt', '925kp9dshh5a6awu9'),('rigbzwk', '91jnwhl3k7ybzortl'),('rh0vsf4', '8xu3brfsaingu9ac8'),('pr6odh0', '8wvlorv3gx2mivbpz'),('i8qerzr', '8wlr19ykuiyg0kzob'); [42102-197]
+2018-03-31 20:44:39 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SSN FROM customer WHERE SSN='000-00-0001'[*]' INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN;"; SQL statement:
+SELECT SSN FROM customer WHERE SSN='000-00-0001'' INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN; [42000-197]
+2018-03-31 20:47:35 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SSN FROM CUSTOMER WHERE SSN='000-00-0001' JOIN[*] CUSTOMER_SALE_TABLE ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN JOIN VEHICLES_SOLD_TO_CUSTOMER ON VEHICLES_SOLD_TO_CUSTOMER.SALE_ID = CUSTOMER_SALE_TABLE.SALE_ID JOIN VEHICLES ON VEHICLES.VIN = VEHICLES_SOLD_TO_CUSTOMER.VIN; "; SQL statement:
+SELECT SSN FROM customer WHERE SSN='000-00-0001' JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN; [42000-197]
+2018-03-31 20:49:06 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SSN FROM CUSTOMER WHERE SSN='000-00-0001' JOIN[*] CUSTOMER_SALE_TABLE ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN  "; SQL statement:
+SELECT SSN FROM customer WHERE SSN='000-00-0001' JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN  [42000-197]
+2018-03-31 20:50:47 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SSN FROM CUSTOMER WHERE SSN='000-00-0001' JOIN[*] CUSTOMER_SALE_TABLE ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN; "; SQL statement:
+SELECT SSN FROM customer WHERE SSN='000-00-0001' JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN; [42000-197]
+2018-03-31 20:51:51 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SSN FROM CUSTOMER WHERE SSN='000-00-0001' INNER[*] JOIN CUSTOMER_SALE_TABLE ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN; "; SQL statement:
+SELECT SSN FROM customer WHERE SSN='000-00-0001' INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN; [42000-197]
+2018-03-31 20:54:43 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "SSN"; SQL statement:
+SELECT SSN FROM customer INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN; [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1237)
+	at org.h2.command.dml.Select.init(Select.java:826)
+	at org.h2.command.Parser.parseSelect(Parser.java:1925)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:216)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:237)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 20:56:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CUSTOMER.SSN FROM CUSTOMER INNER JOIN CUSTOMER_SALE_TABLE ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN INNER JOIN JOIN[*] VEHICLES_SOLD_TO_CUSTOMER ON VEHICLES_SOLD_TO_CUSTOMER.SALE_ID = CUSTOMER_SALE_TABLE.SALE_ID INNER JOIN JOIN VEHICLES ON VEHICLES.VIN = VEHICLES_SOLD_TO_CUSTOMER.VIN; "; expected "identifier"; SQL statement:
+SELECT customer.SSN FROM customer INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN; [42001-197]
+2018-03-31 20:58:59 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "SSN"; SQL statement:
+SELECT customer.SSN FROM customer INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE SSN='000-00-0001'; [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.expression.Comparison.mapColumns(Comparison.java:510)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:260)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1240)
+	at org.h2.command.dml.Select.init(Select.java:826)
+	at org.h2.command.Parser.parseSelect(Parser.java:1925)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:217)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:238)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 21:00:22 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Invalid value "2" for parameter "columnIndex" [90008-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:240)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3191)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3230)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:292)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:222)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:243)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 21:03:05 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "VIN"; SQL statement:
+SELECT * FROM customer, customer_sale_table, vehicles_sold_to_customer, vehicles INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'; [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.expression.Comparison.mapColumns(Comparison.java:510)
+	at org.h2.table.TableFilter$MapColumnsVisitor.accept(TableFilter.java:1228)
+	at org.h2.table.TableFilter.visit(TableFilter.java:1182)
+	at org.h2.table.TableFilter.addJoin(TableFilter.java:669)
+	at org.h2.command.Parser.addJoin(Parser.java:1857)
+	at org.h2.command.Parser.readJoin(Parser.java:1785)
+	at org.h2.command.Parser.parseJoinTableFilter(Parser.java:2183)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:2139)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2287)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:218)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:243)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 21:08:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "SALE_ID"; SQL statement:
+SELECT * FROM customer, customer_sale_table, vehicles_sold_to_customer, vehicles INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID WHERE customer.SSN='000-00-0001'; [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.expression.Comparison.mapColumns(Comparison.java:512)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:260)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:261)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1240)
+	at org.h2.command.dml.Select.init(Select.java:826)
+	at org.h2.command.Parser.parseSelect(Parser.java:1925)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:218)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:243)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 21:08:39 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "SSN"; SQL statement:
+SELECT * FROM customer, customer_sale_table, vehicles_sold_to_customer, vehicles INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN WHERE customer.SSN='000-00-0001'; [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.expression.Comparison.mapColumns(Comparison.java:512)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:261)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1240)
+	at org.h2.command.dml.Select.init(Select.java:826)
+	at org.h2.command.Parser.parseSelect(Parser.java:1925)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:218)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:243)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 21:09:44 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INNER[*] JOIN CUSTOMER_SALE_TABLE ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN WHERE CUSTOMER.SSN='000-00-0001'; "; expected "INSERT, {"; SQL statement:
+INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN WHERE customer.SSN='000-00-0001'; [42001-197]
+2018-03-31 21:10:11 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM INNER[*] JOIN CUSTOMER_SALE_TABLE ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN WHERE CUSTOMER.SSN='000-00-0001'; "; expected "identifier"; SQL statement:
+SELECT * FROM INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN WHERE customer.SSN='000-00-0001'; [42001-197]
+2018-03-31 21:14:47 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "SSN"; SQL statement:
+SELECT SSN FROM customer INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'; [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1237)
+	at org.h2.command.dml.Select.init(Select.java:826)
+	at org.h2.command.Parser.parseSelect(Parser.java:1925)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:218)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:244)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 21:15:06 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Invalid value "2" for parameter "columnIndex" [90008-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:240)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3191)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3230)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:292)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:223)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:244)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 21:17:22 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "VIN"; SQL statement:
+SELECT vehicles.Color, vehicles.Year, vehicles.Make, vehicles.Model FROM vehicles INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'; [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.expression.Comparison.mapColumns(Comparison.java:510)
+	at org.h2.table.TableFilter$MapColumnsVisitor.accept(TableFilter.java:1228)
+	at org.h2.table.TableFilter.visit(TableFilter.java:1182)
+	at org.h2.table.TableFilter.addJoin(TableFilter.java:669)
+	at org.h2.command.Parser.addJoin(Parser.java:1857)
+	at org.h2.command.Parser.readJoin(Parser.java:1785)
+	at org.h2.command.Parser.parseJoinTableFilter(Parser.java:2183)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:2139)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2287)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:218)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:244)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 21:23:48 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CUSTOMER_SALE_TABLE.DATE, VEHICLES.COLOR, VEHICLES.YEAR, VEHICLES.MAKE, VEHICLES.MODEL, VEHICLES.ENGINE, VEHICLES.  FROM[*] CUSTOMER INNER JOIN CUSTOMER_SALE_TABLE ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN INNER JOIN VEHICLES_SOLD_TO_CUSTOMER ON VEHICLES_SOLD_TO_CUSTOMER.SALE_ID = CUSTOMER_SALE_TABLE.SALE_ID INNER JOIN VEHICLES ON VEHICLES.VIN = VEHICLES_SOLD_TO_CUSTOMER.VIN WHERE CUSTOMER.SSN='000-00-0001'; "; expected "identifier"; SQL statement:
+SELECT customer_sale_table.Date, vehicles.Color, vehicles.Year, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.  FROM customer INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'; [42001-197]
+2018-03-31 21:37:57 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Column "DEALER.NAME" not found; SQL statement:
+SELECT customer_sale_table.Date, customer_sale_table.Sale_ID, customer_sale_table.Total, dealer.Name, vehicles.Year, vehicles.Color, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.Drive_Type, vehicles.Miles FROM customer INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'; [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:219)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:258)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 21:39:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "SALE_ID"; SQL statement:
+SELECT customer_sale_table.Date, customer_sale_table.Sale_ID, customer_sale_table.Total, dealer.Name, vehicles.Year, vehicles.Color, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.Drive_Type, vehicles.Miles FROM customer, customer_sale_table, vehicles_sold_to_customer, vehicles, dealer INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'; [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.expression.Comparison.mapColumns(Comparison.java:512)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:260)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:261)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:261)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1240)
+	at org.h2.command.dml.Select.init(Select.java:826)
+	at org.h2.command.Parser.parseSelect(Parser.java:1925)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:219)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:258)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 21:44:54 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CUSTOMER_SALE_TABLE.DATE, CUSTOMER_SALE_TABLE.SALE_ID, CUSTOMER_SALE_TABLE.TOTAL, DEALER.NAME, VEHICLES.YEAR, VEHICLES.COLOR, VEHICLES.MAKE, VEHICLES.MODEL, VEHICLES.ENGINE, VEHICLES.DRIVE_TYPE, VEHICLES.MILES FROM CUSTOMER, DEALER NATURAL RIGHT[*] OUTER JOIN CUSTOMER_SALE_TABLE ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN NATURAL RIGHT OUTER JOIN  VEHICLES_SOLD_TO_CUSTOMER ON VEHICLES_SOLD_TO_CUSTOMER.SALE_ID = CUSTOMER_SALE_TABLE.SALE_ID NATURAL RIGHT OUTER JOIN  VEHICLES ON VEHICLES.VIN = VEHICLES_SOLD_TO_CUSTOMER.VIN WHERE CUSTOMER.SSN='000-00-0001'; "; expected "JOIN"; SQL statement:
+SELECT customer_sale_table.Date, customer_sale_table.Sale_ID, customer_sale_table.Total, dealer.Name, vehicles.Year, vehicles.Color, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.Drive_Type, vehicles.Miles FROM customer, dealer NATURAL RIGHT OUTER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN NATURAL RIGHT OUTER JOIN  vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID NATURAL RIGHT OUTER JOIN  vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'; [42001-197]
+2018-03-31 21:45:33 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CUSTOMER_SALE_TABLE.DATE, CUSTOMER_SALE_TABLE.SALE_ID, CUSTOMER_SALE_TABLE.TOTAL, DEALER.NAME, VEHICLES.YEAR, VEHICLES.COLOR, VEHICLES.MAKE, VEHICLES.MODEL, VEHICLES.ENGINE, VEHICLES.DRIVE_TYPE, VEHICLES.MILES FROM CUSTOMER, DEALER NATURAL RIGHT[*] OUTER JOIN CUSTOMER_SALE_TABLE ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN NATURAL RIGHT OUTER JOIN VEHICLES_SOLD_TO_CUSTOMER ON VEHICLES_SOLD_TO_CUSTOMER.SALE_ID = CUSTOMER_SALE_TABLE.SALE_ID NATURAL RIGHT OUTER JOIN VEHICLES ON VEHICLES.VIN = VEHICLES_SOLD_TO_CUSTOMER.VIN WHERE CUSTOMER.SSN='000-00-0001'; "; expected "JOIN"; SQL statement:
+SELECT customer_sale_table.Date, customer_sale_table.Sale_ID, customer_sale_table.Total, dealer.Name, vehicles.Year, vehicles.Color, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.Drive_Type, vehicles.Miles FROM customer, dealer NATURAL RIGHT OUTER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN NATURAL RIGHT OUTER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID NATURAL RIGHT OUTER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'; [42001-197]
+2018-03-31 21:46:55 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Column "DEALER.NAME" not found; SQL statement:
+SELECT customer_sale_table.Date, customer_sale_table.Sale_ID, customer_sale_table.Total, dealer.Name, vehicles.Year, vehicles.Color, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.Drive_Type, vehicles.Miles FROM customer, dealer OUTER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'; [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:219)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:258)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 21:49:18 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CUSTOMER_SALE_TABLE.DATE, CUSTOMER_SALE_TABLE.SALE_ID, CUSTOMER_SALE_TABLE.TOTAL, DEALER.NAME, VEHICLES.YEAR, VEHICLES.COLOR, VEHICLES.MAKE, VEHICLES.MODEL, VEHICLES.ENGINE, VEHICLES.DRIVE_TYPE, VEHICLES.MILES FROM CUSTOMER, DEALER OUTER JOIN CUSTOMER_SALE_TABLE ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN OUTER[*] JOIN VEHICLES_SOLD_TO_CUSTOMER ON VEHICLES_SOLD_TO_CUSTOMER.SALE_ID = CUSTOMER_SALE_TABLE.SALE_ID OUTER JOIN VEHICLES ON VEHICLES.VIN = VEHICLES_SOLD_TO_CUSTOMER.VIN WHERE CUSTOMER.SSN='000-00-0001'; "; SQL statement:
+SELECT customer_sale_table.Date, customer_sale_table.Sale_ID, customer_sale_table.Total, dealer.Name, vehicles.Year, vehicles.Color, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.Drive_Type, vehicles.Miles FROM customer, dealer OUTER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN OUTER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID OUTER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'; [42000-197]
+2018-03-31 21:49:51 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Column "CUSTOMER.SSN" not found; SQL statement:
+SELECT customer_sale_table.Date, customer_sale_table.Sale_ID, customer_sale_table.Total, dealer.Name, vehicles.Year, vehicles.Color, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.Drive_Type, vehicles.Miles FROM customer, dealer LEFT OUTER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN LEFT OUTER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID LEFT OUTER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'; [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Select.setEvaluatableRecursive(Select.java:1044)
+	at org.h2.command.dml.Select.preparePlan(Select.java:1022)
+	at org.h2.command.dml.Select.prepare(Select.java:884)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:219)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:258)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 21:56:12 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "000-00-0001" [22018-197]
+2018-03-31 21:58:08 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "CUSTOMERINNER" not found; SQL statement:
+SELECT * FROM customerINNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'; [42102-197]
+2018-03-31 22:16:09 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Duplicate column name "SSN"; SQL statement:
+SELECT customer_sale_table.Date, customer_sale_table.Sale_ID, customer_sale_table.Total, dealer.Name, vehicles.Year, vehicles.Color, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.Drive_Type, vehicles.Miles FROM (SELECT * FROM customer INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'); [42121-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.setColumns(Table.java:431)
+	at org.h2.table.TableView.initColumnsAndTables(TableView.java:242)
+	at org.h2.table.TableView.init(TableView.java:113)
+	at org.h2.table.TableView.<init>(TableView.java:70)
+	at org.h2.table.TableView.createTempView(TableView.java:559)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1367)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:2138)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2287)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:227)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:255)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 22:18:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Duplicate column name "NAME"; SQL statement:
+SELECT customer_sale_table.Date, customer_sale_table.Sale_ID, customer_sale_table.Total, dealer.Name, vehicles.Year, vehicles.Color, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.Drive_Type, vehicles.Miles FROM (SELECT * FROM customer, dealer INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'); [42121-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.setColumns(Table.java:431)
+	at org.h2.table.TableView.initColumnsAndTables(TableView.java:242)
+	at org.h2.table.TableView.init(TableView.java:113)
+	at org.h2.table.TableView.<init>(TableView.java:70)
+	at org.h2.table.TableView.createTempView(TableView.java:559)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1367)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:2138)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2287)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:227)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:255)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 22:20:56 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CUSTOMER_SALE_TABLE.DATE, CUSTOMER_SALE_TABLE.SALE_ID, CUSTOMER_SALE_TABLE.TOTAL, DEALER.NAME, VEHICLES.YEAR, VEHICLES.COLOR, VEHICLES.MAKE, VEHICLES.MODEL, VEHICLES.ENGINE, VEHICLES.DRIVE_TYPE, VEHICLES.MILES FROM INNER[*] JOIN CUSTOMER_SALE_TABLE ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN INNER JOIN VEHICLES_SOLD_TO_CUSTOMER ON VEHICLES_SOLD_TO_CUSTOMER.SALE_ID = CUSTOMER_SALE_TABLE.SALE_ID INNER JOIN VEHICLES ON VEHICLES.VIN = VEHICLES_SOLD_TO_CUSTOMER.VIN WHERE CUSTOMER.SSN='000-00-0001'); "; expected "identifier"; SQL statement:
+SELECT customer_sale_table.Date, customer_sale_table.Sale_ID, customer_sale_table.Total, dealer.Name, vehicles.Year, vehicles.Color, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.Drive_Type, vehicles.Miles FROM INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'); [42001-197]
+2018-03-31 22:22:15 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "SALE_ID"; SQL statement:
+SELECT customer_sale_table.Date, customer_sale_table.Sale_ID, customer_sale_table.Total, dealer.Name, vehicles.Year, vehicles.Color, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.Drive_Type, vehicles.Miles FROM (SELECT * FROM customer_sale_table, vehicles_sold_to_customer, vehicles, dealer INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'); [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.expression.Comparison.mapColumns(Comparison.java:512)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:260)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:261)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:261)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1240)
+	at org.h2.command.dml.Select.init(Select.java:826)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1359)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:2138)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2287)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:227)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:255)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 22:22:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "SALE_ID"; SQL statement:
+SELECT customer_sale_table.Date, customer_sale_table.Sale_ID, customer_sale_table.Total, dealer.Name, vehicles.Year, vehicles.Color, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.Drive_Type, vehicles.Miles FROM (SELECT * FROM customer, dealer, customer_sale_table, vehicles_sold_to_customer, vehicles, dealer INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'); [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.expression.Comparison.mapColumns(Comparison.java:512)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:260)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:261)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:261)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1240)
+	at org.h2.command.dml.Select.init(Select.java:826)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1359)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:2138)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2287)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:227)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:255)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 22:23:33 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "SALE_ID"; SQL statement:
+SELECT Date, customer_sale_table.Sale_ID, customer_sale_table.Total, dealer.Name, vehicles.Year, vehicles.Color, vehicles.Make, vehicles.Model, vehicles.Engine, vehicles.Drive_Type, vehicles.Miles FROM (SELECT * FROM customer, dealer, customer_sale_table, vehicles_sold_to_customer, vehicles, dealer INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'); [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.expression.Comparison.mapColumns(Comparison.java:512)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:260)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:261)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:261)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1240)
+	at org.h2.command.dml.Select.init(Select.java:826)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1359)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:2138)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2287)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:227)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:255)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 22:24:57 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Duplicate column name "SSN"; SQL statement:
+SELECT SSN FROM (SELECT * FROM customer INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'); [42121-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.setColumns(Table.java:431)
+	at org.h2.table.TableView.initColumnsAndTables(TableView.java:242)
+	at org.h2.table.TableView.init(TableView.java:113)
+	at org.h2.table.TableView.<init>(TableView.java:70)
+	at org.h2.table.TableView.createTempView(TableView.java:559)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1367)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:2138)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2287)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:227)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:255)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-03-31 22:25:22 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Duplicate column name "SSN"; SQL statement:
+SELECT SSN1 FROM (SELECT * FROM customer INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN WHERE customer.SSN='000-00-0001'); [42121-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.setColumns(Table.java:431)
+	at org.h2.table.TableView.initColumnsAndTables(TableView.java:242)
+	at org.h2.table.TableView.init(TableView.java:113)
+	at org.h2.table.TableView.<init>(TableView.java:70)
+	at org.h2.table.TableView.createTempView(TableView.java:559)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1367)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:2138)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2287)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:227)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:255)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)

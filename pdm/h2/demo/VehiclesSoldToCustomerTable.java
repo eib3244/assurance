@@ -20,7 +20,8 @@ public class VehiclesSoldToCustomerTable {
                     + "VIN VARCHAR (17) NOT NULL,"
                     + "PRIMARY KEY(Sale_ID, VIN),"
                     + "UNIQUE (Sale_ID, VIN),"
-                    +"FOREIGN KEY (VIN) REFERENCES vehicles(VIN)"
+                    +"FOREIGN KEY (VIN) REFERENCES vehicles(VIN),"
+                    +"FOREIGN KEY (Sale_ID) REFERENCES customer_sale_table(Sale_ID)"
                     + ");";
             Statement stmt = conn.createStatement();
             stmt.execute(query);

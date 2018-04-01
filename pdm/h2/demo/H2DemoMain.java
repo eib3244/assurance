@@ -1,5 +1,6 @@
 package pdm.h2.demo;
 
+import pdm.h2.demo.objects.CustomerSale;
 import pdm.h2.demo.objects.DealerSale;
 import pdm.h2.demo.objects.DealerVehicleInventory;
 
@@ -107,7 +108,7 @@ public class H2DemoMain {
 // if we don't delete the database file at the start
 		try{
 			CustomerTable.populateCustomerTableFromCSV(demo.getConnection(),"1_Customer_Data.csv");
-            CustomerTable.addCustomer(demo.getConnection(),"000-00-0000","juan remirez #0", "Male", 25000, 10, "South Park", "WestHempstead" , "NY", "11552","juan@aol.com","0" );
+            CustomerTable.addCustomer(demo.getConnection(),"000-00-0001","juan remirez #1", "Male", 25000, 10, "South Park", "WestHempstead" , "NY", "11552","juan@aol.com","0" );
             CustomerTable.addCustomer(demo.getConnection(),"000-00-0002","juan remirez #2", "Male", 25000, 10, "South Park", "WestHempstead" , "NY", "11552","juan@aol.com","0" );
          	//   System.out.println("/////\nCustomer Table: \n/////");
            	// CustomerTable.printCustomerTable(demo.getConnection());
@@ -116,8 +117,8 @@ public class H2DemoMain {
 // used to load customer phone#'s into the database
         try{
             CustomerPhoneTable.populateCustomerPhoneTableFromCSV(demo.getConnection(),"2_Customer_Phone_Data.csv");
-            CustomerPhoneTable.addPhoneNumber(demo.getConnection(),"000-00-0000","315-222-9999");
-            CustomerPhoneTable.addPhoneNumber(demo.getConnection(),"000-00-0000","315-222-8888");
+            CustomerPhoneTable.addPhoneNumber(demo.getConnection(),"000-00-0001","315-222-9999");
+            CustomerPhoneTable.addPhoneNumber(demo.getConnection(),"000-00-0001","315-222-8888");
          //   System.out.println("/////\nCustomer Phone Table: \n/////");
            // CustomerPhoneTable.printCustomerPhoneTable(demo.getConnection());
         }catch (SQLException e) {e.printStackTrace();}
@@ -176,9 +177,20 @@ public class H2DemoMain {
 			//VehiclesSoldToCustomerTable.printVehiclesSoldToCustomerTable(demo.getConnection());
 		}catch (SQLException e) {e.printStackTrace();}
 
-	// simple login example
-		// use juan1@aol.com and 000001 or 000000 to test
-		// you should get juan #1 or #2
+
+
+
+			CustomerSaleTable.addCustomerSale(demo.getConnection(), "0000000","000-00-0001","crcg6",System.currentTimeMillis(),62331);
+
+		VehiclesSoldToCustomerTable.addVehicleSoldToCustomer(demo.getConnection(),"0000000","r2nfcgeaeogutxub2");
+		VehiclesSoldToCustomerTable.addVehicleSoldToCustomer(demo.getConnection(),"0000000","qebqow2w7l52nss1x");
+
+		DealerVehicleInventoryTable.removeVehicleFromDealerInventory(demo.getConnection(),"r2nfcgeaeogutxub2");
+		DealerVehicleInventoryTable.removeVehicleFromDealerInventory(demo.getConnection(),"qebqow2w7l52nss1x");
+
+
+
+
 
 	// launch user login
 	userLoginMain.main(null);

@@ -21,11 +21,8 @@ public class CustomerSaleTable {
                     + "Date Long NOT NULL,"
                     + "Total INT NOT NULL,"
                     + "UNIQUE (Sale_ID),"
-
-                    // why does this 1 work but not the other ?!
-                    +"FOREIGN KEY (SSN) REFERENCES customer(SSN)"
-                    //TODO CANT ADD CAUSES ERROR !
-                    //+"FOREIGN KEY (Dealer_ID) REFERENCES dealer(Dealer_ID)"
+                    +"FOREIGN KEY (SSN) REFERENCES customer(SSN),"
+                    +"FOREIGN KEY (Dealer_ID) REFERENCES dealer(Dealer_ID)"
                     + ");";
 
             Statement stmt = conn.createStatement();
@@ -105,7 +102,7 @@ public class CustomerSaleTable {
         return sb.toString();
     }
 
-    public static void addCustomerSale(Connection conn, String sale_id, String ssn, String dealer_id, int date, int total){
+    public static void addCustomerSale(Connection conn, String sale_id, String ssn, String dealer_id, long date, int total){
         String query = String.format("INSERT INTO customer_sale_table "
                         + "VALUES (\'%s\', \'%s\', \'%s\', %d, %d);",
                         sale_id, ssn, dealer_id, date, total);

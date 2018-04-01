@@ -103,8 +103,18 @@ public class DealerVehicleInventoryTable {
 
     public static void addDealerVehicleInventory(Connection conn, String dealer_id, String vin){
         String query = String.format("INSERT INTO DealerVehicleInventory "
-                        + "VALUES (%s,\'%s\');",
+                        + "VALUES (\'%s\',\'%s\');",
                 dealer_id, vin);
+        try{
+            Statement stmt = conn.createStatement();
+            stmt.execute(query);
+        }catch (SQLException e){e.printStackTrace();}
+    }
+
+    public static void removeVehicleFromDealerInventory(Connection conn, String VIN){
+        String query = String.format("DELETE FROM DealerVehicleInventory WHERE "
+                        + "VIN=\'%s\';",
+               VIN);
         try{
             Statement stmt = conn.createStatement();
             stmt.execute(query);
