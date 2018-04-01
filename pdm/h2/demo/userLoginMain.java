@@ -20,7 +20,6 @@ public class userLoginMain {
 
     private static Scanner userin = new Scanner(System.in);
 
-
     /*
      * Main method to log in a user
      */
@@ -207,17 +206,65 @@ public class userLoginMain {
         return currentCustomer;
     }
 
+    /*
+     * Main loop for customer interaction
+     */
+    private static void customerInteractionLoop(H2DemoMain demo, Customer currentCustomer) {
+        int option;
+        System.out.println("Hello: " + currentCustomer.getName());
+
+        option = -1;
+        while (option != 3) {
+            System.out.println("\n--Main Menu--");
+            System.out.println("1: View Past sales");
+            System.out.println("2: Search for a vehicle");
+            System.out.println("3: Log out");
+            System.out.print("Select an option: ");
+
+            // loop to ensure a number is inputted / no crash
+            while(true) {
+                String optionInput = userin.next();
+
+                try{
+                    option = Integer.parseInt(optionInput);
+                } catch (java.lang.NumberFormatException e){}
+                if ((option > 0) && (option <= 3))
+                    break;
+                System.out.print("Please input a number from the list above: ");
+            }
+
+            switch (option) {
+                case 1:
+                    System.out.println("\n--PAST SALES--");
+                    viewPastSales(demo, currentCustomer);
+                    break;
+
+                case 2:
+                    System.out.println("\n--VEHICLE SEARCH--");
+                    viewVehicles(demo,currentCustomer);
+                    break;
+
+                case 3:
+                    System.out.println("Goodbye!");
+                    break;
+            }
+        }
+    }
+
+    /*
+     * Main Method to view past sales
+     */
     private static void viewPastSales(H2DemoMain demo, Customer currentCustomer){
 
         try {
-            String query = "SELECT * FROM customer "//, customer_sale_table, vehicles_sold_to_customer, vehicles, dealer "
+            String query = "SELECT * FROM customer "
                     + "INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN "
                     + "INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID "
                     + "INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN "
                     + "INNER JOIN dealer ON dealer.Dealer_ID = customer_sale_table.Dealer_ID "
                     + "WHERE customer.SSN=\'" + currentCustomer.getSSN() + "\';";
 
-            Statement stmt = demo.getConnection().createStatement();
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet result = stmt.executeQuery(query);
 
             while (result.next()){
@@ -237,10 +284,190 @@ public class userLoginMain {
                         +result.getString(29) + " miles");
                 System.out.println("-----");
             }
+            result.last();
+            int lastResult = result.getRow();
+            if (lastResult == 0){
+                System.out.println("You have not purchased a vehicle yet.");
+            }
 
         }catch (SQLException e){e.printStackTrace();}
     }
 
+    /*
+     * Main Driver for viewing vehicles and buying them
+     */
+    private static void viewVehicles(H2DemoMain demo, Customer currentCustomer) {
+        ArrayList<Dealer> dealers = new ArrayList<Dealer>();
+        int numberOfDealers = 0;
+        int dealerSelected = -1;
+
+        try {
+            String queryDealers = "SELECT * FROM dealer;";
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery(queryDealers);
+
+            while (result.next()) {
+                dealers.add(new Dealer(result.getString(1), result.getString(2),
+                        result.getInt(3), result.getString(4), result.getString(5),
+                        result.getString(6), result.getString(7), result.getString(8)));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        for (int i = 0; i < dealers.size(); i++) {
+            System.out.println(i + ": " + dealers.get(i).getName());
+            System.out.println(dealers.get(i).getStreet_Number() + " " + dealers.get(i).getStreet() + " " +
+                    dealers.get(i).getCity() + " " + dealers.get(i).getState() + " " + dealers.get(i).getZip());
+            System.out.println("--------");
+            numberOfDealers++;
+        }
+
+        System.out.print("Select a Dealer to buy from (input their number): ");
+        while (true) {
+            String optionInput = userin.next();
+
+            try {
+                dealerSelected = Integer.parseInt(optionInput);
+            } catch (java.lang.NumberFormatException e) {
+            }
+            if ((dealerSelected >= 0) && (dealerSelected < numberOfDealers))
+                break;
+            System.out.print("Please input a number from the list above: ");
+        }
+
+        System.out.println(dealers.get(dealerSelected).getName() + " was selected");
+
+        boolean stayInLoop = true;
+        ArrayList <String> whereClauseArrayList = new ArrayList<String>();
+
+        for (int i = 0; i < 10; i++) {
+            whereClauseArrayList.add("");
+        }
+
+        while (stayInLoop) {
+            int selection = -1;
+            System.out.println("\n--" + dealers.get(dealerSelected).getName() + "--");
+            System.out.println("1: View vehicles");
+            System.out.println("2: Alter search options");
+            System.out.println("3: View cart");
+            System.out.println("4: Main menu");
+
+            while (true) {
+                String optionInput = userin.next();
+                try {
+                    selection = Integer.parseInt(optionInput);
+                } catch (java.lang.NumberFormatException e) {
+                }
+                if ((selection > 0) && (selection <= 4))
+                    break;
+                System.out.print("Please input a number from the list above: ");
+            }
+
+            switch (selection) {
+
+                case 1:
+
+                    break;
+
+                case 2:
+                    whereClauseArrayList =
+                            alterWhereClause(demo, whereClauseArrayList, dealers.get(dealerSelected).getDealer_ID());
+                    break;
+
+                case 3:
+                    break;
+
+                case 4:
+                    stayInLoop = false;
+                    break;
+            }
+        }
+    }
+
+    /*
+     * Used to alter the where clause for our query
+     */
+    private static ArrayList<String> alterWhereClause(H2DemoMain demo, ArrayList<String> whereClauseArrayList, String currentDealerID ){
+        String Make = whereClauseArrayList.get(0);
+        String Model = whereClauseArrayList.get(1);
+        String Brand = whereClauseArrayList.get(2);
+        String Year = whereClauseArrayList.get(3);
+        String Engine = whereClauseArrayList.get(4);
+        String Color = whereClauseArrayList.get(5);
+        String Transmission = whereClauseArrayList.get(6);
+        String Drive_Type = whereClauseArrayList.get(7);
+        String Price = whereClauseArrayList.get(8);
+        String Miles =  whereClauseArrayList.get(9);
+
+        boolean keepAltering = true;
+        while (keepAltering) {
+            System.out.println("\n--Search Options--");
+            System.out.println("1:  Make");
+            System.out.println("2:  Model");
+            System.out.println("3:  Brand");
+            System.out.println("4:  Year");
+            System.out.println("5:  Engine");
+            System.out.println("6:  Color");
+            System.out.println("7:  Transmission");
+            System.out.println("8:  Drive_Type");
+            System.out.println("9:  Price");
+            System.out.println("10: Miles");
+            System.out.println("11: Stop altering attributes");
+            System.out.print("Select an option: ");
+
+            int selection = -1;
+            while (true) {
+                String optionInput = userin.next();
+                try {
+                    selection = Integer.parseInt(optionInput);
+                } catch (java.lang.NumberFormatException e) {
+                }
+                if ((selection > 0) && (selection <= 11))
+                    break;
+                System.out.print("Please input a number from the list above: ");
+            }
+
+            switch (selection) {
+                case 1:
+                    ArrayList<String > makeOptions = new ArrayList<String>();
+                    try {
+                        String query = "SELECT * FROM vehicles "
+                                + "INNER JOIN DealerVehicleInventory ON" +
+                                " DealerVehicleInventory.VIN = vehicles.VIN "
+                                + " WHERE DealerVehicleInventory.Dealer_ID =\'"
+                                + currentDealerID + "\';";
+                        Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                        ResultSet result = stmt.executeQuery(query);
+
+                        while(result.next()){
+                            if (!makeOptions.contains(result.getString(2))){
+                                makeOptions.add(result.getString(2));
+                            }
+                        }
+
+                    } catch (java.sql.SQLException e){}
+
+                    System.out.println("\n--Makes To Choose From--");
+                    for(int i = 0; i < makeOptions.size(); i++){
+                        System.out.println(i + ": " + makeOptions.get(i));
+                    }
+
+                    break;
+
+                case 2:
+                    break;
+
+                case 3:
+                    break;
+
+                case 11:
+                    keepAltering = false;
+                    break;
+            }
+        }
+        return whereClauseArrayList;
+    }
 
     public static void main(String[] args) {
 
@@ -248,25 +475,11 @@ public class userLoginMain {
         String location = System.getProperty("user.dir") + "/test";
         String user = "scj";
         String password = "password";
-        //Create the database connections, basically makes the database
+        //Create the database connections
         demo.createConnection(location, user, password);
 
         Customer currentCustomer = loginCustomer(demo);
-        System.out.println("Hello: " + currentCustomer.getName());
-        System.out.println(currentCustomer.getSSN() + "\n");
 
-        int option;
-        System.out.println("Select an option: ");
-        System.out.println("View Past sales: 1");
-
-        option = userin.nextInt();
-
-        switch (option) {
-            case 1:
-            viewPastSales(demo, currentCustomer);
-            break;
-
-
-        }
+        customerInteractionLoop(demo,currentCustomer);
     }
 }

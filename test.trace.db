@@ -601,3 +601,18 @@ SELECT SSN1 FROM (SELECT * FROM customer INNER JOIN customer_sale_table ON custo
 	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:227)
 	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:255)
 	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-04-01 12:05:21 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: The result set is not scrollable and can not be reset. You may need to use conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ..). [90128-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcResultSet.resetResult(JdbcResultSet.java:3282)
+	at org.h2.jdbc.JdbcResultSet.last(JdbcResultSet.java:2810)
+	at pdm.h2.demo.userLoginMain.viewPastSales(userLoginMain.java:284)
+	at pdm.h2.demo.userLoginMain.customerInteractionLoop(userLoginMain.java:238)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:305)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:196)
+2018-04-01 12:25:15 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "DELER" not found; SQL statement:
+SELECT * FROM deler; [42102-197]
