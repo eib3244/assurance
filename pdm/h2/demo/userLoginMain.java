@@ -258,31 +258,31 @@ public class userLoginMain {
 
         try {
             String query = "SELECT * FROM customer "
-                    + "INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN "
-                    + "INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID "
-                    + "INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN "
-                    + "INNER JOIN dealer ON dealer.Dealer_ID = customer_sale_table.Dealer_ID "
-                    + "WHERE customer.SSN=\'" + currentCustomer.getSSN() + "\';";
+                        + "INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN "
+                        + "INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID "
+                        + "INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN "
+                        + "INNER JOIN dealer ON dealer.Dealer_ID = customer_sale_table.Dealer_ID "
+                        + "WHERE customer.SSN=\'" + currentCustomer.getSSN() + "\';";
 
-            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            ResultSet result = stmt.executeQuery(query);
+                Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                ResultSet result = stmt.executeQuery(query);
 
-            while (result.next()){
-                Date date = new Date(result.getLong(15));
-                System.out.println("-----");
-                System.out.println("Sale Date: " + date);
-                System.out.println("Sale ID: " +result.getString(12) );
-                System.out.println("Total Sale Price: " + result.getString(16));
-                System.out.println("Dealer: " + result.getString(31));
-                System.out.println("Car Info: ");
-                System.out.println(result.getString(23) + " "
-                        + result.getString(25) + " "
-                        +result.getString(20) + " "
-                        +result.getString(21) + " "
-                        +result.getString(24) + " "
-                        +result.getString(27) + " "
-                        +result.getString(29) + " miles");
-                System.out.println("-----");
+                while (result.next()){
+                    Date date = new Date(result.getLong(15));
+                    System.out.println("-----");
+                    System.out.println("Sale Date: " + date);
+                    System.out.println("Sale ID: " +result.getString(12) );
+                    System.out.println("Total Sale Price: " + result.getString(16));
+                    System.out.println("Dealer: " + result.getString(31));
+                    System.out.println("Car Info: ");
+                    System.out.println(result.getString(23) + " "
+                            + result.getString(25) + " "
+                            +result.getString(20) + " "
+                            +result.getString(21) + " "
+                            +result.getString(24) + " "
+                            +result.getString(27) + " "
+                            +result.getString(29) + " miles");
+                    System.out.println("-----");
             }
             result.last();
             int lastResult = result.getRow();
@@ -449,10 +449,32 @@ public class userLoginMain {
                     } catch (java.sql.SQLException e){}
 
                     System.out.println("\n--Makes To Choose From--");
-                    for(int i = 0; i < makeOptions.size(); i++){
+                    int i;
+                    for(i = 0; i < makeOptions.size(); i++){
                         System.out.println(i + ": " + makeOptions.get(i));
                     }
+                    System.out.println(i + ": Clear preference");
 
+                    int makeSelection = -1;
+                    System.out.print("Select a make: ");
+                    while (true) {
+                        String optionInput = userin.next();
+                        try {
+                            makeSelection = Integer.parseInt(optionInput);
+                        } catch (java.lang.NumberFormatException e) {
+                        }
+                        if ((makeSelection >= 0) && (makeSelection < makeOptions.size() + 1))
+                            break;
+                        System.out.print("Please input a number from the list above: ");
+                    }
+                    if(makeSelection == makeOptions.size()) {
+                        Make = "";
+                        System.out.println("No preference selected");
+                    }
+                    else {
+                        Make = makeOptions.get(makeSelection);
+                        System.out.println("You selected " + Make + " for your make.");
+                    }
                     break;
 
                 case 2:

@@ -69,6 +69,10 @@ public class H2DemoMain {
 		
 		H2DemoMain demo = new H2DemoMain();
 
+//**********
+//TODO fix this so that the database only loads tables once !!!!
+//**********
+
 		// used for testing. allows us to run the program without having to delete the database.
 		try {
             java.nio.file.Files.deleteIfExists(Paths.get(System.getProperty("user.dir") + "/test.mv.db"));
