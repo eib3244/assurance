@@ -389,10 +389,10 @@ public class userLoginMain {
 
     private static ArrayList<Vehicle> viewVehiclesToBuy(H2DemoMain demo, ArrayList<String> whereClauseArrayList, String currentDealerID, ArrayList<Vehicle> cart){
 
-       // try {
+        try {
             String query = "SELECT * FROM vehicles "
                     + "INNER JOIN DealerVehicleInventory ON" +
-                    " DealerVehicleInventory.VIN = vehicles.VIN "
+                    " DealerVehicleInventory.VIN = vehicles.VIN"
                     + " WHERE DealerVehicleInventory.Dealer_ID =\'"
                     + currentDealerID + "\'";
 
@@ -405,7 +405,7 @@ public class userLoginMain {
             }
 
             if (addWhereClause){
-                query = query + " WHERE ";
+                query = query + " AND ";
                 if (!whereClauseArrayList.get(0).equals(""))
                     query = query + "vehicles.Make=\'" + whereClauseArrayList.get(0) +"\' AND ";
 
@@ -436,16 +436,33 @@ public class userLoginMain {
 
         System.out.println(("\'" + query.substring(query.length()-5, query.length()) + "\'"));
 
+            System.out.println(query);
             if(query.substring(query.length()-5, query.length()).equals(" AND ")){
                 query = query.substring(0,query.length()-5);
             }
             query = query + ";";
 
             System.out.println(query);
-            //Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-           // ResultSet result = stmt.executeQuery(query);
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery(query);
 
-       // } catch (java.sql.SQLException e){}
+            int i = 1;
+            while (result.next()){
+                System.out.println(i + ": " + result.getString(7) + " "
+                        + result.getString(5) + " "
+                        +result.getString(2) + " "
+                        +result.getString(3) + " "
+                        +result.getString(6) + " "
+                        +result.getString(8) + " "
+                        +result.getString(9) + " $"
+                        +result.getString(10));
+                System.out.println("-----");
+                i++;
+            }
+
+
+
+        } catch (java.sql.SQLException e){}
 
 
 
