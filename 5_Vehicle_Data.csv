@@ -1,8 +1,8 @@
 164x7ftifwa2c9w4x,Subaru,Legacy,Subaru,2007,V6,Mauv,Manual,RWD,31022,147844
 129je33c7ggsdkozd,Mercedes-Benz,SL-Class,Daimler AG,1990,V8,Green,Manual,AWD,12035,30909
-128zahzofhbnpm4xf,Jeep,Grand Cherokee,Chrysler†,1993,V8,Fuscia,Automatic,4WD,34927,65659
+128zahzofhbnpm4xf,Jeep,Grand Cherokee,Chrysler,1993,V8,Fuscia,Automatic,4WD,34927,65659
 11rrs4l1map186yts,Lincoln,Blackwood,GM,2003,V6,Khaki,Automatic,FWD,9045,27228
-10b0sp52zxug34i0t,Audi,S4,Volkswagen†,2001,4-cylinder,Teal,Automatic,RWD,27483,100537
+10b0sp52zxug34i0t,Audi,S4,Volkswagen,2001,4-cylinder,Teal,Automatic,RWD,27483,100537
 0xtunc1fpokmwxywt,Chevrolet,G-Series 1500,GM,1998,4-cylinder,Pink,Automatic,4WD,23096,89714
 0x58a5fq6xsecs5c0,Nissan,Xterra,Nissan,2005,V8,Yellow,Manual,RWD,12536,58549
 0ve619i66mxvxkmfl,GMC,Yukon,GM,2000,V6,Green,Manual,FWD,45756,197492
@@ -18,9 +18,9 @@
 0id3dkqb47moy1n2n,Oldsmobile,Silhouette,GM,1997,V8,Turquoise,Manual,AWD,48384,196799
 0heyjkjjxdwgt4jkv,Ferrari,612 Scaglietti,Ferrari,2008,4-cylinder,Violet,Manual,RWD,29545,127655
 0ga17id2ndk97oyt0,Mitsubishi,RVR,Mitsubishi,1994,V6,Orange,Manual,AWD,48678,89111
-0g1pags931ez523et,Ram,2500,Chrysler†,2011,4-cylinder,Fuscia,Automatic,AWD,13383,89295
+0g1pags931ez523et,Ram,2500,Chrysler,2011,4-cylinder,Fuscia,Automatic,AWD,13383,89295
 0fk39cfp5e60k3c78,Hyundai,Accent,Hyundai,1999,V6,Maroon,Manual,RWD,13764,138003
-0b9segx19zlrrzu58,Jeep,Liberty,Chrysler†,2008,4-cylinder,Blue,Manual,FWD,45108,9807
+0b9segx19zlrrzu58,Jeep,Liberty,Chrysler,2008,4-cylinder,Blue,Manual,FWD,45108,9807
 08mxjv1loww61qc3j,Dodge,Caravan,Chrysler,1996,V6,Blue,Manual,RWD,34067,2978
 08l00gygdnvnn95um,Chrysler,Town & Country,Chrysler,2005,V6,Green,Manual,4WD,35996,128951
 08exdjsvcuvgetmmm,Acura,RL,Honda,2009,V6,Green,Automatic,RWD,11695,19926
@@ -34,8 +34,8 @@
 zwc8eu2gi9495jh2s,Chrysler,Town & Country,Chrysler,2010,V8,Blue,Manual,FWD,17473,115843
 zvdz422w3zqnplrsf,GMC,Safari,GM,2003,V6,Orange,Automatic,4WD,27383,83275
 zsy7yxafbunm0af5a,Dodge,Charger,Chrysler,1970,V8,Red,Automatic,FWD,19337,184777
-zopimxohkmqqwuj1c,Ram,C/V,Chrysler†,2012,V8,Yellow,Manual,4WD,15017,74011
-zoco057jd9o80e607,Audi,S4,Volkswagen†,2006,V6,Turquoise,Manual,RWD,27910,166983
+zopimxohkmqqwuj1c,Ram,C/V,Chrysler,2012,V8,Yellow,Manual,4WD,15017,74011
+zoco057jd9o80e607,Audi,S4,Volkswagen,2006,V6,Turquoise,Manual,RWD,27910,166983
 znjsup6we844sbifb,Chevrolet,Lumina,GM,1996,V6,Fuscia,Automatic,4WD,40258,180668
 zlaxxhwoho5z0z5es,Oldsmobile,Cutlass Supreme,GM,1995,V6,Puce,Automatic,4WD,11971,86338
 zkl7m5su03ap4ibi0,Volkswagen,Golf,Volkswagen,1999,V6,Goldenrod,Automatic,AWD,38385,145915
@@ -45,14 +45,14 @@ zdpr6nawdevlksg36,GMC,Vandura 3500,GM,1992,4-cylinder,Red,Manual,AWD,13977,10744
 zcgp3uwagfswp93s2,Hyundai,Santa Fe,Hyundai,2009,V6,Aquamarine,Automatic,RWD,38007,52397
 zbh1ghbrktxwqhw46,Mazda,Mazda3,Mazda,2004,4-cylinder,Khaki,Automatic,RWD,19291,162439
 zathytcz9ymsdrjfx,Mercury,Mystique,Ford,1999,4-cylinder,Crimson,Manual,AWD,26824,11308
-zaa1h63o08u14gnxk,Audi,100,Volkswagen†,1993,V6,Crimson,Manual,4WD,40983,30445
+zaa1h63o08u14gnxk,Audi,100,Volkswagen,1993,V6,Crimson,Manual,4WD,40983,30445
 z932cbiddpeetobn4,Mercedes-Benz,SLK-Class,Daimler AG,2005,V6,Indigo,Manual,FWD,48497,12591
 z8lskwwaanuphkoo7,Toyota,Tundra,Toyota,2000,4-cylinder,Yellow,Manual,4WD,28033,127135
 z82n1dn6cou0pkxog,Honda,Prelude,Honda,2000,4-cylinder,Turquoise,Automatic,AWD,42225,10372
-z49luv9pw33b48g0v,Audi,S6,Volkswagen†,2007,V6,Khaki,Manual,FWD,15236,7111
+z49luv9pw33b48g0v,Audi,S6,Volkswagen,2007,V6,Khaki,Manual,FWD,15236,7111
 z49g2pydztao2tpjb,Nissan,350Z,Nissan,2004,V8,Maroon,Automatic,4WD,31735,27127
 z3dcq7h3zyvn1afg4,Acura,CL,Honda,2003,V8,Turquoise,Automatic,FWD,26268,98470
-z2tyjhbi81dq45iq5,Audi,S4,Volkswagen†,2002,4-cylinder,Goldenrod,Automatic,RWD,46629,19288
+z2tyjhbi81dq45iq5,Audi,S4,Volkswagen,2002,4-cylinder,Goldenrod,Automatic,RWD,46629,19288
 z2t41djn9kqapyxr2,Volvo,850,Volkswagen,1996,4-cylinder,Pink,Manual,4WD,18334,65013
 yzabdadm7c1142h2l,Ford,Windstar,Ford,1996,4-cylinder,Turquoise,Automatic,4WD,5663,129554
 yx2qi3arhu4zwp4cx,GMC,Jimmy,GM,1999,4-cylinder,Goldenrod,Automatic,RWD,12413,116470
@@ -62,7 +62,7 @@ ytbd3czozi0mxk9dp,Mazda,Millenia,Mazda,1997,V6,Blue,Automatic,4WD,11387,98546
 yp0msva7tta4h7p6n,Porsche,Cayman,Porsche,2010,4-cylinder,Fuscia,Manual,4WD,49437,154829
 yn05lkw13stea219j,Nissan,300ZX,Nissan,1993,V6,Crimson,Manual,RWD,39922,188160
 ymepa3bsoo9r00khz,Cadillac,SRX,GM,2005,V6,Yellow,Manual,4WD,15468,33594
-ylaawarai12myclzg,Audi,Coupe Quattro,Volkswagen†,1991,V6,Indigo,Manual,4WD,10538,114486
+ylaawarai12myclzg,Audi,Coupe Quattro,Volkswagen,1991,V6,Indigo,Manual,4WD,10538,114486
 yknl2au38cyfkvyq8,Pontiac,GTO,GM,2005,V8,Red,Manual,RWD,19451,53633
 yju3yaw905ub53o3j,Subaru,B9 Tribeca,Subaru,2006,V8,Aquamarine,Manual,AWD,40661,131500
 yi02qjkzjg4bld189,Volkswagen,Golf,Volkswagen,1986,4-cylinder,Pink,Manual,FWD,42169,6825
@@ -100,7 +100,7 @@ xi6rpn8sirtc4ibf3,Chevrolet,Aveo,GM,2011,4-cylinder,Maroon,Manual,RWD,15690,1091
 xf8kxvjzll33uihyu,Subaru,Legacy,Subaru,2012,V8,Goldenrod,Automatic,4WD,32068,28491
 xf44vqylfltz0g1g1,Dodge,Caravan,Chrysler,2009,4-cylinder,Green,Manual,FWD,9961,178178
 xdat6wh8c9ln6di6q,Chevrolet,2500,GM,1993,V6,Violet,Automatic,AWD,42079,24178
-xcvrr6agd92vx3cun,Jeep,Grand Cherokee,Chrysler†,2006,V6,Turquoise,Automatic,4WD,24147,161773
+xcvrr6agd92vx3cun,Jeep,Grand Cherokee,Chrysler,2006,V6,Turquoise,Automatic,4WD,24147,161773
 xcsn3jraggylenj73,Land Rover,Freelander,Land Rover,2010,4-cylinder,Maroon,Manual,4WD,36063,22381
 xcovmge5xa4fe8h3i,Mazda,Mazda5,Mazda,2006,V6,Indigo,Automatic,FWD,28104,107172
 xckayp02mcyfxd1rz,Chevrolet,Silverado 3500,GM,2011,V6,Mauv,Automatic,AWD,32604,198593
@@ -145,8 +145,8 @@ w837jrndvdc3g23jo,Chevrolet,Monte Carlo,GM,2004,V8,Blue,Automatic,4WD,9292,84799
 w5s6ep777kd23cy7z,Nissan,350Z,Nissan,2004,V8,Maroon,Manual,4WD,7095,139512
 w3c4054o4xlkiuzrp,Nissan,Altima,Nissan,1995,4-cylinder,Khaki,Automatic,RWD,27700,21893
 w2sofo6d3ht8rosg0,Nissan,240SX,Nissan,1997,4-cylinder,Teal,Automatic,RWD,39355,99559
-w1ukikxojjx2o4do0,Audi,A6,Volkswagen†,2000,V8,Mauv,Manual,AWD,9570,155715
-w0mwlfeoshwluped0,Audi,A6,Volkswagen†,2007,V8,Pink,Automatic,RWD,38491,148012
+w1ukikxojjx2o4do0,Audi,A6,Volkswagen,2000,V8,Mauv,Manual,AWD,9570,155715
+w0mwlfeoshwluped0,Audi,A6,Volkswagen,2007,V8,Pink,Automatic,RWD,38491,148012
 vzpk9bjmu3g5yrx2u,Lexus,IS F,Toyota,2011,V6,Indigo,Manual,AWD,49072,62618
 vzj5xrpferco7tgvx,Ford,F150,Ford,1995,V6,Violet,Automatic,AWD,8845,109270
 vy6gdbev6yicrlvsv,Mercedes-Benz,SLR McLaren,Daimler AG,2006,V8,Aquamarine,Automatic,4WD,13674,125067
@@ -183,22 +183,22 @@ urb2jrfaajbzy88x3,Jaguar,XJ,Land Rover,2006,4-cylinder,Puce,Manual,AWD,25290,259
 ur6y8hmiysb80jcpv,Mitsubishi,Challenger,Mitsubishi,2000,V6,Maroon,Automatic,AWD,29628,143932
 ur6ixr6d37nyof7b8,Oldsmobile,Intrigue,GM,2000,V6,Indigo,Manual,AWD,28089,59674
 uq58tfurct0bhr10r,Eagle,Talon,Chrysler,1997,V6,Khaki,Manual,RWD,17594,70563
-upckv53kobebqycbh,Audi,S4,Volkswagen†,2000,V6,Turquoise,Automatic,4WD,49268,151179
+upckv53kobebqycbh,Audi,S4,Volkswagen,2000,V6,Turquoise,Automatic,4WD,49268,151179
 uokq85qlnwiabgshm,Mercury,Grand Marquis,Ford,2009,V8,Khaki,Automatic,AWD,14729,123258
 uncipgt453fihg0b7,Chevrolet,Suburban 2500,GM,2009,4-cylinder,Yellow,Manual,AWD,42421,140914
 um0obym5fsnbar86v,Saab,3-Sep,Saab,2003,4-cylinder,Crimson,Manual,RWD,40481,79184
 ujidmqh9t40qwiwqa,Pontiac,6000,GM,1991,V6,Red,Manual,RWD,14487,188556
-ujdrnk0j42mpey312,Audi,Quattro,Volkswagen†,1992,4-cylinder,Orange,Manual,AWD,6622,2527
+ujdrnk0j42mpey312,Audi,Quattro,Volkswagen,1992,4-cylinder,Orange,Manual,AWD,6622,2527
 uh1ovk8t8wnoci7wt,Honda,Accord,Honda,2002,V8,Fuscia,Automatic,FWD,48475,140787
 ugkcposu7k52y65h4,Cadillac,STS,GM,2005,V6,Khaki,Manual,RWD,20558,105897
 u84em80tnrwxp62ks,Mazda,Tribute,Mazda,2008,V6,Goldenrod,Automatic,RWD,9962,103350
 u81e0n43s953jzdyd,Kia,Amanti,Kia,2004,V8,Fuscia,Manual,RWD,45113,62351
 u6nn9b8eyz05845k8,Lamborghini,Murci√©lago,Lamborghini,2009,V6,Teal,Manual,4WD,17605,151363
 u63w1x4whbjecgxes,Dodge,Dakota,Chrysler,1994,V6,Orange,Automatic,FWD,23197,157317
-u441bk95ayrd5z314,Audi,A6,Volkswagen†,1999,V8,Purple,Automatic,RWD,21114,165300
+u441bk95ayrd5z314,Audi,A6,Volkswagen,1999,V8,Purple,Automatic,RWD,21114,165300
 u37bjig5w3u4gok1h,Toyota,Land Cruiser,Toyota,2002,V6,Khaki,Automatic,RWD,15454,94912
 u2n396uhx8jmid5st,Ford,Excursion,Ford,2003,V8,Orange,Manual,RWD,11553,62694
-u0575pvqbu7nune3b,Audi,S4,Volkswagen†,1992,V8,Goldenrod,Automatic,4WD,30319,49769
+u0575pvqbu7nune3b,Audi,S4,Volkswagen,1992,V8,Goldenrod,Automatic,4WD,30319,49769
 u04kyivrjix8ugijj,Acura,RSX,Honda,2003,V6,Violet,Manual,4WD,24399,188954
 txdoev5do6laz1web,Mazda,MX-5,Mazda,1997,4-cylinder,Crimson,Manual,4WD,23853,54144
 tvw5c4cc4qftzv78j,Toyota,Sequoia,Toyota,2001,4-cylinder,Crimson,Automatic,FWD,30192,85125
@@ -215,7 +215,7 @@ tkpl53piuj7qqlkbp,Hyundai,Accent,Hyundai,2002,4-cylinder,Purple,Automatic,AWD,36
 tkby6nlbpmn64gkou,BMW,M3,Rolls-Royce,2010,V6,Red,Manual,4WD,36728,193428
 t9lfy2uw9p34e0nao,Mitsubishi,Galant,Mitsubishi,2000,4-cylinder,Violet,Automatic,RWD,8567,99582
 t93qkxe45j7znbphe,Oldsmobile,Aurora,GM,1999,4-cylinder,Violet,Manual,AWD,47148,24239
-t8s2d6v4ev7546ulc,Audi,A4,Volkswagen†,2005,4-cylinder,Red,Automatic,4WD,18703,34969
+t8s2d6v4ev7546ulc,Audi,A4,Volkswagen,2005,4-cylinder,Red,Automatic,4WD,18703,34969
 t88vbhxufqacldnai,Mazda,MX-6,Mazda,1994,V8,Pink,Automatic,4WD,45048,195454
 t6x9lgg58icrq4fk5,Volvo,S80,Volkswagen,2006,V6,Green,Manual,FWD,24194,52447
 t2jpeoghoc8ne56uc,Chevrolet,SSR,GM,2005,4-cylinder,Green,Manual,AWD,7246,95742
@@ -254,7 +254,7 @@ s5sg2qf2dnhhb0vl4,Chevrolet,G-Series G10,GM,1993,4-cylinder,Orange,Manual,4WD,24
 s4fxy4gdvvlikkbgx,Infiniti,EX,Nissan,2009,4-cylinder,Aquamarine,Manual,AWD,26752,132862
 s3alle3evx81xv3zx,Volkswagen,Jetta,Volkswagen,1985,V6,Yellow,Manual,RWD,42311,125362
 s0bh96yut56wf7vgg,Subaru,Impreza WRX,Subaru,2011,4-cylinder,Maroon,Automatic,FWD,45143,102233
-ryvdonpd379myj7pu,Jeep,Grand Cherokee,Chrysler†,2008,4-cylinder,Aquamarine,Manual,RWD,21202,38382
+ryvdonpd379myj7pu,Jeep,Grand Cherokee,Chrysler,2008,4-cylinder,Aquamarine,Manual,RWD,21202,38382
 ryv55rktj3cnzteay,Oldsmobile,Achieva,GM,1997,V6,Mauv,Automatic,AWD,19648,36024
 ryfvmhope6mwsu99r,Plymouth,Laser,GM,1992,4-cylinder,Pink,Automatic,AWD,23908,199749
 rx5tiz34qxfi6e0ou,Toyota,Avalon,Toyota,1996,V8,Red,Manual,FWD,42784,165550
@@ -326,7 +326,7 @@ p9dbxu7g1ffv7itri,Pontiac,Bonneville,GM,2003,4-cylinder,Green,Manual,AWD,14867,1
 p7jqgo5lzs7fa0hdt,Holden,VS Commodore,Holden,1996,4-cylinder,Violet,Automatic,AWD,7019,114447
 p5uex6ipte359nqih,Bentley,Continental Super,BMC,2010,V8,Goldenrod,Automatic,RWD,23823,90632
 p4tewec0gwjpo4vqr,Dodge,Caravan,Chrysler,1995,4-cylinder,Mauv,Manual,4WD,37980,190276
-p4p2v0mygok6dxpkb,Audi,A8,Volkswagen†,2000,V8,Indigo,Manual,FWD,44925,167185
+p4p2v0mygok6dxpkb,Audi,A8,Volkswagen,2000,V8,Indigo,Manual,FWD,44925,167185
 p4npar4zoo1co39x2,Pontiac,Grand Am,GM,2003,V6,Fuscia,Automatic,FWD,17703,169863
 p4kux7vpd4mku1msq,Land Rover,Discovery,Land Rover,2012,V6,Mauv,Manual,AWD,43665,119998
 p3xgzwcrd3ocs3ps2,GMC,Suburban 1500,GM,1998,4-cylinder,Puce,Manual,RWD,39674,111910
@@ -356,7 +356,7 @@ o2ee5sjtg47pnm1ep,Hummer,H2,GM,2005,V8,Purple,Automatic,RWD,11955,7002
 o0xz6cbz1ru4vd3y6,Chevrolet,Cavalier,GM,2004,4-cylinder,Purple,Manual,RWD,21240,118795
 nyru1mciasb3aqczw,Chevrolet,Avalanche,GM,2006,V6,Khaki,Manual,RWD,36608,188696
 nyowoax5l5oz52d53,Bentley,Azure,BMC,2009,V6,Pink,Manual,RWD,46524,138451
-nxrydztp3hc9wzm7n,Audi,Coupe Quattro,Volkswagen†,1991,4-cylinder,Yellow,Manual,FWD,47287,166611
+nxrydztp3hc9wzm7n,Audi,Coupe Quattro,Volkswagen,1991,4-cylinder,Yellow,Manual,FWD,47287,166611
 nuxwe77hb28y0po0u,Subaru,Alcyone SVX,Subaru,1994,V6,Orange,Automatic,AWD,37807,72031
 nub2mjlkasa7v3wfe,Ford,Ranger,Ford,2011,V6,Green,Automatic,4WD,6434,168867
 nsrn90g3w0hl8bsnq,GMC,Vandura 1500,GM,1994,V6,Khaki,Manual,AWD,43190,170211
@@ -386,7 +386,7 @@ n58tbosce4t5t6v06,Saab,3-Sep,Saab,2007,V6,Violet,Automatic,4WD,5090,135923
 n37nt5hqg2m2uaki8,Cadillac,SRX,GM,2005,V8,Green,Manual,FWD,25067,40475
 n2gudjl95ywuum1aj,Cadillac,DeVille,GM,2002,4-cylinder,Yellow,Automatic,RWD,12537,194848
 n26gjhqtaau1vtv8k,Toyota,Avalon,Toyota,2005,V6,Goldenrod,Manual,RWD,43814,176287
-n1gr244vyv63ukivo,Jeep,Grand Cherokee,Chrysler†,2001,V8,Crimson,Automatic,FWD,6630,32507
+n1gr244vyv63ukivo,Jeep,Grand Cherokee,Chrysler,2001,V8,Crimson,Automatic,FWD,6630,32507
 mvbmtxcf2viv887xo,Lexus,SC,Toyota,1992,4-cylinder,Yellow,Automatic,FWD,29989,112742
 muz1gyazxf9cdz92w,Hummer,H3,GM,2006,V6,Maroon,Automatic,RWD,35252,156241
 mq98s4l2eak4a5fso,Dodge,Ram 3500,Chrysler,2007,V8,Crimson,Automatic,4WD,45514,42233
@@ -405,7 +405,7 @@ mf57t6e69so17m1f4,GMC,Suburban 1500,GM,1992,4-cylinder,Teal,Manual,RWD,32366,153
 mee0jsxvsilgpy4h8,Pontiac,Bonneville,GM,1990,V6,Yellow,Automatic,AWD,16326,173791
 mdtfrc2b83zr6blus,Chevrolet,Camaro,GM,1975,V8,Puce,Manual,AWD,45360,87646
 md3kdunsl2aa1mjd4,Acura,TL,Honda,2010,4-cylinder,Mauv,Manual,FWD,34299,63352
-md34x767wjee2kaj2,Jeep,Grand Cherokee,Chrysler†,1993,V6,Khaki,Manual,FWD,18014,31434
+md34x767wjee2kaj2,Jeep,Grand Cherokee,Chrysler,1993,V6,Khaki,Manual,FWD,18014,31434
 mc16boc69e65kbgxh,Nissan,Frontier,Nissan,2006,V6,Turquoise,Automatic,FWD,10417,156889
 madn21ftl6ea1r0fu,Volkswagen,Jetta III,Volkswagen,1993,V8,Aquamarine,Automatic,FWD,7799,79041
 m750vv5ycnbwn0jpf,Ford,Expedition,Ford,2004,V8,Puce,Automatic,RWD,33487,117327
@@ -420,7 +420,7 @@ lwlj9fbpwrkbqttpn,Volkswagen,Cabriolet,Volkswagen,1985,V6,Blue,Automatic,4WD,294
 lw0dxvy7h7r9x64vj,Infiniti,QX56,Nissan,2011,V6,Khaki,Automatic,4WD,31782,112415
 lvbtgzabbo9p4omai,Saturn,VUE,GM,2005,V6,Green,Manual,FWD,20771,156244
 lticcbxog02njlnj1,Nissan,Pathfinder,Nissan,1995,V8,Mauv,Manual,AWD,19308,37476
-lse9siz3jxkdis8mn,Audi,4000CS Quattro,Volkswagen†,1986,V6,Green,Automatic,RWD,26888,29384
+lse9siz3jxkdis8mn,Audi,4000CS Quattro,Volkswagen,1986,V6,Green,Automatic,RWD,26888,29384
 lruwitv5cdj44lhi1,Ford,E250,Ford,2010,V6,Teal,Manual,AWD,29192,193153
 lptmwi514dpqcqes9,Ford,F350,Ford,1992,V6,Turquoise,Automatic,RWD,47628,115991
 lp0rupwy88gsco0g2,Ford,F250,Ford,2010,4-cylinder,Mauv,Automatic,FWD,10565,129978
@@ -442,7 +442,7 @@ kvjxa5g378h7614qk,Nissan,Altima,Nissan,2001,V8,Yellow,Automatic,RWD,16998,132524
 kucunxkn918kjbxy5,Buick,Coachbuilder,GM,1990,V8,Turquoise,Automatic,RWD,43251,199628
 ktuq8z3mvb6ndj2o8,Scion,tC,Toyota,2010,V6,Red,Manual,AWD,48991,149682
 ktd7uc2bnzlhn25cx,Buick,Century,GM,1989,V8,Indigo,Automatic,RWD,39049,82801
-ks2gfxt85689ymv50,MINI,MINI,BMW†,2002,V8,Blue,Automatic,AWD,30361,153461
+ks2gfxt85689ymv50,MINI,MINI,BMW,2002,V8,Blue,Automatic,AWD,30361,153461
 kqvpz8rerv5xblexa,Kia,Spectra,Kia,2007,4-cylinder,Purple,Automatic,RWD,17189,190647
 kpqvqvtnnhzii7jw1,Volkswagen,Cabriolet,Volkswagen,2001,V6,Purple,Manual,FWD,26584,126323
 kp1zo74of6h84bcd2,Subaru,XT,Subaru,1985,V6,Crimson,Automatic,4WD,5758,869
@@ -478,7 +478,7 @@ jjqwbn65507akyldy,Honda,Accord,Honda,2003,4-cylinder,Mauv,Automatic,4WD,17478,17
 jiqejfc4ygorp9mwf,Plymouth,Breeze,GM,1997,V8,Mauv,Automatic,FWD,40968,198495
 jhza3cicu9hridtu0,Mazda,MPV,Mazda,1990,V8,Indigo,Automatic,AWD,34326,168617
 jfjb55iuhlg0vll31,Mitsubishi,Montero,Mitsubishi,1992,V6,Khaki,Manual,4WD,31438,151478
-jfhdbbc68vd92ts2z,Jeep,Wrangler,Chrysler†,2002,4-cylinder,Purple,Automatic,FWD,26742,13210
+jfhdbbc68vd92ts2z,Jeep,Wrangler,Chrysler,2002,4-cylinder,Purple,Automatic,FWD,26742,13210
 jegbo0obx213o6yee,Toyota,Avalon,Toyota,2000,V8,Maroon,Automatic,AWD,9421,48370
 jdndgo8ztylz4pjkv,Nissan,350Z,Nissan,2003,V6,Puce,Automatic,RWD,35948,62488
 jdet1ibl6wwdyclny,Honda,S2000,Honda,2005,V6,Goldenrod,Manual,FWD,43689,86327
@@ -491,14 +491,14 @@ j67xf1bh89e9wpr20,Buick,Skylark,GM,1985,V8,Orange,Automatic,FWD,18509,11497
 j16na6rske2556i0l,Chevrolet,Silverado 1500,GM,2009,V6,Indigo,Automatic,AWD,24814,151767
 j0geltgyx2xvjuuf5,Mitsubishi,Mighty Max,Mitsubishi,1995,V8,Yellow,Manual,RWD,49396,154114
 j02q7pg8bdbe64t42,Suzuki,Swift,Suzuki,1993,V6,Blue,Automatic,AWD,41696,59327
-izv3yx57tdofb0fjn,Audi,A6,Volkswagen†,2001,V8,Green,Manual,AWD,7351,77664
+izv3yx57tdofb0fjn,Audi,A6,Volkswagen,2001,V8,Green,Manual,AWD,7351,77664
 ix5iho6w8gtv76nsb,Dodge,Ram Van 3500,Chrysler,2003,4-cylinder,Maroon,Manual,RWD,35478,195599
 iwqmby996pad064jv,Mitsubishi,Pajero,Mitsubishi,2001,V8,Yellow,Automatic,AWD,24085,158648
-iv8cahrzv20xn93fk,Audi,Coupe Quattro,Volkswagen†,1991,V8,Mauv,Manual,AWD,19228,56489
+iv8cahrzv20xn93fk,Audi,Coupe Quattro,Volkswagen,1991,V8,Mauv,Manual,AWD,19228,56489
 iv3aueo0n8nam66vc,Chevrolet,Express 2500,GM,1997,4-cylinder,Teal,Automatic,FWD,12719,14677
 iuiz3syzc1pvvr2ho,Lexus,SC,Toyota,1998,V8,Pink,Manual,FWD,40158,21312
 iu2254oyj1i2rn0fz,Mitsubishi,Chariot,Mitsubishi,1996,V8,Goldenrod,Automatic,4WD,36191,40666
-is9yrtsmij6792bov,Jeep,Grand Cherokee,Chrysler†,2001,V6,Indigo,Manual,4WD,39564,158539
+is9yrtsmij6792bov,Jeep,Grand Cherokee,Chrysler,2001,V6,Indigo,Manual,4WD,39564,158539
 ir7byzk8dt4j6b0df,Hummer,H1,GM,2003,V8,Mauv,Automatic,FWD,28249,160630
 iqvhv9465h6lv984y,Mercury,Tracer,Ford,1996,4-cylinder,Maroon,Automatic,AWD,12115,198669
 iqgyy8zj2nyfkhmkj,Saab,900,Saab,1990,V6,Turquoise,Automatic,AWD,18818,36845
@@ -544,7 +544,7 @@ hbpkj0yztylmy9jqn,Acura,RL,Honda,2010,V8,Yellow,Automatic,FWD,34554,116017
 hbnf3u32no6qlcypt,Chevrolet,Corvette,GM,2009,4-cylinder,Pink,Automatic,RWD,13087,69352
 h9irwaqfj6cylbaf5,Chevrolet,Express 2500,GM,2004,4-cylinder,Blue,Automatic,AWD,27480,68599
 h7oc9wsjs1klvx8mv,Mercedes-Benz,C-Class,Daimler AG,2003,V8,Violet,Automatic,4WD,45394,88957
-h7mi0zb2vurpilwyd,Audi,100,Volkswagen†,1989,V6,Pink,Automatic,FWD,43818,173967
+h7mi0zb2vurpilwyd,Audi,100,Volkswagen,1989,V6,Pink,Automatic,FWD,43818,173967
 h5tna90rfw2me2fmi,Chevrolet,G-Series G20,GM,1995,V8,Green,Automatic,RWD,28962,99312
 h39p7p6axllztzf7v,Eagle,Summit,Chrysler,1994,V6,Crimson,Manual,4WD,30314,104755
 h2pao889vom3fqla0,Dodge,Intrepid,Chrysler,2003,4-cylinder,Teal,Automatic,FWD,42206,12994
@@ -556,15 +556,15 @@ gwj5q4rmv3ohbfra2,Suzuki,Swift,Suzuki,2000,V6,Crimson,Automatic,FWD,32124,71998
 gvwtouudcg5onqkms,Mercedes-Benz,E-Class,Daimler AG,1995,4-cylinder,Mauv,Manual,FWD,44329,118284
 gvu6nzquh7jzsfn14,Chevrolet,Malibu,GM,2000,4-cylinder,Pink,Automatic,RWD,28954,15151
 gvmns5760wkphcw3f,Jaguar,XK Series,Land Rover,2001,4-cylinder,Crimson,Automatic,RWD,24469,37697
-gu3nur5zcpqsdu5sl,Jeep,Grand Cherokee,Chrysler†,2001,4-cylinder,Red,Automatic,4WD,27642,164118
-gs48ca63snmj81bkf,Ram,2500,Chrysler†,2012,V8,Blue,Automatic,FWD,39579,183823
+gu3nur5zcpqsdu5sl,Jeep,Grand Cherokee,Chrysler,2001,4-cylinder,Red,Automatic,4WD,27642,164118
+gs48ca63snmj81bkf,Ram,2500,Chrysler,2012,V8,Blue,Automatic,FWD,39579,183823
 grwou7ptt06gszhky,Subaru,Outback,Subaru,2006,V8,Indigo,Automatic,AWD,42829,99070
 gqomsceab7v6fd39e,Mazda,RX-8,Mazda,2005,V8,Turquoise,Manual,4WD,16118,98323
 gqcgmq8ff71bt1tup,GMC,Sierra 2500,GM,1999,V8,Crimson,Manual,4WD,11864,64455
 gp6otxytv34vpa7f8,BMW,M5,Rolls-Royce,2000,4-cylinder,Goldenrod,Automatic,FWD,21283,157408
 go49mru8p4xy3k8zv,Mercury,Tracer,Ford,1991,V8,Mauv,Manual,4WD,34551,16690
 go04sjgamhv7z8011,Toyota,Sequoia,Toyota,2008,4-cylinder,Goldenrod,Manual,RWD,8435,44704
-gkwcmmgw0ea1fgr23,Audi,TT,Volkswagen†,2004,V8,Purple,Manual,RWD,16878,92777
+gkwcmmgw0ea1fgr23,Audi,TT,Volkswagen,2004,V8,Purple,Manual,RWD,16878,92777
 gik3f3ui85r3jbqqi,Pontiac,Fiero,GM,1988,4-cylinder,Green,Manual,RWD,20067,173201
 ghmytwmu1pn1ym96y,Toyota,Camry Solara,Toyota,2007,V6,Mauv,Manual,FWD,29209,187525
 gh3hx29kxd8l70ccl,Ford,Mustang,Ford,1993,4-cylinder,Puce,Manual,FWD,13058,182165
@@ -630,7 +630,7 @@ egd9epyrto4hozvh9,Ford,Fusion,Ford,2010,V6,Blue,Manual,4WD,48266,173463
 ef6qqrwz72l0x3ib5,Bentley,Arnage,BMC,2008,V6,Crimson,Automatic,FWD,39949,2564
 eezkl0lcydrxctvbe,Ford,E-Series,Ford,2004,V8,Crimson,Automatic,RWD,32802,77036
 eey7kli745skxk9tf,Suzuki,Daewoo Lacetti,Suzuki,2007,V8,Khaki,Manual,AWD,11470,164547
-eejljigydw55evges,Audi,Quattro,Volkswagen†,1993,V8,Yellow,Automatic,AWD,11052,168355
+eejljigydw55evges,Audi,Quattro,Volkswagen,1993,V8,Yellow,Automatic,AWD,11052,168355
 ee92yzzrfp9mabaee,Volkswagen,GTI,Volkswagen,2008,4-cylinder,Khaki,Automatic,FWD,29262,40286
 edgojov8alnhv4qj0,Dodge,Ram Van 2500,Chrysler,1998,V6,Mauv,Manual,AWD,31997,146686
 ecuhkvi6s4vssf8pd,Mazda,929,Mazda,1992,V6,Mauv,Automatic,4WD,47777,140527
@@ -638,12 +638,12 @@ ecjgh1eb1d0qag9pp,Acura,NSX,Honda,1995,4-cylinder,Purple,Automatic,AWD,5826,2861
 ecdnhjd0han4stjm2,Buick,Reatta,GM,1988,V6,Teal,Automatic,FWD,35254,195238
 eaylme91qufxjesi6,Oldsmobile,98,GM,1993,V8,Yellow,Manual,RWD,38347,67722
 e9sua9cdhn9fe5mnf,Dodge,Ram 3500,Chrysler,2004,V6,Pink,Manual,FWD,9558,115029
-e9mzkpwqtmheu1qpi,Audi,Allroad,Volkswagen†,2002,4-cylinder,Orange,Manual,4WD,13512,94186
+e9mzkpwqtmheu1qpi,Audi,Allroad,Volkswagen,2002,4-cylinder,Orange,Manual,4WD,13512,94186
 e6tvp5sr5e0096olx,Bentley,Continental Super,BMC,2011,V8,Maroon,Manual,RWD,36417,9519
 e6f2e0h22qla6jfyf,Lexus,ES,Toyota,1994,4-cylinder,Yellow,Automatic,RWD,27480,131768
 e6467xljimczvideg,Saturn,L-Series,GM,2005,V8,Goldenrod,Automatic,FWD,15738,112090
 e4k7f9ncoykwi5ycz,Mercury,Villager,Ford,2002,4-cylinder,Puce,Manual,AWD,30098,197802
-e1q0t0t0bzy1ezsdc,Audi,S4,Volkswagen†,2011,4-cylinder,Goldenrod,Manual,FWD,43999,191408
+e1q0t0t0bzy1ezsdc,Audi,S4,Volkswagen,2011,4-cylinder,Goldenrod,Manual,FWD,43999,191408
 e19zezkrm7d01ak8q,GMC,Acadia,GM,2011,4-cylinder,Aquamarine,Automatic,4WD,32961,35470
 e0ixcs69zlr6ije8y,Nissan,Rogue,Nissan,2008,4-cylinder,Fuscia,Automatic,RWD,28135,104019
 e0ggyhz9i52x1obds,Isuzu,i-Series,Isuzu,2008,V8,Maroon,Automatic,AWD,20253,142110
@@ -697,7 +697,7 @@ cnc9xjtvj2shu0b8k,Pontiac,GTO,GM,1969,4-cylinder,Teal,Automatic,FWD,8866,167645
 clorzr7jjb2dskk1w,Toyota,Land Cruiser,Toyota,1997,V6,Puce,Manual,4WD,19275,158161
 cjovyvyvk80qnbapy,Pontiac,Trans Sport,GM,1999,V6,Red,Manual,AWD,17802,91807
 ci8wcmkgousi5w1jl,Ford,Thunderbird,Ford,1958,4-cylinder,Turquoise,Manual,AWD,46993,74544
-ce153mc5tiwu42aip,Audi,A4,Volkswagen†,2006,V6,Violet,Automatic,FWD,11089,59071
+ce153mc5tiwu42aip,Audi,A4,Volkswagen,2006,V6,Violet,Automatic,FWD,11089,59071
 cattwwu7yim4gdrrv,Dodge,Dakota,Chrysler,2004,V6,Puce,Automatic,4WD,6380,9833
 c9ufqtvigace4aws9,Chevrolet,Corvette,GM,2006,V8,Teal,Manual,FWD,20113,136264
 c9ogyh8ey6ud06j3f,Chevrolet,Cavalier,GM,2005,V6,Orange,Manual,FWD,19134,152974
@@ -708,7 +708,7 @@ c3g7qxhnb8d22o41l,Pontiac,Grand Prix,GM,1982,V8,Mauv,Automatic,FWD,34653,69989
 c1we7azv1wsz6evq7,Mercury,Grand Marquis,Ford,1989,V8,Puce,Manual,AWD,10099,54171
 c1daik31mzu5au54z,Volkswagen,Passat,Volkswagen,1987,4-cylinder,Maroon,Manual,RWD,14489,178618
 c0tcnn47gmzy1pxwz,Ford,Bronco II,Ford,1985,4-cylinder,Puce,Manual,AWD,32199,79507
-c07aglhc5be884inb,MINI,Clubman,BMW†,2012,V8,Turquoise,Manual,FWD,5263,116213
+c07aglhc5be884inb,MINI,Clubman,BMW,2012,V8,Turquoise,Manual,FWD,5263,116213
 bzzjz43brbylbegfs,Ford,Laser,Ford,1984,V6,Teal,Automatic,FWD,9597,91587
 by1dqe1uynqr6q286,Lexus,RX,Toyota,2009,4-cylinder,Turquoise,Automatic,AWD,5737,197382
 bx3r9yppr8bn138qq,Oldsmobile,Bravada,GM,1996,V6,Aquamarine,Automatic,AWD,39596,64559
@@ -724,7 +724,7 @@ bjiebm62b38b4bnom,Chrysler,Concorde,Chrysler,1999,4-cylinder,Red,Automatic,RWD,1
 bipaa68kfu3bys1ko,Hyundai,Veracruz,Hyundai,2009,V8,Mauv,Manual,FWD,11999,12662
 bh7qcrfg90jq1nw50,Mazda,MX-5,Mazda,1994,4-cylinder,Khaki,Automatic,RWD,12815,113420
 bgee3j8e3ngipjee1,Toyota,Sienna,Toyota,2009,V8,Goldenrod,Manual,AWD,43730,32645
-bdro7bvq2mp7tk5o4,Jeep,Wrangler,Chrysler†,2000,V6,Yellow,Automatic,RWD,8739,39530
+bdro7bvq2mp7tk5o4,Jeep,Wrangler,Chrysler,2000,V6,Yellow,Automatic,RWD,8739,39530
 b85279ibgmfbso4en,Ford,F350,Ford,2009,V8,Maroon,Manual,AWD,11326,38221
 b4sbyrrzwymnfvg2c,Dodge,Intrepid,Chrysler,1994,V6,Puce,Manual,RWD,15438,45610
 b2634doin7xmlq5ce,Lincoln,Mark LT,GM,2008,4-cylinder,Red,Automatic,4WD,5016,17220
@@ -825,7 +825,7 @@ a1jlueuesgv1zpvgi,Chevrolet,Suburban,GM,2007,V8,Crimson,Automatic,4WD,43843,1289
 7l84tqjbxz2oudy4p,Ford,Mustang,Ford,1967,4-cylinder,Mauv,Manual,4WD,33381,198237
 7kngonczw4mu6whlm,Infiniti,QX56,Nissan,2008,4-cylinder,Goldenrod,Automatic,RWD,44680,23178
 7klrj8f2259oijdvm,Volkswagen,GTI,Volkswagen,1989,4-cylinder,Purple,Automatic,RWD,41467,33251
-7h6eh5ragv23k5r10,Audi,A8,Volkswagen†,2010,4-cylinder,Blue,Automatic,4WD,36695,166385
+7h6eh5ragv23k5r10,Audi,A8,Volkswagen,2010,4-cylinder,Blue,Automatic,4WD,36695,166385
 7et53klofe1a07jt3,Ford,Crown Victoria,Ford,2000,V8,Red,Manual,RWD,48918,106620
 7ernwvda8po67vjn9,Pontiac,G5,GM,2009,V6,Blue,Automatic,4WD,11416,179505
 7dmkbehn57roj8pqc,Volkswagen,Golf,Volkswagen,1995,4-cylinder,Orange,Automatic,FWD,44667,76353
@@ -839,7 +839,7 @@ a1jlueuesgv1zpvgi,Chevrolet,Suburban,GM,2007,V8,Crimson,Automatic,4WD,43843,1289
 78p5rwli5cae1qpx2,Ford,Escape,Ford,2006,V8,Puce,Automatic,AWD,45011,63844
 76mjelznpw21f97fv,Mercury,Mystique,Ford,1997,V8,Fuscia,Automatic,4WD,38139,86587
 75ewhmg0cc9l5qz7k,Maybach,62,Maybach,2003,V6,Pink,Manual,AWD,6823,107193
-74zjbd1cnlagwkkb2,Audi,4000s Quattro,Volkswagen†,1986,4-cylinder,Purple,Manual,4WD,15227,182354
+74zjbd1cnlagwkkb2,Audi,4000s Quattro,Volkswagen,1986,4-cylinder,Purple,Manual,4WD,15227,182354
 74uj7pij7fin5sizt,Isuzu,Rodeo Sport,Isuzu,2001,V8,Mauv,Manual,4WD,44770,8197
 74li1rb3tri0inxzm,Buick,Skyhawk,GM,1988,4-cylinder,Blue,Automatic,RWD,31115,78734
 72370g6mxmiu8dgtm,Dodge,Ram 2500,Chrysler,2005,4-cylinder,Mauv,Automatic,AWD,15800,43159
@@ -852,7 +852,7 @@ a1jlueuesgv1zpvgi,Chevrolet,Suburban,GM,2007,V8,Crimson,Automatic,4WD,43843,1289
 6shg5evgd5441egc1,Mercedes-Benz,E-Class,Daimler AG,1984,V8,Mauv,Manual,FWD,13384,64276
 6r72p5mctsn07oej2,Toyota,Prius,Toyota,2003,V6,Goldenrod,Automatic,FWD,33322,58417
 6qkfjoqv3jjbxe5d3,Pontiac,Firebird,GM,1996,V6,Aquamarine,Automatic,4WD,9951,181621
-6o96wjph1lptg5q65,Audi,A6,Volkswagen†,2004,4-cylinder,Goldenrod,Automatic,AWD,27107,63897
+6o96wjph1lptg5q65,Audi,A6,Volkswagen,2004,4-cylinder,Goldenrod,Automatic,AWD,27107,63897
 6msfel4zpnzbribdw,Mercury,Capri,Ford,1992,V8,Maroon,Manual,AWD,44634,12421
 6m3vmbh19127pce4v,Dodge,Ram Wagon B350,Chrysler,1994,4-cylinder,Blue,Automatic,AWD,35993,28745
 6k1df1oi680dbeyne,Hyundai,Elantra,Hyundai,2012,4-cylinder,Aquamarine,Automatic,RWD,35531,90470
@@ -872,11 +872,11 @@ a1jlueuesgv1zpvgi,Chevrolet,Suburban,GM,2007,V8,Crimson,Automatic,4WD,43843,1289
 5f7nakwtit8c9ywue,Hummer,H1,GM,1994,4-cylinder,Blue,Manual,RWD,47494,54735
 5eupkw12rp31j0s4w,Volkswagen,Cabriolet,Volkswagen,2001,V6,Teal,Manual,AWD,16357,87523
 59ansh5nlzftfjkgm,Chevrolet,Corvette,GM,2002,4-cylinder,Green,Automatic,FWD,13148,155983
-59049u8m36w37snb6,Audi,90,Volkswagen†,1991,V8,Purple,Automatic,RWD,35558,83927
+59049u8m36w37snb6,Audi,90,Volkswagen,1991,V8,Purple,Automatic,RWD,35558,83927
 56momwhj0zlfd190t,Ford,Escape,Ford,2009,V6,Mauv,Manual,4WD,37810,132085
 54i1hu6be6d0idg5v,Mitsubishi,Endeavor,Mitsubishi,2007,V6,Aquamarine,Manual,RWD,13818,77818
 54967iqdcwah9hxyd,Lexus,RX,Toyota,2003,V6,Teal,Manual,4WD,16027,83040
-52ensrn1hg2dd4c94,Audi,Q7,Volkswagen†,2010,V6,Goldenrod,Automatic,RWD,48298,96121
+52ensrn1hg2dd4c94,Audi,Q7,Volkswagen,2010,V6,Goldenrod,Automatic,RWD,48298,96121
 51hwru4krz3sflrz6,Mercedes-Benz,E-Class,Daimler AG,2000,4-cylinder,Crimson,Automatic,AWD,15408,182398
 51ad5ezu30tno556a,Subaru,Alcyone SVX,Subaru,1997,4-cylinder,Khaki,Automatic,AWD,33343,12888
 50ib38u24t6sn7t7u,Mercury,Cougar,Ford,1997,V6,Aquamarine,Manual,FWD,47702,53604
@@ -917,8 +917,8 @@ a1jlueuesgv1zpvgi,Chevrolet,Suburban,GM,2007,V8,Crimson,Automatic,4WD,43843,1289
 3unq82hvghjwc20f5,Mercedes-Benz,E-Class,Daimler AG,2001,V8,Red,Automatic,AWD,31738,116802
 3rxm413awe4od51eu,Nissan,240SX,Nissan,1993,V6,Purple,Manual,FWD,49633,176150
 3lk00nws34xklhupd,Volvo,C30,Volkswagen,2013,4-cylinder,Aquamarine,Manual,FWD,49478,81719
-3jh4r2prs1dhgljsu,Audi,S4,Volkswagen†,2001,V8,Crimson,Automatic,FWD,46515,172249
-3hv83qsni0gc0l03i,MINI,Cooper,BMW†,2012,V8,Red,Manual,RWD,33440,80899
+3jh4r2prs1dhgljsu,Audi,S4,Volkswagen,2001,V8,Crimson,Automatic,FWD,46515,172249
+3hv83qsni0gc0l03i,MINI,Cooper,BMW,2012,V8,Red,Manual,RWD,33440,80899
 3h6m4o8h042v3a8sw,Ford,F-250 Super Duty,Ford,2006,V8,Turquoise,Manual,4WD,40096,108984
 3h4vqenflaoqhduo8,BMW,X5 M,Rolls-Royce,2011,V8,Puce,Automatic,4WD,27233,101917
 3gtcmhfrwy7251jp9,Chevrolet,Silverado,GM,2003,4-cylinder,Mauv,Manual,AWD,30368,28043
@@ -933,7 +933,7 @@ a1jlueuesgv1zpvgi,Chevrolet,Suburban,GM,2007,V8,Crimson,Automatic,4WD,43843,1289
 3bbnvcy497ia4i7vr,GMC,Savana 3500,GM,2004,4-cylinder,Pink,Manual,FWD,39186,29300
 3b7mmhovjjdw0tc59,Ford,Explorer Sport,Ford,2002,V6,Yellow,Automatic,4WD,42772,89516
 3a7uydjosdf7psqn0,Volkswagen,Cabriolet,Volkswagen,1987,V6,Turquoise,Automatic,4WD,31212,132862
-38hkmzoc7r5szduyb,Audi,A4,Volkswagen†,2004,4-cylinder,Violet,Automatic,4WD,13424,107155
+38hkmzoc7r5szduyb,Audi,A4,Volkswagen,2004,4-cylinder,Violet,Automatic,4WD,13424,107155
 37evz8ilgmdveasbt,Mazda,Miata MX-5,Mazda,1992,V8,Teal,Automatic,FWD,5779,61747
 36sk2ctqk9vz42eee,Honda,Element,Honda,2011,V8,Purple,Automatic,FWD,48277,152303
 35t2udaq8cqp6139l,Mercedes-Benz,CLK-Class,Daimler AG,2000,V8,Fuscia,Manual,4WD,21888,114364
@@ -943,12 +943,12 @@ a1jlueuesgv1zpvgi,Chevrolet,Suburban,GM,2007,V8,Crimson,Automatic,4WD,43843,1289
 317ebqxdjz2lw6sjx,Mitsubishi,Precis,Mitsubishi,1992,4-cylinder,Puce,Automatic,4WD,23845,114164
 2zrja3uuwyn09ezpx,Lexus,IS F,Toyota,2008,V8,Fuscia,Manual,RWD,16307,162918
 2z0pycz86b7vda4ds,Suzuki,Reno,Suzuki,2006,4-cylinder,Pink,Automatic,RWD,35720,89831
-2xixzclkpvg51r5c2,Audi,A4,Volkswagen†,2006,V8,Pink,Automatic,FWD,25986,107196
+2xixzclkpvg51r5c2,Audi,A4,Volkswagen,2006,V8,Pink,Automatic,FWD,25986,107196
 2xa0gih7nifmscjx2,Mercedes-Benz,CLK-Class,Daimler AG,1999,V8,Blue,Manual,RWD,37317,151175
 2x14ux2tojsi5r2sv,Suzuki,Reno,Suzuki,2007,V8,Orange,Manual,AWD,38432,56588
 2wbrprocv83xrf2w8,Lexus,IS,Toyota,2010,4-cylinder,Indigo,Manual,AWD,43819,192353
 2waj1rgrav7sza64o,Ford,F-Series Super Duty,Ford,2009,4-cylinder,Teal,Automatic,RWD,24489,174441
-2w6r9t93cig51fbja,MINI,Clubman,BMW†,2008,4-cylinder,Green,Manual,FWD,49728,75106
+2w6r9t93cig51fbja,MINI,Clubman,BMW,2008,4-cylinder,Green,Manual,FWD,49728,75106
 2vm2t8bowfjp2x1s2,Dodge,Caravan,Chrysler,2008,4-cylinder,Maroon,Automatic,RWD,27591,53283
 2tjwwk8ku99hal3v7,GMC,Suburban 2500,GM,1997,V6,Blue,Manual,FWD,49388,119610
 2tjtxhu94l25p1j5i,Honda,S2000,Honda,2006,V6,Fuscia,Automatic,RWD,10625,28227
@@ -964,7 +964,7 @@ a1jlueuesgv1zpvgi,Chevrolet,Suburban,GM,2007,V8,Crimson,Automatic,4WD,43843,1289
 29pvbg2bivrthji02,BMW,525,Rolls-Royce,2005,V8,Puce,Manual,4WD,30565,66158
 29gonpm7fb9g0t0g8,Rolls-Royce,Phantom,Rolls-Royce,2007,V6,Blue,Manual,4WD,37785,59216
 27ju942z58s00f799,Lincoln,MKT,GM,2010,V6,Purple,Automatic,4WD,34136,172664
-26lur0ljr1g22t5q3,Audi,A4,Volkswagen†,2008,V6,Teal,Manual,RWD,15656,102764
+26lur0ljr1g22t5q3,Audi,A4,Volkswagen,2008,V6,Teal,Manual,RWD,15656,102764
 25bxp0vj5snad28d8,Subaru,Forester,Subaru,2008,V8,Orange,Automatic,4WD,24813,199596
 23jt1r87c2lbg76z4,Ford,F350,Ford,2000,V8,Teal,Automatic,FWD,46143,85943
 22txpd6zqud3x8fyd,Porsche,Boxster,Porsche,2000,V6,Aquamarine,Automatic,AWD,43545,105555
@@ -984,7 +984,7 @@ a1jlueuesgv1zpvgi,Chevrolet,Suburban,GM,2007,V8,Crimson,Automatic,4WD,43843,1289
 1ofgrqjrfsx8oujei,Pontiac,Bonneville,GM,2004,V8,Mauv,Automatic,FWD,11749,137493
 1nqnf2ahdkrapqo3n,Dodge,Journey,Chrysler,2012,V8,Orange,Automatic,RWD,5973,127597
 1nfyia9tc7urm153n,Toyota,Yaris,Toyota,2007,V8,Violet,Manual,RWD,34679,168399
-1n7x8rpyl8weep2y9,Audi,5000S,Volkswagen†,1988,4-cylinder,Pink,Automatic,4WD,48102,89642
+1n7x8rpyl8weep2y9,Audi,5000S,Volkswagen,1988,4-cylinder,Pink,Automatic,4WD,48102,89642
 1lt2lij49jzg27zuv,Toyota,FJ Cruiser,Toyota,2007,V8,Purple,Manual,FWD,13163,134534
 1ktq5pzrvumc6662r,Chevrolet,Corvette,GM,1958,V8,Teal,Manual,RWD,15924,77842
 1kngcb51ket5nsxs8,Pontiac,Safari,GM,1989,V8,Red,Manual,FWD,29901,6179

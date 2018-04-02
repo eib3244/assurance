@@ -1,5 +1,6 @@
 package pdm.h2.demo;
 
+import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 import com.sun.org.apache.bcel.internal.generic.Select;
 import pdm.h2.demo.objects.*;
 
@@ -353,6 +354,7 @@ public class userLoginMain {
             System.out.println("3: View cart");
             System.out.println("4: Main menu");
 
+            ArrayList<Vehicle> cart = new ArrayList<Vehicle>();
             while (true) {
                 String optionInput = userin.next();
                 try {
@@ -367,7 +369,7 @@ public class userLoginMain {
             switch (selection) {
 
                 case 1:
-
+                    cart = viewVehiclesToBuy(demo, whereClauseArrayList, dealers.get(dealerSelected).getDealer_ID(), cart);
                     break;
 
                 case 2:
@@ -385,10 +387,77 @@ public class userLoginMain {
         }
     }
 
+    private static ArrayList<Vehicle> viewVehiclesToBuy(H2DemoMain demo, ArrayList<String> whereClauseArrayList, String currentDealerID, ArrayList<Vehicle> cart){
+
+       // try {
+            String query = "SELECT * FROM vehicles "
+                    + "INNER JOIN DealerVehicleInventory ON" +
+                    " DealerVehicleInventory.VIN = vehicles.VIN "
+                    + " WHERE DealerVehicleInventory.Dealer_ID =\'"
+                    + currentDealerID + "\'";
+
+            boolean addWhereClause = false;
+            for (int i = 0; i < whereClauseArrayList.size(); i++){
+                if (!whereClauseArrayList.get(i).equals("")){
+                    addWhereClause = true;
+                    break;
+                }
+            }
+
+            if (addWhereClause){
+                query = query + " WHERE ";
+                if (!whereClauseArrayList.get(0).equals(""))
+                    query = query + "vehicles.Make=\'" + whereClauseArrayList.get(0) +"\' AND ";
+
+                if (!whereClauseArrayList.get(1).equals(""))
+                    query = query + "vehicles.Model=\'" + whereClauseArrayList.get(1) +"\' AND ";
+
+                if (!whereClauseArrayList.get(2).equals(""))
+                    query = query + "vehicles.Brand=\'" + whereClauseArrayList.get(2) +"\' AND ";
+
+                if (!whereClauseArrayList.get(3).equals(""))
+                    query = query + "vehicles.Year=\'" + whereClauseArrayList.get(3) +"\' AND ";
+
+                if (!whereClauseArrayList.get(4).equals(""))
+                    query = query + "vehicles.Engine=\'" + whereClauseArrayList.get(4) +"\' AND ";
+
+                if (!whereClauseArrayList.get(5).equals(""))
+                    query = query + "vehicles.Color=\'" + whereClauseArrayList.get(5) +"\' AND ";
+
+                if (!whereClauseArrayList.get(6).equals(""))
+                    query = query + "vehicles.Transmission=\'" + whereClauseArrayList.get(6) +"\' AND ";
+
+                if (!whereClauseArrayList.get(7).equals(""))
+                    query = query + "vehicles.Drive_Type=\'" + whereClauseArrayList.get(7) +"\' AND ";
+
+                // TODO price and miles need to be added !
+
+            }
+
+        System.out.println(("\'" + query.substring(query.length()-5, query.length()) + "\'"));
+
+            if(query.substring(query.length()-5, query.length()).equals(" AND ")){
+                query = query.substring(0,query.length()-5);
+            }
+            query = query + ";";
+
+            System.out.println(query);
+            //Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+           // ResultSet result = stmt.executeQuery(query);
+
+       // } catch (java.sql.SQLException e){}
+
+
+
+
+
+        return cart;
+    }
+
     /*
      * Used to alter the where clause for our query
      */
-    private static ArrayList<String> alterWhereClause(H2DemoMain demo, ArrayList<String> whereClauseArrayList, String currentDealerID ){
+    private static ArrayList<String> alterWhereClause(H2DemoMain demo, ArrayList<String> whereClauseArrayList, String currentDealerID){
         String Make = whereClauseArrayList.get(0);
         String Model = whereClauseArrayList.get(1);
         String Brand = whereClauseArrayList.get(2);
@@ -402,20 +471,20 @@ public class userLoginMain {
 
         boolean keepAltering = true;
         while (keepAltering) {
-            System.out.println("\n--Search Options--");
-            System.out.println("1:  Make");
-            System.out.println("2:  Model");
-            System.out.println("3:  Brand");
-            System.out.println("4:  Year");
-            System.out.println("5:  Engine");
-            System.out.println("6:  Color");
-            System.out.println("7:  Transmission");
-            System.out.println("8:  Drive_Type");
-            System.out.println("9:  Price");
-            System.out.println("10: Miles");
+            System.out.println("\n--Search Options To Alter--");
+            System.out.println("1:  Make Currently(" + Make + ")");
+            System.out.println("2:  Model Currently(" + Model + ")");
+            System.out.println("3:  Brand Currently(" + Brand + ")");
+            System.out.println("4:  Year Currently(" + Year + ")");
+            System.out.println("5:  Engine Currently(" + Engine + ")");
+            System.out.println("6:  Color Currently(" + Color + ")");
+            System.out.println("7:  Transmission Currently(" + Transmission + ")");
+            System.out.println("8:  Drive_Type Currently(" + Drive_Type + ")");
+            System.out.println("9:  Price Currently(" + Price + ")");
+            System.out.println("10: Miles Currently(" + Miles + ")");
             System.out.println("11: Stop altering attributes");
+            System.out.println("Note () means no preference.");
             System.out.print("Select an option: ");
-
             int selection = -1;
             while (true) {
                 String optionInput = userin.next();
@@ -430,57 +499,42 @@ public class userLoginMain {
 
             switch (selection) {
                 case 1:
-                    ArrayList<String > makeOptions = new ArrayList<String>();
-                    try {
-                        String query = "SELECT * FROM vehicles "
-                                + "INNER JOIN DealerVehicleInventory ON" +
-                                " DealerVehicleInventory.VIN = vehicles.VIN "
-                                + " WHERE DealerVehicleInventory.Dealer_ID =\'"
-                                + currentDealerID + "\';";
-                        Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-                        ResultSet result = stmt.executeQuery(query);
-
-                        while(result.next()){
-                            if (!makeOptions.contains(result.getString(2))){
-                                makeOptions.add(result.getString(2));
-                            }
-                        }
-
-                    } catch (java.sql.SQLException e){}
-
-                    System.out.println("\n--Makes To Choose From--");
-                    int i;
-                    for(i = 0; i < makeOptions.size(); i++){
-                        System.out.println(i + ": " + makeOptions.get(i));
-                    }
-                    System.out.println(i + ": Clear preference");
-
-                    int makeSelection = -1;
-                    System.out.print("Select a make: ");
-                    while (true) {
-                        String optionInput = userin.next();
-                        try {
-                            makeSelection = Integer.parseInt(optionInput);
-                        } catch (java.lang.NumberFormatException e) {
-                        }
-                        if ((makeSelection >= 0) && (makeSelection < makeOptions.size() + 1))
-                            break;
-                        System.out.print("Please input a number from the list above: ");
-                    }
-                    if(makeSelection == makeOptions.size()) {
-                        Make = "";
-                        System.out.println("No preference selected");
-                    }
-                    else {
-                        Make = makeOptions.get(makeSelection);
-                        System.out.println("You selected " + Make + " for your make.");
-                    }
+                    Make = alterVehicleAttOption(demo, "Make",selection + 1, currentDealerID);
                     break;
 
                 case 2:
+                    Model = alterVehicleAttOption(demo, "Model",selection + 1, currentDealerID);
                     break;
 
                 case 3:
+                    Brand = alterVehicleAttOption(demo, "Brand",selection + 1, currentDealerID);
+                    break;
+
+                case 4:
+                    Year = alterVehicleAttOption(demo, "Year",selection + 1, currentDealerID);
+                    break;
+
+                case 5:
+                    Engine = alterVehicleAttOption(demo, "Engine",selection + 1, currentDealerID);
+                    break;
+
+                case 6:
+                    Color = alterVehicleAttOption(demo, "Color",selection + 1, currentDealerID);
+                    break;
+
+                case 7:
+                    Transmission = alterVehicleAttOption(demo, "Transmission",selection + 1, currentDealerID);
+                    break;
+
+                case 8:
+                    Drive_Type = alterVehicleAttOption(demo, "Drive_Type",selection + 1, currentDealerID);
+                    break;
+
+//TODO miles and price below need to be done do <, > than a # for these
+                case 9:
+                    break;
+
+                case 10:
                     break;
 
                 case 11:
@@ -488,8 +542,76 @@ public class userLoginMain {
                     break;
             }
         }
+
+        whereClauseArrayList.set(0,Make);
+        whereClauseArrayList.set(1,Model);
+        whereClauseArrayList.set(2,Brand);
+        whereClauseArrayList.set(3,Year);
+        whereClauseArrayList.set(4,Engine);
+        whereClauseArrayList.set(5,Color);
+        whereClauseArrayList.set(6,Transmission);
+        whereClauseArrayList.set(7,Drive_Type);
+        whereClauseArrayList.set(8,Price);
+        whereClauseArrayList.set(9,Miles);
+
         return whereClauseArrayList;
     }
+
+    /*
+     * Helper fn created to alter strings from our alterWhereClause function.
+     * This is used for everything except for price and miles
+     */
+    private static String alterVehicleAttOption(H2DemoMain demo, String optionToChange, int thingToChangeColumn, String currentDealerID){
+        ArrayList<String > optionsToChooseFrom = new ArrayList<String>();
+
+        try {
+            String query = "SELECT * FROM vehicles "
+                    + "INNER JOIN DealerVehicleInventory ON" +
+                    " DealerVehicleInventory.VIN = vehicles.VIN "
+                    + " WHERE DealerVehicleInventory.Dealer_ID =\'"
+                    + currentDealerID + "\';";
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery(query);
+
+            while(result.next()){
+                if (!optionsToChooseFrom.contains(result.getString(thingToChangeColumn))){
+                    optionsToChooseFrom.add(result.getString(thingToChangeColumn));
+                }
+            }
+
+        } catch (java.sql.SQLException e){}
+
+        System.out.println("\n--" + optionToChange + " To Choose From--");
+        int i;
+        for(i = 0; i < optionsToChooseFrom.size(); i++){
+            System.out.println(i + ": " + optionsToChooseFrom.get(i));
+        }
+        System.out.println(i + ": Clear preference");
+
+        int userSelection = -1;
+        System.out.print("Select a " + optionToChange + ": ");
+        while (true) {
+            String optionInput = userin.next();
+            try {
+                userSelection = Integer.parseInt(optionInput);
+            } catch (java.lang.NumberFormatException e) {
+            }
+            if ((userSelection >= 0) && (userSelection < optionsToChooseFrom.size() + 1))
+                break;
+            System.out.print("Please input a number from the list above: ");
+        }
+        if(userSelection == optionsToChooseFrom.size()) {
+            System.out.println("No preference selected for " + optionToChange + ".");
+            return "";
+        }
+        else {
+            System.out.println("You selected " + optionsToChooseFrom.get(userSelection) + " for your " + optionToChange + ".");
+            return optionsToChooseFrom.get(userSelection);
+        }
+    }
+
+
+
 
     public static void main(String[] args) {
 
