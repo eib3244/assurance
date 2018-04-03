@@ -550,6 +550,7 @@ public class userLoginMain {
 
 //TODO miles and price below need to be done do <, > than a # for these
                 case 9:
+
                     break;
 
                 case 10:
@@ -628,8 +629,14 @@ public class userLoginMain {
         }
     }
 
+    /*
+     * Helper fn to alter numberic values
+     */
+    private static String alterVehicleNumericAtt(){
 
 
+        return null;
+    }
 
     public static void main(String[] args) {
 

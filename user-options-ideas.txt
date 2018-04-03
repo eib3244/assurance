@@ -1,0 +1,34 @@
+Select: Dealer: (done)
+
+Select: vehicle: atrabutes
+
+System.out.print("1:  Make");
+System.out.print("2:  Model");
+System.out.print("3:  Brand");
+System.out.print("4:  Year");
+System.out.print("5:  Engine");
+System.out.print("6:  Color");
+System.out.print("7:  Transmission");
+System.out.print("8:  Drive_Type");
+System.out.print("9:  Price");
+System.out.print("10: Miles");
+	
+Select: Vehicle
+	add: to: cart
+	buy: vehicles: in: cart
+	return: to: results
+	
+Alter: search: atrabutes
+
+to find attrabutes
+
+join: vehicles with DealerVehicleInventory on VIN 
+where DealerVehicleInventory.Dealer_ID = currentDealerID
+
+
+            String query = "SELECT * FROM customer "
+                    + "INNER JOIN customer_sale_table ON customer.SSN = customer_sale_table.SSN "
+                    + "INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.Sale_ID = customer_sale_table.Sale_ID "
+                    + "INNER JOIN vehicles ON vehicles.VIN = vehicles_sold_to_customer.VIN "
+                    + "INNER JOIN dealer ON dealer.Dealer_ID = customer_sale_table.Dealer_ID "
+                    + "WHERE customer.SSN=\'" + currentCustomer.getSSN() + "\';";
