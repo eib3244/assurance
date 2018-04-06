@@ -625,3 +625,95 @@ SELECT * FROM vehicles INNER JOIN DealerVehicleInventory ON DealerVehicleInvento
 2018-04-02 18:44:35 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM VEHICLES INNER JOIN DEALERVEHICLEINVENTORY ON DEALERVEHICLEINVENTORY.VIN = VEHICLES.VIN WHERE DEALERVEHICLEINVENTORY.DEALER_ID ='lz8eo' WHERE[*] VEHICLES.MAKE='Subaru'; "; SQL statement:
 SELECT * FROM vehicles INNER JOIN DealerVehicleInventory ON DealerVehicleInventory.VIN = vehicles.VIN WHERE DealerVehicleInventory.Dealer_ID ='lz8eo' WHERE vehicles.Make='Subaru'; [42000-197]
+2018-04-05 19:02:27 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-04-05 19:05:34 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-04-05 19:06:39 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-04-05 19:08:40 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/admin/Desktop/Auto-DataBase-Project-3-27/src/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at pdm.h2.demo.H2DemoMain.createConnection(H2DemoMain.java:36)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:89)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/admin/Desktop/Auto-DataBase-Project-3-27/src/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/admin/Desktop/Auto-DataBase-Project-3-27/src/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 20 more
+2018-04-05 19:09:25 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-04-05 19:13:31 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-04-05 19:13:45 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-04-05 19:15:12 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-04-05 19:25:46 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Column "VEHICLES.VIN" must be in the GROUP BY list; SQL statement:
+SELECT * FROM vehicles INNER JOIN DealerVehicleInventory ON DealerVehicleInventory.VIN = vehicles.VIN  WHERE DealerVehicleInventory.Dealer_ID ='lz8eo' GROUP BY vehicles.Make; [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:85)
+	at pdm.h2.demo.userLoginMain.alterVehicleAttOption(userLoginMain.java:616)
+	at pdm.h2.demo.userLoginMain.alterWhereClause(userLoginMain.java:543)
+	at pdm.h2.demo.userLoginMain.viewVehicles(userLoginMain.java:380)
+	at pdm.h2.demo.userLoginMain.customerInteractionLoop(userLoginMain.java:248)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:750)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:200)
+2018-04-05 19:26:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Column "VEHICLES.VIN" must be in the GROUP BY list; SQL statement:
+SELECT * FROM vehicles INNER JOIN DealerVehicleInventory ON DealerVehicleInventory.VIN = vehicles.VIN  WHERE DealerVehicleInventory.Dealer_ID ='lz8eo' GROUP BY vehicles.Make; [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:85)
+	at pdm.h2.demo.userLoginMain.alterVehicleAttOption(userLoginMain.java:616)
+	at pdm.h2.demo.userLoginMain.alterWhereClause(userLoginMain.java:543)
+	at pdm.h2.demo.userLoginMain.viewVehicles(userLoginMain.java:380)
+	at pdm.h2.demo.userLoginMain.customerInteractionLoop(userLoginMain.java:248)
+	at pdm.h2.demo.userLoginMain.main(userLoginMain.java:750)
+	at pdm.h2.demo.H2DemoMain.main(H2DemoMain.java:200)
