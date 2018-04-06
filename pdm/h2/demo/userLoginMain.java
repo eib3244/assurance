@@ -348,16 +348,17 @@ public class userLoginMain {
         for (int i = 0; i < 10; i++) {
             whereClauseArrayList.add("");
         }
+        ArrayList<Vehicle> cart = new ArrayList<Vehicle>();
 
         while (stayInLoop) {
             int selection = -1;
             System.out.println("\n--" + dealers.get(dealerSelected).getName() + "--");
             System.out.println("1: View vehicles");
             System.out.println("2: Alter search options");
-            System.out.println("3: View cart");
+            System.out.println("3: View cart (" + cart.size() + " cars in cart)");
             System.out.println("4: Main menu");
 
-            ArrayList<Vehicle> cart = new ArrayList<Vehicle>();
+
             while (true) {
                 String optionInput = userin.next();
                 try {
@@ -381,6 +382,7 @@ public class userLoginMain {
                     break;
 
                 case 3:
+                    cart = viewCart(demo,cart,currentCustomer,dealers.get(dealerSelected).getDealer_ID());
                     break;
 
                 case 4:
@@ -392,6 +394,8 @@ public class userLoginMain {
 
     private static ArrayList<Vehicle> viewVehiclesToBuy(H2DemoMain demo, ArrayList<String> whereClauseArrayList, String currentDealerID, ArrayList<Vehicle> cart){
         ResultSet result;
+        ArrayList<Vehicle> vehiclesToSelect = new ArrayList<Vehicle>();
+        int i = 1;
 
         try {
             String query = "SELECT * FROM vehicles "
@@ -401,8 +405,8 @@ public class userLoginMain {
                     + currentDealerID + "\'";
 
             boolean addWhereClause = false;
-            for (int i = 0; i < whereClauseArrayList.size(); i++){
-                if (!whereClauseArrayList.get(i).equals("")){
+            for (int x = 0; x < whereClauseArrayList.size(); x++){
+                if (!whereClauseArrayList.get(x).equals("")){
                     addWhereClause = true;
                     break;
                 }
@@ -453,8 +457,22 @@ public class userLoginMain {
             result = stmt.executeQuery(query);
 
             System.out.println("-----");
-            int i = 1;
+
             while (result.next()){
+                Vehicle newVehicle = new Vehicle(result.getString(1), result.getString(2),result.getString(3), result.getString(4),Integer.parseInt(result.getString(5)),result.getString(6),result.getString(7),result.getString(8),result.getString(9),Integer.parseInt(result.getString(10)),Integer.parseInt(result.getString(11)));
+
+                boolean inCart = false;
+                for (int y = 0; y < cart.size(); y++) {
+                    if (cart.get(y).getVIN() == newVehicle.getVIN()) {
+                       inCart = true;
+                    }
+                }
+
+                if (inCart)
+                    continue;
+
+                vehiclesToSelect.add(newVehicle);
+
                 System.out.println(i + ": " + result.getString(7) + " "
                     + result.getString(5) + " "
                     +result.getString(2) + " "
@@ -470,10 +488,28 @@ public class userLoginMain {
 
             if (i == 1)
                 System.out.println("No vehicles found please alter search options");
+            else {
+                System.out.println(i + ": Return to prev menu");
+                System.out.println("-----");
+                System.out.println("Please select an option from the list above: ");
+
+                int option = -1;
+                // loop to ensure a number is inputted / no crash
+                while(true) {
+                    String optionInput = userin.next();
+
+                    try{
+                        option = Integer.parseInt(optionInput);
+                    } catch (java.lang.NumberFormatException e){}
+                    if ((option >= 1) && (option <= i))
+                        break;
+                    System.out.print("Please input a number from the list above: ");
+                }
+                if (option != i){
+                    viewVehicleInDetail(demo, vehiclesToSelect.get(option-1), cart);
+                }
+            }
         } catch (java.sql.SQLException e){}
-
-
-
 
         return cart;
     }
@@ -768,6 +804,82 @@ public class userLoginMain {
             optionToChange = "<" +  "\'" + value + "\'";
 
         return optionToChange;
+    }
+
+    /*
+     * used to view a specific vehicle / add it to the cart
+     */
+    private static ArrayList<Vehicle> viewVehicleInDetail(H2DemoMain demo, Vehicle vehicleToView,ArrayList<Vehicle> cart){
+        System.out.println("Vin: " + vehicleToView.getVIN());
+        System.out.println("Make: " + vehicleToView.getMake());
+        System.out.println("Model: " + vehicleToView.getModel());
+        System.out.println("Brand: " + vehicleToView.getBrand());
+        System.out.println("Year: " + vehicleToView.getYear());
+        System.out.println("Engine: " + vehicleToView.getEngine());
+        System.out.println("Color: " + vehicleToView.getColor());
+        System.out.println("Transmission: " + vehicleToView.getTransmission());
+        System.out.println("Drive Type: " + vehicleToView.getDrive_Type());
+        System.out.println("Price: $" + vehicleToView.getPrice());
+        System.out.println("Miles: " + vehicleToView.getMiles());
+
+        System.out.println("--Options--");
+        System.out.println("1: Add car to cart");
+        System.out.println("2: Go back to dealer menu");
+
+        int option = -1;
+        // loop to ensure a number is inputted / no crash
+        while(true) {
+            String optionInput = userin.next();
+
+            try{
+                option = Integer.parseInt(optionInput);
+            } catch (java.lang.NumberFormatException e){}
+            if ((option >= 1) && (option <= 3))
+                break;
+            System.out.print("Please input a number from the list above: ");
+        }
+
+        if (option == 1)
+            cart.add(vehicleToView);
+
+        return cart;
+    }
+
+    public static ArrayList<Vehicle> viewCart(H2DemoMain demo, ArrayList<Vehicle> cart, Customer currentCustomer, String currentDealerID){
+        if (cart.size() == 0){
+            System.out.println("No vehicles in your cart");
+            return cart;
+        }
+        int total=0;
+
+        for(int i = 0; i < cart.size(); i++){
+            System.out.println(cart.get(i).getColor() + " " + cart.get(i).getYear() + " " + cart.get(i).getMake() + " " + cart.get(i).getModel() + " $" + cart.get(i).getPrice());
+            total += cart.get(i).getPrice();
+        }
+        System.out.println("-----");
+        System.out.println("Ttotal: $" + total);
+        System.out.println("-----");
+
+        System.out.println("1: Buy all vehicles in the cart");
+        System.out.println("2: Remove vehicles from the cart");
+        System.out.println("3: Go back to dealer menu");
+        System.out.print("Select an option: ");
+        int option = -1;
+        // loop to ensure a number is inputted / no crash
+        while(true) {
+            String optionInput = userin.next();
+
+            try{
+                option = Integer.parseInt(optionInput);
+            } catch (java.lang.NumberFormatException e){}
+            if ((option >= 1) && (option <= 3))
+                break;
+            System.out.print("Please input a number from the list above: ");
+        }
+
+
+
+        return cart;
     }
 
     public static void main(String[] args) {
