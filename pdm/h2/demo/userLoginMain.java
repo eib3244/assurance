@@ -960,7 +960,7 @@ public class userLoginMain {
             VehiclesSoldToCustomerTable.addVehicleSoldToCustomer(demo.getConnection(),newSaleID,cart.get(i).getVIN());
 
             DealerVehicleInventoryTable.removeVehicleFromDealerInventory(demo.getConnection(),cart.get(i).getVIN());
-
+            System.out.println("\nVehicles bought! Thank you for your purchase!\n");
         }
     }
 
