@@ -31,7 +31,7 @@ public class userLoginMain {
         Customer currentCustomer = null;
 
         do {
-            System.out.println("Select an option:\nLogin: 1\nCreate New User: 2");
+            System.out.print("Login: 1\nCreate New User: 2\nSelect an option: ");
             choice = userin.nextInt();
 
         }while ((choice != 1) && (choice != 2));
