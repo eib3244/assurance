@@ -17,3 +17,7 @@ Build | Build Artifact
 once jar is made put all csv files into its folder with the jar!
 
 run cmd line and use cmd java -jar assurance.jar to run
+
+
+
+to access from website use "jdbc:h2:./test" as the path !

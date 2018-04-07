@@ -31,7 +31,7 @@ public class userLoginMain {
         Customer currentCustomer = null;
         int choice = -1;
         System.out.println("\n-----Customer Home-----");
-        System.out.print("\nLogin: 1\nCreate New User: 2\nSelect an option: ");
+        System.out.print("Login: 1\nCreate New User: 2\nSelect an option: ");
         while(true) {
           String userinput= userin.next();
 
@@ -332,6 +332,7 @@ public class userLoginMain {
             e.printStackTrace();
         }
 
+
         for (int i = 0; i < dealers.size(); i++) {
             System.out.println(i + ": " + dealers.get(i).getName());
             System.out.println(dealers.get(i).getStreet_Number() + " " + dealers.get(i).getStreet() + " " +
@@ -459,21 +460,25 @@ public class userLoginMain {
                     query = query + "vehicles.Price" + whereClauseArrayList.get(9) + " AND ";
             }
 
-            // System.out.println(("\'" + query.substring(query.length()-5, query.length()) + "\'"));
-            //System.out.println(query);
             if(query.substring(query.length()-5, query.length()).equals(" AND ")){
                 query = query.substring(0,query.length()-5);
             }
             query = query + " ORDER BY vehicles.Make asc;";
 
-            //System.out.println(query);
             Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             result = stmt.executeQuery(query);
+//TODO make all prints that involeve data that works with colums like this !!!!
+            System.out.printf("%2s: %20s %4s %20s %30s %10s %12s %10s %10s %10s\n",
+                    "--","Color","Year","Make","Model","Engine","Transmission","Drive Type","Price","Miles");
 
-            System.out.println("-----");
+
 
             while (result.next()){
-                Vehicle newVehicle = new Vehicle(result.getString(1), result.getString(2),result.getString(3), result.getString(4),Integer.parseInt(result.getString(5)),result.getString(6),result.getString(7),result.getString(8),result.getString(9),Integer.parseInt(result.getString(10)),Integer.parseInt(result.getString(11)));
+                Vehicle newVehicle = new Vehicle(result.getString(1), result.getString(2),
+                        result.getString(3), result.getString(4),
+                        Integer.parseInt(result.getString(5)),result.getString(6),
+                        result.getString(7),result.getString(8),result.getString(9),
+                        Integer.parseInt(result.getString(10)),Integer.parseInt(result.getString(11)));
 
                 boolean inCart = false;
                 for (int y = 0; y < cart.size(); y++) {
@@ -487,16 +492,17 @@ public class userLoginMain {
 
                 vehiclesToSelect.add(newVehicle);
 
-                System.out.println(i + ": " + result.getString(7) + " "
-                    + result.getString(5) + " "
-                    +result.getString(2) + " "
-                    +result.getString(3) + " "
-                    +result.getString(6) + " "
-                    +result.getString(8) + " "
-                    +result.getString(9) + " $"
-                    +result.getString(10) + " "
-                    + result.getString(11) + " miles");
-                System.out.println("-----");
+                System.out.printf("%2d: %20s %4s %20s %30s %10s %12s %10s %10s %10s miles",i,
+                        result.getString(7),
+                        result.getString(5),
+                        result.getString(2),
+                        result.getString(3),
+                        result.getString(6),
+                        result.getString(8),
+                        result.getString(9),
+                        "$" + result.getString(10),
+                        result.getString(11));
+                System.out.println("\n-----");
                 i++;
             }
 
