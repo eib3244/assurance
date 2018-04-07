@@ -183,6 +183,30 @@ public class dealerLoginMain {
 
     private static void viewCustomers(H2DemoMain demo, Dealer currentDealer) {
         //TODO
+        ArrayList<Customer> customerList = new ArrayList<Customer>();
+        boolean loopThrough = true;
+
+        try {
+
+            String queuryCustomers = "SELECT * from customer"
+                    + " INNER JOIN customer_sale_table ON customer_sale_table.SSN = customer.SSN WHERE customer_sale_table.Dealer_ID = \'"
+                    + currentDealer.getDealer_ID() +"\'";
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery(queuryCustomers);
+            while (result.next()) {
+                System.out.println(result.getString("SSN") + " " + result.getString("Name"));
+            }
+
+
+
+
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     private static void viewManufacturers(H2DemoMain demo, Dealer currentDealer) {
