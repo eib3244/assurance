@@ -1,10 +1,12 @@
 package pdm.h2.demo;
 
+import com.sun.corba.se.impl.encoding.BufferManagerWriteCollect;
 import pdm.h2.demo.objects.CustomerSale;
 import pdm.h2.demo.objects.DealerSale;
 import pdm.h2.demo.objects.DealerVehicleInventory;
 
 import javax.tools.JavaFileManager;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.*;
@@ -15,7 +17,7 @@ import java.util.Scanner;
  * Main Driver for our DataBase
  */
 public class H2DemoMain {
-
+	private static Scanner userin = new Scanner(System.in);
 	//The connection to the database
 	private Connection conn;
 	
@@ -224,13 +226,47 @@ else
         System.out.println("1: Customer Login");
         System.out.println("2: Dealer Login");
         System.out.println("3: Admin Login");
-        System.out.print("Select an option: ");
+		System.out.println("4: log off");
+		System.out.print("Select an option: ");
 
+		int choice = -1;
+		while(true) {
 
+			String userinput= userin.next();
 
+			try{
+				choice = Integer.parseInt(userinput);
+			} catch (java.lang.NumberFormatException e){}
 
+			if (choice < 1 || choice > 4){
+				System.out.print("\nPlease enter a number from the list above: ");
+			}
+			else
+				break;
+		}
 
-	userLoginMain.main(null);
+		switch (choice) {
+			case(1):
+				userLoginMain.main(null);
+				break;
 
+			case(2):
+				dealerLoginMain.main(null);
+				break;
+
+			case(3):
+				// Run a java app in a separate system process
+				Process proc = null;
+				try {
+					proc = Runtime.getRuntime().exec("java -jar h2-1.4.197.jar");
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				demo.closeConnection();
+				break;
+
+			case 4:
+				break;
+		}
 	}
 }
