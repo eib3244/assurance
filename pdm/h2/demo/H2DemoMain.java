@@ -221,6 +221,15 @@ else
 	demo.createConnection(location, user, password);
 
 	// launch user login
+        System.out.println("1: Customer Login");
+        System.out.println("2: Dealer Login");
+        System.out.println("3: Admin Login");
+        System.out.print("Select an option: ");
+
+
+
+
+
 	userLoginMain.main(null);
 
 	}
