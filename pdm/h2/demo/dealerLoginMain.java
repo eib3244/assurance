@@ -83,14 +83,14 @@ public class dealerLoginMain {
                 try{
                     option = Integer.parseInt(input);
                 } catch (NumberFormatException e){}
-                if ((option > 0) && (option <= 3))
+                if ((option > 0) && (option <= 4))
                     break;
                 System.out.print("Please input a number from the list above: ");
             }
 
             switch (option) {
                 case 1:
-                    System.out.println("\n--VEHICLE INVENTORY--");
+                    //System.out.println("\n--VEHICLE INVENTORY--");
                     viewInventory(demo, currentDealer);
                     break;
 
@@ -105,7 +105,7 @@ public class dealerLoginMain {
                     break;
 
                 case 4:
-                    System.out.println("\n Goodbye!");
+                    System.out.println("\nGoodbye!");
                     break;
 
 
@@ -121,6 +121,7 @@ public class dealerLoginMain {
     private static void viewInventory(H2DemoMain demo, Dealer currentDealer) {
 
         ArrayList<Vehicle> vehicleInventory = new ArrayList<Vehicle>();
+        boolean loopThrough = true;
 
         try {
             String queryVehicles = "SELECT * from DealerVehicleInventory"
@@ -134,33 +135,42 @@ public class dealerLoginMain {
                         result.getString("Drive_Type"), result.getInt("Price"), result.getInt("Miles"));
                 vehicleInventory.add(newVehicle);
             }
-            for (int i = 0; i < vehicleInventory.size();i++){
-                System.out.println(i + 1 + ": " + vehicleInventory.get(i).getYear() + " " + vehicleInventory.get(i).getMake() + " " + vehicleInventory.get(i).getModel());
-            }
-            int choice = -1;
 
-
-            System.out.println("\n-----Car Selection-----");
-            while (true) {
-
-                System.out.print("Pick a car to view more information: ");
-                String input = userIn.next();
-
-
-                try {
-                    choice = Integer.parseInt(input);
-                } catch (java.lang.NumberFormatException e){}
-
-                if (choice > 0 && choice <= vehicleInventory.size()) {
-                    showVehicleInformation(vehicleInventory.get(choice - 1));
-                    break;
+            while (loopThrough) {
+                System.out.println("\n-----VEHICLE INVENTORY-----");
+                for (int i = 0; i < vehicleInventory.size();i++){
+                    System.out.println(i + 1 + ": " + vehicleInventory.get(i).getYear() + " " + vehicleInventory.get(i).getMake() + " " + vehicleInventory.get(i).getModel());
                 }
-                else {
-                    System.out.println("Not a valid option.");
+                System.out.println(vehicleInventory.size() + 1 + ": Prior Menu");
+
+                int choice = -1;
+
+
+                System.out.println("\n-----Car Selection-----");
+                while (true) {
+
+                    System.out.print("Please select an option: ");
+                    String input = userIn.next();
+
+
+                    try {
+                        choice = Integer.parseInt(input);
+                    } catch (java.lang.NumberFormatException e){}
+
+                    if (choice > 0 && choice <= vehicleInventory.size()) {
+                        showVehicleInformation(vehicleInventory.get(choice - 1));
+                        break;
+                    }
+                    if (choice == vehicleInventory.size() + 1) {
+                        return;
+                    }
+                    else {
+                        System.out.println("Not a valid option.");
+                    }
+
                 }
 
             }
-
 
 
         } catch (SQLException e) {
