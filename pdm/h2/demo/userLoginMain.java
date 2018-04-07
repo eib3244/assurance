@@ -27,14 +27,23 @@ public class userLoginMain {
      * Main method to log in a user
      */
     private static Customer loginCustomer(H2DemoMain demo){
-        int choice;
+        int choice = -1;
         Customer currentCustomer = null;
 
-        do {
-            System.out.println("Select an option:\nLogin: 1\nCreate New User: 2");
-            choice = userin.nextInt();
+        System.out.print("Login: 1\nCreate New User: 2\nSelect an option: ");
+        while(true) {
+          String userinput= userin.next();
 
-        }while ((choice != 1) && (choice != 2));
+          try{
+              choice = Integer.parseInt(userinput);
+          } catch (java.lang.NumberFormatException e){}
+
+          if (choice != 1 || choice != 2){
+              System.out.print("\nPlease enter a number from the list above: ");
+          }
+          else
+              break;
+        }
 
         // logging user in
         if (choice == 1) {
@@ -960,7 +969,7 @@ public class userLoginMain {
             VehiclesSoldToCustomerTable.addVehicleSoldToCustomer(demo.getConnection(),newSaleID,cart.get(i).getVIN());
 
             DealerVehicleInventoryTable.removeVehicleFromDealerInventory(demo.getConnection(),cart.get(i).getVIN());
-
+            System.out.println("\nVehicles bought! Thank you for your purchase!\n");
         }
     }
 

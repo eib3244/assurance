@@ -1,0 +1,19 @@
+Here's how to build a jar with IntelliJ 10 http://blogs.jetbrains.com/idea/2010/08/quickly-create-jar-artifact/
+
+File -> Project Structure -> Project Settings -> Artifacts -> Click green plus sign -> Jar -> From modules with dependencies...
+
+The above sets the "skeleton" to where the jar will be saved to. To actually build and save it do the following:
+
+****select main class which is "h2 demo"
+
+Extract to the target Jar
+
+OK
+
+Build | Build Artifact
+
+
+
+once jar is made put all csv files into its folder with the jar!
+
+run cmd line and use cmd java -jar assurance.jar to run
