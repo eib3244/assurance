@@ -90,7 +90,7 @@ public class userLoginMain {
                     // if two user share the same email and password we try to verify them via SSN
                     if (numOfPPL > 1) {
 
-                        System.out.print("Enter your SSN for verification: ");
+                        System.out.print("Enter your SSN for verification\n(Ex: 000-00-0000): ");
                         String ssn = userin.next();
 
                         boolean ssnFound = false;
@@ -319,7 +319,7 @@ public class userLoginMain {
         int dealerSelected = -1;
 
         try {
-            String queryDealers = "SELECT * FROM dealer;";
+            String queryDealers = "SELECT * FROM dealer ORDER BY(dealer.State);";
             Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet result = stmt.executeQuery(queryDealers);
 
@@ -371,6 +371,7 @@ public class userLoginMain {
             System.out.println("2: Alter search options");
             System.out.println("3: View cart (" + cart.size() + " cars in cart)");
             System.out.println("4: Main menu");
+            System.out.print("Select an option: ");
 
 
             while (true) {
@@ -468,8 +469,12 @@ public class userLoginMain {
             Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             result = stmt.executeQuery(query);
 //TODO make all prints that involeve data that works with colums like this !!!!
-            System.out.printf("%2s: %20s %4s %20s %30s %10s %12s %10s %10s %10s\n",
+            System.out.printf("%2s: %20s %10s %20s %30s %15s %15s %15s %15s %15s\n",
                     "--","Color","Year","Make","Model","Engine","Transmission","Drive Type","Price","Miles");
+
+            System.out.println("----------------------------------------------------------------------------" +
+                            "-------------------------------------------------" +
+                            "----------------------------------------------");
 
 
 
@@ -492,7 +497,7 @@ public class userLoginMain {
 
                 vehiclesToSelect.add(newVehicle);
 
-                System.out.printf("%2d: %20s %4s %20s %30s %10s %12s %10s %10s %10s miles",i,
+                System.out.printf("%2d: %20s %10s %20s %30s %15s %15s %15s %15s %15s Mi.",i,
                         result.getString(7),
                         result.getString(5),
                         result.getString(2),
@@ -502,7 +507,9 @@ public class userLoginMain {
                         result.getString(9),
                         "$" + result.getString(10),
                         result.getString(11));
-                System.out.println("\n-----");
+                System.out.println("\n----------------------------------------------------------------------------" +
+                        "-------------------------------------------------" +
+                        "----------------------------------------------");
                 i++;
             }
 
@@ -510,8 +517,8 @@ public class userLoginMain {
                 System.out.println("\nNo vehicles found please alter search options");
             else {
                 System.out.println(i + ": Return to prev menu");
-                System.out.println("-----");
-                System.out.println("Please select an option from the list above: ");
+                System.out.println("------------------------");
+                System.out.print("Please select an option from the list above: ");
 
                 int option = -1;
                 // loop to ensure a number is inputted / no crash
@@ -607,9 +614,9 @@ public class userLoginMain {
                     (!Model.equals("")) && (!Make.equals("")) && (!Make.equals(modelsCurrentMake))
                     ||
                     (!Make.equals("")) && (!Brand.equals("")) && (!Brand.equals(makesCurrentBrand))) {
-                System.out.println("Note! Your search will currently return 0 vehicles as\n"
+                System.out.println("*****\nNote! Your search will currently return 0 vehicles as\n"
                         + "your selected \'Make\' must be made by your selected \'Brand\' and \n" +
-                        "your selected  \'Model\' must be made by your selected \'Make\'");
+                        "your selected  \'Model\' must be made by your selected \'Make\'\n*****");
             }
             System.out.print("Select an option: ");
             int selection = -1;
@@ -843,9 +850,10 @@ public class userLoginMain {
         System.out.println("Price: $" + vehicleToView.getPrice());
         System.out.println("Miles: " + vehicleToView.getMiles());
 
-        System.out.println("--Options--");
+        System.out.println("\n--Options--");
         System.out.println("1: Add car to cart");
         System.out.println("2: Go back to dealer menu");
+        System.out.print("Select an option: ");
 
         int option = -1;
         // loop to ensure a number is inputted / no crash
@@ -862,6 +870,7 @@ public class userLoginMain {
 
         if (option == 1)
             cart.add(vehicleToView);
+        System.out.println("Car added to your cart");
 
         return cart;
     }
@@ -877,12 +886,20 @@ public class userLoginMain {
             int total = 0;
 
             System.out.println("\n-----Current Vehicles in Cart-----");
+
+            System.out.printf("%-20s %-5s %-20s %-30s %-7s\n",
+                    "Color", "Year", "Make",
+                    "Model", "Price");
+
             for (int i = 0; i < cart.size(); i++) {
-                System.out.println(cart.get(i).getColor() + " " + cart.get(i).getYear() + " " + cart.get(i).getMake() + " " + cart.get(i).getModel() + " $" + cart.get(i).getPrice());
+                System.out.printf("%-20s %-5s %-20s %-30s %-7s\n",
+                        cart.get(i).getColor(), cart.get(i).getYear(), cart.get(i).getMake(),
+                        cart.get(i).getModel(), "$" + cart.get(i).getPrice());
+
                 total += cart.get(i).getPrice();
             }
             System.out.println("-----");
-            System.out.println("Ttotal: $" + total);
+            System.out.println("Total: $" + total);
             System.out.println("-----");
 
             System.out.println("1: Buy all vehicles in the cart");
@@ -911,15 +928,19 @@ public class userLoginMain {
 
                 case (2):
                     System.out.println("\n-----Current Vehicles in Cart Available to Remove-----");
+
+                    System.out.printf("    %-20s %-5s %-20s %-30s %-7s\n",
+                            "Color", "Year", "Make",
+                            "Model", "Price");
+
                     int i = 0;
                     for (i = 0; i < cart.size(); i++) {
-                        System.out.println(i + ": " + cart.get(i).getColor() + " " + cart.get(i).getYear() + " "
-                                + cart.get(i).getMake() + " " + cart.get(i).getModel() + " " + cart.get(i).getEngine()
-                                + " " + cart.get(i).getTransmission() + " " + cart.get(i).getDrive_Type() + " " + " $"
-                                + cart.get(i).getPrice());
+                        System.out.printf("%2d: %-20s %-5s %-20s %-30s %-7s\n",
+                                i,cart.get(i).getColor(), cart.get(i).getYear(), cart.get(i).getMake(),
+                                cart.get(i).getModel(), "$" + cart.get(i).getPrice());
                     }
 
-                    System.out.println(i + ": Go back");
+                    System.out.println(" "+ i + ": Go back");
                     System.out.print("Select a vehicle to remove: ");
 
                     int option1 = -1;
@@ -937,6 +958,8 @@ public class userLoginMain {
                     }
 
                     if (option1 < cart.size()) {
+                        System.out.println("\nRemoving " + cart.get(option1).getMake() + " "+
+                                cart.get(option1).getModel());
                         cart.remove(option1);
                     }
                     break;
@@ -976,7 +999,7 @@ public class userLoginMain {
             VehiclesSoldToCustomerTable.addVehicleSoldToCustomer(demo.getConnection(),newSaleID,cart.get(i).getVIN());
 
             DealerVehicleInventoryTable.removeVehicleFromDealerInventory(demo.getConnection(),cart.get(i).getVIN());
-            System.out.println("\nVehicles bought! Thank you for your purchase!\n");
+            System.out.println("\nVehicles bought! Thank you for your purchase!");
         }
     }
 
