@@ -250,7 +250,26 @@ public class dealerLoginMain {
     }
 
     private static void viewManufacturers(H2DemoMain demo, Dealer currentDealer) {
-        //TODO
+        ArrayList<Manufacturer> manufacturers = new ArrayList<Manufacturer>();
+
+        try {
+            String queryManufacturers = "SELECT * from Manufacturer";
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery(queryManufacturers);
+
+            while (result.next()) {
+                Manufacturer newManufacturer = new Manufacturer(result.getString("M_ID"),result.getString("Name"));
+                manufacturers.add(newManufacturer);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        for (int i = 0; i < manufacturers.size(); i++) {
+            System.out.println(i + 1 + ": " + manufacturers.get(i).getName());
+        }
+
     }
 
     private static void showCustomerInformation(Customer currentCustomer, H2DemoMain demo) {
