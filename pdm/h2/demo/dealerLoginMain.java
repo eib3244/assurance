@@ -193,13 +193,53 @@ public class dealerLoginMain {
                     + currentDealer.getDealer_ID() +"\'";
             Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet result = stmt.executeQuery(queuryCustomers);
+
             while (result.next()) {
-                System.out.println(result.getString("SSN") + " " + result.getString("Name"));
+                Customer newCustomer = new Customer(result.getString("SSN"), result.getString("Name"),result.getString("Gender"),
+                        result.getInt("Income"), result.getInt("House_Num"),result.getString("Street"),
+                        result.getString("City"),result.getString("State"),result.getString("ZIP"),result.getString("Email"),
+                        result.getString("Password"));
+                customerList.add(newCustomer);
             }
 
+            while (loopThrough) {
+
+                System.out.println("\n-----Customers-----");
+                for (int i = 0; i < customerList.size();i++) {
+
+                    System.out.println(i + 1 + ": " + customerList.get(i).getName() + " " + customerList.get(i).getSSN());
+                }
+
+                System.out.println(customerList.size() + 1 + ": Prior Menu");
+
+                int choice = -1;
+
+                System.out.println("\n-----Customer Selection-----");
+
+                while (true) {
+
+                    System.out.print("Please select an option: ");
+                    String input = userIn.next();
 
 
+                    try {
+                        choice = Integer.parseInt(input);
+                    } catch (java.lang.NumberFormatException e){}
 
+                    if (choice > 0 && choice <= customerList.size()) {
+                        showCustomerInformation(customerList.get(choice - 1), demo);
+                        break;
+                    }
+                    if (choice == customerList.size() + 1) {
+                        return;
+                    }
+                    else {
+                        System.out.println("Not a valid option.");
+                    }
+
+                }
+
+            }
 
 
         } catch (SQLException e) {
@@ -210,7 +250,78 @@ public class dealerLoginMain {
     }
 
     private static void viewManufacturers(H2DemoMain demo, Dealer currentDealer) {
-        //TODO
+        ArrayList<Manufacturer> manufacturers = new ArrayList<Manufacturer>();
+
+        try {
+            String queryManufacturers = "SELECT * from Manufacturer";
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery(queryManufacturers);
+
+            while (result.next()) {
+                Manufacturer newManufacturer = new Manufacturer(result.getString("M_ID"),result.getString("Name"));
+                manufacturers.add(newManufacturer);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        for (int i = 0; i < manufacturers.size(); i++) {
+            System.out.println(i + 1 + ": " + manufacturers.get(i).getName());
+        }
+
+    }
+
+    private static void showCustomerInformation(Customer currentCustomer, H2DemoMain demo) {
+
+        ArrayList<String> phoneNumbers = new ArrayList<String>();
+
+
+        try {
+
+            String queuryCustomerPhones = "SELECT Phone_Num from customer_phone" +
+                    " WHERE customer_phone.SSN = \'" + currentCustomer.getSSN() + "\'";
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery(queuryCustomerPhones);
+            while (result.next()){
+                phoneNumbers.add(result.getString("Phone_Num"));
+            }
+
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        System.out.println("\n-----" + currentCustomer.getName() +"-----");
+        System.out.println("SSN: " + currentCustomer.getSSN());
+        System.out.println("Name: " + currentCustomer.getName());
+        System.out.println("Gender: " + currentCustomer.getGender());
+        System.out.println("Income: $" + currentCustomer.getIncome());
+        System.out.println("Address: " + currentCustomer.gethouse_num() + " "
+                + currentCustomer.getStreet() + " " + currentCustomer.getCity() + " " + currentCustomer.getState()+ " " + currentCustomer.getZip());
+        System.out.println("Email: " + currentCustomer.getEmail());
+        System.out.print("Phone Number(s): ");
+        for (int i = 0; i < phoneNumbers.size();i++) {
+            System.out.print(" " + phoneNumbers.get(i));
+        }
+
+
+
+
+
+
+
+
+        System.out.println("\n-----Options-----");
+        System.out.println("1: Prior menu");
+        int choice = -1;
+        while (choice != 1) {
+            try {
+                System.out.print("Select an option: ");
+                choice = Integer.parseInt(userIn.next());
+            } catch (java.lang.NumberFormatException e){}
+        }
     }
 
     private static void showVehicleInformation(Vehicle currentVehicle){
