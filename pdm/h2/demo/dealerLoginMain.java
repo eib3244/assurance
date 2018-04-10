@@ -340,8 +340,8 @@ public class dealerLoginMain {
                             break;
 
                         case 2:
-                            //whereClauseArrayList =
-                            //        alterWhereClause(demo, whereClauseArrayList, manufacturers.get(choice - 1).getM_ID());
+                            whereClauseArrayList =
+                                   alterWhereClause(demo, whereClauseArrayList, manufacturers.get(choice - 1).getM_ID());
                             break;
 
                         case 3:
@@ -369,6 +369,289 @@ public class dealerLoginMain {
 
 
     }
+
+    private static ArrayList<String> alterWhereClause(H2DemoMain demo, ArrayList<String> whereClauseArrayList, String currentManufacturerID){
+        String Make = whereClauseArrayList.get(0);
+        String Model = whereClauseArrayList.get(1);
+        String Brand = whereClauseArrayList.get(2);
+        String Year = whereClauseArrayList.get(3);
+        String Engine = whereClauseArrayList.get(4);
+        String Color = whereClauseArrayList.get(5);
+        String Transmission = whereClauseArrayList.get(6);
+        String Drive_Type = whereClauseArrayList.get(7);
+        String Price = whereClauseArrayList.get(8);
+        String Miles =  whereClauseArrayList.get(9);
+
+        boolean keepAltering = true;
+        while (keepAltering) {
+
+            String modelsCurrentMake = "";
+            if (!Model.equals("")){
+                try {
+                    String query = "SELECT * FROM vehicles "
+                            + " WHERE Vehicles.Model =\'"
+                            + Model + "\'";
+                    Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                    ResultSet result = stmt.executeQuery(query);
+                    result.next();
+
+                    modelsCurrentMake = result.getString(2);
+                } catch (java.sql.SQLException e){}
+            }
+
+            String makesCurrentBrand = "";
+            if (!Make.equals("")){
+                try {
+                    String query = "SELECT * FROM vehicles "
+                            + " WHERE Vehicles.Make =\'"
+                            + Make + "\'";
+                    Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                    ResultSet result = stmt.executeQuery(query);
+                    result.next();
+
+                    makesCurrentBrand = result.getString(4);
+                } catch (java.sql.SQLException e){}
+            }
+
+            System.out.println("\n--Search Options To Alter--");
+
+            if (makesCurrentBrand.equals(""))
+                System.out.println("1:  Make Currently (" + Make + ")");
+            else
+                System.out.println("1:  Make Currently (" + Make + ") made by " + makesCurrentBrand);
+
+            if (modelsCurrentMake.equals(""))
+                System.out.println("2:  Model Currently (" + Model + ")");
+            else
+                System.out.println("2:  Model Currently (" + Model + ") made by " + modelsCurrentMake);
+
+            System.out.println("3:  Brand Currently (" + Brand + ")");
+            System.out.println("4:  Year Currently (" + Year + ")");
+            System.out.println("5:  Engine Currently (" + Engine + ")");
+            System.out.println("6:  Color Currently (" + Color + ")");
+            System.out.println("7:  Transmission Currently (" + Transmission + ")");
+            System.out.println("8:  Drive_Type Currently (" + Drive_Type + ")");
+            System.out.println("9:  Price Currently (" + Price + ")");
+            System.out.println("10: Miles Currently (" + Miles + ")");
+            System.out.println("11: Stop altering attributes");
+            System.out.println("Note () means no preference.");
+
+            if (
+                    (!Model.equals("")) && (!Make.equals("")) && (!Make.equals(modelsCurrentMake))
+                            ||
+                            (!Make.equals("")) && (!Brand.equals("")) && (!Brand.equals(makesCurrentBrand))) {
+                System.out.println("*****\nNote! Your search will currently return 0 vehicles as\n"
+                        + "your selected \'Make\' must be made by your selected \'Brand\' and \n" +
+                        "your selected  \'Model\' must be made by your selected \'Make\'\n*****");
+            }
+            System.out.print("Select an option: ");
+            int selection = -1;
+            while (true) {
+                String optionInput = userIn.next();
+                try {
+                    selection = Integer.parseInt(optionInput);
+                } catch (java.lang.NumberFormatException e) {
+                }
+                if ((selection > 0) && (selection <= 11))
+                    break;
+                System.out.print("Please input a number from the list above: ");
+            }
+
+            switch (selection) {
+                case 1:
+                    Make = alterVehicleAttOption(demo, "Make",selection + 1, currentManufacturerID, Make);
+                    break;
+
+                case 2:
+                    Model = alterVehicleAttOption(demo, "Model",selection + 1, currentManufacturerID, Make);
+                    break;
+
+                case 3:
+                    Brand = alterVehicleAttOption(demo, "Brand",selection + 1, currentManufacturerID, Make);
+                    break;
+
+                case 4:
+                    Year = alterVehicleAttOption(demo, "Year",selection + 1, currentManufacturerID, Make);
+                    break;
+
+                case 5:
+                    Engine = alterVehicleAttOption(demo, "Engine",selection + 1, currentManufacturerID, Make);
+                    break;
+
+                case 6:
+                    Color = alterVehicleAttOption(demo, "Color",selection + 1, currentManufacturerID, Make);
+                    break;
+
+                case 7:
+                    Transmission = alterVehicleAttOption(demo, "Transmission",selection + 1, currentManufacturerID, Make);
+                    break;
+
+                case 8:
+                    Drive_Type = alterVehicleAttOption(demo, "Drive_Type",selection + 1, currentManufacturerID, Make);
+                    break;
+
+                case 9:
+                    Price = alterVehicleNumericAtt(demo,selection + 1, currentManufacturerID, "Price");
+                    break;
+                case 10:
+                    Miles = alterVehicleNumericAtt(demo, selection + 1, currentManufacturerID, "Miles");
+                    break;
+
+                case 11:
+                    keepAltering = false;
+                    break;
+            }
+        }
+        whereClauseArrayList.set(0,Make);
+        whereClauseArrayList.set(1,Model);
+        whereClauseArrayList.set(2,Brand);
+        whereClauseArrayList.set(3,Year);
+        whereClauseArrayList.set(4,Engine);
+        whereClauseArrayList.set(5,Color);
+        whereClauseArrayList.set(6,Transmission);
+        whereClauseArrayList.set(7,Drive_Type);
+        whereClauseArrayList.set(8,Price);
+        whereClauseArrayList.set(9,Miles);
+
+        return whereClauseArrayList;
+    }
+
+    private static String alterVehicleAttOption(H2DemoMain demo, String optionToChange, int thingToChangeColumn, String currentManufacturerID, String currentMake){
+        ArrayList<String > optionsToChooseFrom = new ArrayList<String>();
+        ArrayList<String > optionsToChooseFromMakes = new ArrayList<String>();
+
+        try {
+            String query = "SELECT * FROM vehicles "
+                    + "INNER JOIN ManufacturerVehicles ON" +
+                    " ManufacturerVehicles.VIN = vehicles.VIN "
+                    + " WHERE ManufacturerVehicles.M_ID =\'"
+                    + currentManufacturerID + "\' "
+                    + "ORDER BY vehicles.Make asc;";
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery(query);
+
+            while(result.next()){
+                if (!optionsToChooseFrom.contains(result.getString(thingToChangeColumn))){
+                    optionsToChooseFromMakes.add(" made by " + result.getString(2));
+                    optionsToChooseFrom.add(result.getString(thingToChangeColumn));
+                }
+            }
+        } catch (java.sql.SQLException e){}
+
+        System.out.println("\n--" + optionToChange + " To Choose From--");
+        if (thingToChangeColumn == 3 && !currentMake.equals("")) {
+            System.out.println("Note your currently selected make is: " + currentMake);
+        }
+        System.out.println("----------------");
+        int i;
+        for(i = 0; i < optionsToChooseFrom.size(); i++){
+            if (thingToChangeColumn == 3){
+                System.out.println(i + ": " + optionsToChooseFrom.get(i) + optionsToChooseFromMakes.get(i));
+            }
+            else
+                System.out.println(i + ": " + optionsToChooseFrom.get(i));
+        }
+        System.out.println(i + ": Clear preference");
+
+        int userSelection = -1;
+        System.out.print("Select a " + optionToChange + ": ");
+        while (true) {
+            String optionInput = userIn.next();
+            try {
+                userSelection = Integer.parseInt(optionInput);
+            } catch (java.lang.NumberFormatException e) {
+            }
+            if ((userSelection >= 0) && (userSelection < optionsToChooseFrom.size() + 1))
+                break;
+            System.out.print("Please input a number from the list above: ");
+        }
+        if(userSelection == optionsToChooseFrom.size()) {
+            System.out.println("No preference selected for " + optionToChange + ".");
+            return "";
+        }
+        else {
+            System.out.println("You selected " + optionsToChooseFrom.get(userSelection) + " for your " + optionToChange + ".");
+            return optionsToChooseFrom.get(userSelection);
+        }
+    }
+
+    private static String alterVehicleNumericAtt(H2DemoMain demo, int thingToChangeColumn, String currentManufacturerID, String thingToChange){
+        int value = -1;
+        int greaterOrLess = -1;
+        String optionToChange;
+
+        try {
+            String query = "SELECT MIN(" + thingToChange + ") FROM vehicles "
+                    + "INNER JOIN ManufacturerVehicles ON" +
+                    " ManufacturerVehicles.VIN = vehicles.VIN"
+                    + " WHERE ManufacturerVehicles.M_ID =\'"
+                    + currentManufacturerID + "\'";
+
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery(query);
+            result.next();
+            System.out.println("Min " + thingToChange +": " + result.getString(1));
+
+            query = "SELECT MAX(" + thingToChange + ") FROM vehicles "
+                    + "INNER JOIN ManufacturerVehicles ON" +
+                    " ManufacturerVehicles.VIN = vehicles.VIN"
+                    + " WHERE ManufacturerVehicles.M_ID =\'"
+                    + currentManufacturerID + "\'";
+
+            stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            result = stmt.executeQuery(query);
+            result.next();
+            System.out.println("Max " + thingToChange +": " + result.getString(1));
+
+            query = "SELECT AVG(" + thingToChange + ") FROM vehicles "
+                    + "INNER JOIN ManufacturerVehicles ON" +
+                    " ManufacturerVehicles.VIN = vehicles.VIN"
+                    + " WHERE ManufacturerVehicles.M_ID =\'"
+                    + currentManufacturerID + "\'";
+
+            stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            result = stmt.executeQuery(query);
+            result.next();
+            System.out.println("Average " + thingToChange +": " + result.getString(1));
+
+        } catch (java.sql.SQLException e){}
+
+        System.out.print("Input a price for your vehicle: ");
+        // loop to ensure a number is inputted / no crash
+        while(true) {
+            String optionInput = userIn.next();
+
+            try{
+                value = Integer.parseInt(optionInput);
+            } catch (java.lang.NumberFormatException e){}
+            if ((value >= 0))
+                break;
+            System.out.print("Please input a whole number: ");
+        }
+
+        System.out.println("1: Greater than");
+        System.out.println("2: Less than");
+        System.out.print("Select if you want to see vehicles above or below your selected price: ");
+        while(true) {
+            String optionInput = userIn.next();
+
+            try{
+                greaterOrLess = Integer.parseInt(optionInput);
+            } catch (java.lang.NumberFormatException e){}
+            if ((greaterOrLess == 1) || (greaterOrLess == 2))
+                break;
+            System.out.print("Please input a 1 or 2: ");
+        }
+
+        if(greaterOrLess == 1){
+            optionToChange = ">" +  "\'" + value + "\'";
+        }
+        else
+            optionToChange = "<" +  "\'" + value + "\'";
+
+        return optionToChange;
+    }
+
 
 
 
