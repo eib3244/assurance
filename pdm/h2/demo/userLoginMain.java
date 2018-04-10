@@ -33,7 +33,7 @@ public class userLoginMain {
         System.out.println("\n-----Customer Home-----");
         System.out.print("Login: 1\nCreate New User: 2\nSelect an option: ");
         while(true) {
-          String userinput= userin.next();
+          String userinput= userin.nextLine();
 
           try{
               choice = Integer.parseInt(userinput);
@@ -53,9 +53,9 @@ public class userLoginMain {
             // main loop we loop until a user is logged in.
             while (true) {
                 System.out.print("Enter in a email:");
-                String email = userin.next();
+                String email = userin.nextLine();
                 System.out.print("Enter in a password:");
-                String passwordLogin = userin.next();
+                String passwordLogin = userin.nextLine();
 
                 String query = "SELECT * FROM customer WHERE Email=\'" + email + "\' AND Password=\'" + passwordLogin + "\';";
 
@@ -91,7 +91,7 @@ public class userLoginMain {
                     if (numOfPPL > 1) {
 
                         System.out.print("Enter your SSN for verification\n(Ex: 000-00-0000): ");
-                        String ssn = userin.next();
+                        String ssn = userin.nextLine();
 
                         boolean ssnFound = false;
                         while(result.next()){
@@ -126,22 +126,22 @@ public class userLoginMain {
             System.out.println("\n-----New Customer Creation-----");
 
             System.out.print("Input SSN (Ex: 000-00-0000): ");
-            String ssn = userin.next();
+            String ssn = userin.nextLine();
             ssn = ssn.substring(0, Math.min(11, ssn.length()));
 
             System.out.print("Input Your Full Name (max length 50): ");
-            String name = userin.next();
+            String name = userin.nextLine();
             name = name.substring(0, Math.min(50, name.length()));
 
             System.out.print("Input Your Gender (max length 6): ");
-            String gender = userin.next();
+            String gender = userin.nextLine();
             gender = gender.substring(0, Math.min(6, gender.length()));
 
             System.out.print("Input Your income (Must be a whole number \ngreater than or equal to zero. Ex: 15000): ");
             int income = -1;
             // loop to ensure a number is inputted / no crash
             while(true) {
-                String incomeInput = userin.next();
+                String incomeInput = userin.nextLine();
 
                 try{
                     income = Integer.parseInt(incomeInput);
@@ -155,7 +155,7 @@ public class userLoginMain {
             int houseNumber = -1;
             // loop to ensure a number is inputted / no crash
             while(true) {
-                String houseNumInput = userin.next();
+                String houseNumInput = userin.nextLine();
 
                 try{
                     houseNumber = Integer.parseInt(houseNumInput);
@@ -167,27 +167,27 @@ public class userLoginMain {
             }
 
             System.out.print("Input Street (max length 50): ");
-            String street = userin.next();
+            String street = userin.nextLine();
             street = street.substring(0, Math.min(50, street.length()));
 
             System.out.print("Input City (max length 20): ");
-            String city = userin.next();
+            String city = userin.nextLine();
             city = city.substring(0, Math.min(20, city.length()));
 
 
             System.out.print("Input State (Ex. NY,WI,FL): ");
-            String state = userin.next();
+            String state = userin.nextLine();
             state = state.toUpperCase();
             state = state.substring(0, Math.min(2, state.length()));
 
             System.out.print("Input Zip-Code (Ex: 13021, 53066): ");
-            String zipcode = userin.next();
+            String zipcode = userin.nextLine();
             zipcode = zipcode.substring(0, Math.min(5, zipcode.length()));
 
 
             System.out.print("Enter Phone Numbers (Ex: 315-111-1111,315-222-3333)\nSeparate Each one by a comma: ");
             String phoneNumbers;
-            phoneNumbers = userin.next();
+            phoneNumbers = userin.nextLine();
             String[] phoneNumArray = phoneNumbers.split(",");
             int i = 0;
             while(i < phoneNumArray.length){
@@ -195,12 +195,22 @@ public class userLoginMain {
                 i++;
             }
 
+            ArrayList<String> custPhonesNoDup = new ArrayList<String>();
+
+            i = 0;
+            while(i < phoneNumArray.length){
+                if (!custPhonesNoDup.contains(phoneNumArray[i])) {
+                    custPhonesNoDup.add(phoneNumArray[i]);
+                }
+                i++;
+            }
+
             System.out.print("Input Email (max length 40): ");
-            String email = userin.next();
+            String email = userin.nextLine();
             email = email.substring(0, Math.min(40, email.length()));
 
             System.out.print("Input Password (max length 20): ");
-            String userPass = userin.next();
+            String userPass = userin.nextLine();
             userPass = userPass.substring(0, Math.min(20, userPass.length()));
 
             // we check to see if the customer's SSN is in the Database yet.
@@ -210,12 +220,16 @@ public class userLoginMain {
                 if (result == false) {
                     System.out.println("User Created !");
                     CustomerTable.addCustomer(demo.getConnection(), ssn, name, gender, income, houseNumber, street, city, state, zipcode, email, userPass);
+
+                    for (int x = 0; x < custPhonesNoDup.size(); x++)
+                        CustomerPhoneTable.addPhoneNumber(demo.getConnection(),ssn,custPhonesNoDup.get(x));
+
                     currentCustomer = new Customer(ssn,name,gender,income,houseNumber,street,city,state,zipcode,email,userPass);
                     break;
                 } else {
                     System.out.println("Error: SSN is already in use");
                     System.out.println("Input SSN (Ex: 000-00-0000): ");
-                    ssn = userin.next();
+                    ssn = userin.nextLine();
                     ssn = ssn.substring(0, Math.min(11, ssn.length()));
                 }
             }
