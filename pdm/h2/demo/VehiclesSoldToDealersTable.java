@@ -99,7 +99,7 @@ public class VehiclesSoldToDealersTable {
 
     public static void addVehiclesSoldToDealers(Connection conn, String dealer_s_id, String vin){
         String query = String.format("INSERT INTO VehiclesSoldToDealers "
-                        + "VALUES (%s,\'%s\');",
+                        + "VALUES (\'%s\',\'%s\');",
                 dealer_s_id, vin);
         try{
             Statement stmt = conn.createStatement();

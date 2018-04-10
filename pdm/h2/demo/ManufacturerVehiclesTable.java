@@ -107,6 +107,18 @@ public class ManufacturerVehiclesTable {
         }catch (SQLException e){e.printStackTrace();}
     }
 
+    public static void removeVehicleFromManufacturerInventory(Connection conn, String VIN) {
+        String query = String.format("DELETE FROM MANUFACTURERVEHICLES WHERE "
+        + "VIN=\'%s\';", VIN);
+
+        try {
+            Statement stmt = conn.createStatement();
+            stmt.execute(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void printCustomerTable(Connection conn){
         String query = "SELECT * FROM ManufacturerVehicles;";
         try {

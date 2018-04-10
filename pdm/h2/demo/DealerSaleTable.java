@@ -104,7 +104,8 @@ public class DealerSaleTable {
                                  String m_id, Long date,
                                  int total){
         String query = String.format("INSERT INTO Dealer_Sale "
-                        + "VALUES (\'s%\', \'s%\', \'s%\', %d, %d);",
+                        //+ "VALUES (\'s%\', \'s%\', \'s%\', %d, %d);",
+                         + "VALUES (\'%s\', \'%s\', \'%s\', %d, %d);",
                 dealer_sale_id, dealer_id, m_id, date, total);
         try{
             Statement stmt = conn.createStatement();
