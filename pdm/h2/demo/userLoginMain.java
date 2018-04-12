@@ -228,7 +228,7 @@ public class userLoginMain {
                     break;
                 } else {
                     System.out.println("Error: SSN is already in use");
-                    System.out.println("Input SSN (Ex: 000-00-0000): ");
+                    System.out.print("Input SSN (Ex: 000-00-0000): ");
                     ssn = userin.nextLine();
                     ssn = ssn.substring(0, Math.min(11, ssn.length()));
                 }
@@ -811,7 +811,7 @@ public class userLoginMain {
 
         } catch (java.sql.SQLException e){}
 
-        System.out.print("Input a price for your vehicle: ");
+        System.out.print("Input a number for your vehicle's " + thingToChange + ": ");
         // loop to ensure a number is inputted / no crash
         while(true) {
             String optionInput = userin.next();
