@@ -22,9 +22,10 @@ public class dealerLoginMain {
 
         int choice;
         Dealer currentDealer = null;
+        System.out.println("\n-----Dealer Login-----");
 
         while (true) {
-            System.out.println("Enter your Dealer ID:");
+            System.out.print("Enter your Dealer ID:");
             String dealerID = userIn.next();
 
 
@@ -66,7 +67,7 @@ public class dealerLoginMain {
 
     private static void dealerInteractionLoop(H2DemoMain demo, Dealer currentDealer) {
         int option;
-        System.out.println("\n" + currentDealer.getName() + " Login");
+        System.out.println("\n-----" + currentDealer.getName() + " Home-----");
 
         option = -1;
 
@@ -303,7 +304,7 @@ public class dealerLoginMain {
             }
 
             while (true) {
-                System.out.println("\n-----Manufacturers-----");
+
 
 
                 for (int i = 0; i < manufacturers.size(); i++) {
@@ -318,7 +319,7 @@ public class dealerLoginMain {
 
                 while (true) {
 
-                    System.out.print("Please select an option: ");
+                    System.out.print("Please select an option from the list above: ");
                     String input = userIn.next();
 
 
