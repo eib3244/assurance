@@ -243,6 +243,7 @@ else
 				break;
 
 			case 4:
+				System.out.println("Goodbye!");
 				break;
 		}
 	}

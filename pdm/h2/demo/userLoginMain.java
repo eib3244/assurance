@@ -8,6 +8,7 @@ import pdm.h2.demo.objects.*;
 import javax.jws.WebParam;
 import javax.jws.soap.SOAPBinding;
 import javax.tools.JavaFileManager;
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -218,6 +219,7 @@ public class userLoginMain {
             while (true) {
                 boolean result = CustomerTable.checkIfInTable(demo.getConnection(), ssn);
                 if (result == false) {
+                    cls.clear();
                     System.out.println("User Created !");
                     CustomerTable.addCustomer(demo.getConnection(), ssn, name, gender, income, houseNumber, street, city, state, zipcode, email, userPass);
 
