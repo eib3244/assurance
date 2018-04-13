@@ -92,17 +92,17 @@ public class dealerLoginMain {
 
             switch (option) {
                 case 1:
-                    //System.out.println("\n--VEHICLE INVENTORY--");
+                    System.out.println("\n-----VEHICLE INVENTORY-----");
                     viewInventory(demo, currentDealer);
                     break;
 
                 case 2:
-                    System.out.println("\n--CUSTOMERS--");
+                    System.out.println("\n-----CUSTOMERS-----");
                     viewCustomers(demo, currentDealer);
                     break;
 
                 case 3:
-                    System.out.println("\n--Manufacturers--");
+                    System.out.println("\n-----Manufacturers-----");
                     viewManufacturers(demo, currentDealer);
                     break;
 
@@ -165,14 +165,16 @@ public class dealerLoginMain {
                 }
                 //System.out.println(vehicleInventory.size() + 1 + ": Prior Menu");
                 System.out.println(vehicleInventory.size() + 1 + ": Return to prev menu");
+                System.out.println("------------------------");
 
                 int choice = -1;
 
 
-                System.out.println("\n-----Car Selection-----");
+                //System.out.println("\n-----Car Selection-----");
+                System.out.print("Please select an option from the list above: ");
                 while (true) {
 
-                    System.out.print("Please select an option: ");
+                    //System.out.print("Please select an option from the list above: ");
                     String input = userIn.next();
 
 
@@ -188,7 +190,7 @@ public class dealerLoginMain {
                         return;
                     }
                     else {
-                        System.out.println("Not a valid option.");
+                        System.out.print("Please input a number from the list above: ");
                     }
 
                 }
@@ -225,23 +227,38 @@ public class dealerLoginMain {
                 customerList.add(newCustomer);
             }
 
+            System.out.printf("%2s: %50s %20s %40s\n",
+            "--","Name","SSN" ,"Email" );
+
+            System.out.println("----------------------------------------------------------------------------" +
+                    "-------------------------------------------------" +
+                    "--------------------------------------");
+
+
             while (loopThrough) {
 
-                System.out.println("\n-----Customers-----");
                 for (int i = 0; i < customerList.size();i++) {
 
-                    System.out.println(i + 1 + ": " + customerList.get(i).getName() + " " + customerList.get(i).getSSN());
+                    //System.out.println(i + 1 + ": " + customerList.get(i).getName() + " " + customerList.get(i).getSSN());
+                    System.out.printf("%2d: %50s %20s %40s", i + 1,
+                                        customerList.get(i).getName(),
+                                        customerList.get(i).getSSN(),
+                                        customerList.get(i).getEmail());
+
+                    System.out.println("\n----------------------------------------------------------------------------" +
+                            "-------------------------------------------------" +
+                            "--------------------------------------");
                 }
 
-                System.out.println(customerList.size() + 1 + ": Prior Menu");
+                System.out.println(customerList.size() + 1 + ": Return to prev menu");
+                System.out.println("------------------------");
 
                 int choice = -1;
 
-                System.out.println("\n-----Customer Selection-----");
-
+                System.out.print("Please select an option from the list above: ");
                 while (true) {
 
-                    System.out.print("Please select an option: ");
+                    //System.out.print("Please select an option from the list above: ");
                     String input = userIn.next();
 
 
@@ -257,7 +274,7 @@ public class dealerLoginMain {
                         return;
                     }
                     else {
-                        System.out.println("Not a valid option.");
+                        System.out.print("Please input a number from the list above: ");
                     }
 
                 }
@@ -825,7 +842,7 @@ public class dealerLoginMain {
 
         System.out.println("\n--Options--");
         System.out.println("1: Add car to cart");
-        System.out.println("2: Go back to dealer menu");
+        System.out.println("2: Go back to manufacturer menu");
         System.out.print("Select an option: ");
 
         int option = -1;
@@ -1001,7 +1018,7 @@ public class dealerLoginMain {
         }
 
 
-        System.out.println("\n-----" + currentCustomer.getName() +"-----");
+        System.out.println("\n-----Current Customer Selected-----");
         System.out.println("SSN: " + currentCustomer.getSSN());
         System.out.println("Name: " + currentCustomer.getName());
         System.out.println("Gender: " + currentCustomer.getGender());
@@ -1022,7 +1039,7 @@ public class dealerLoginMain {
 
 
         System.out.println("\n-----Options-----");
-        System.out.println("1: Prior menu");
+        System.out.println("1: Go back to customer menu");
         int choice = -1;
         while (choice != 1) {
             try {
@@ -1034,7 +1051,7 @@ public class dealerLoginMain {
 
     private static void showVehicleInformation(Vehicle currentVehicle){
 
-        System.out.println("\n-----" + currentVehicle.getYear() +" " + currentVehicle.getMake() +" " + currentVehicle.getModel() + "-----");
+        System.out.println("\n-----Current Vehicle Selected-----");
         System.out.println("VIN: " + currentVehicle.getVIN());
         System.out.println("Make: " + currentVehicle.getMake());
         System.out.println("Model: " + currentVehicle.getModel());
@@ -1053,11 +1070,11 @@ public class dealerLoginMain {
         System.out.println("Color: " + currentVehicle.getColor());
         System.out.println("Transmission: " + currentVehicle.getTransmission());
         System.out.println("Drive Type: " + currentVehicle.getDrive_Type());
-        System.out.println("Price: $ " + currentVehicle.getPrice());
+        System.out.println("Price: $" + currentVehicle.getPrice());
         System.out.println("Miles: " + currentVehicle.getMiles());
 
-        System.out.println("\n-----Options-----");
-        System.out.println("1: Prior menu");
+        System.out.println("\n--Options--");
+        System.out.println("1: Go back to inventory menu");
         int choice = -1;
         while (choice != 1) {
             try {
