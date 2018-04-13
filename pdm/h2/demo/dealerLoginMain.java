@@ -137,13 +137,34 @@ public class dealerLoginMain {
                         result.getString("Drive_Type"), result.getInt("Price"), result.getInt("Miles"));
                 vehicleInventory.add(newVehicle);
             }
+            System.out.printf("%2s: %20s %10s %20s %30s %15s %15s %15s %15s %15s\n",
+                    "--","Color","Year","Make","Model","Engine","Transmission","Drive Type","Price","Miles");
+
+            System.out.println("----------------------------------------------------------------------------" +
+                    "-------------------------------------------------" +
+                    "----------------------------------------------");
 
             while (loopThrough) {
-                System.out.println("\n-----VEHICLE INVENTORY-----");
+                //System.out.println("\n-----VEHICLE INVENTORY-----");
                 for (int i = 0; i < vehicleInventory.size();i++){
-                    System.out.println(i + 1 + ": " + vehicleInventory.get(i).getYear() + " " + vehicleInventory.get(i).getMake() + " " + vehicleInventory.get(i).getModel());
+                    //System.out.println(i + 1 + ": " + vehicleInventory.get(i).getYear() + " " + vehicleInventory.get(i).getMake() + " " + vehicleInventory.get(i).getModel());
+                    System.out.printf("%2d: %20s %10s %20s %30s %15s %15s %15s %15s %15s Mi.",i + 1,
+                            vehicleInventory.get(i).getColor(),
+                            vehicleInventory.get(i).getYear(),
+                            vehicleInventory.get(i).getMake(),
+                            vehicleInventory.get(i).getModel(),
+                            vehicleInventory.get(i).getEngine(),
+                            vehicleInventory.get(i).getTransmission(),
+                            vehicleInventory.get(i).getDrive_Type(),
+                            vehicleInventory.get(i).getPrice(),
+                            vehicleInventory.get(i).getMiles());
+                    System.out.println("\n----------------------------------------------------------------------------" +
+                            "-------------------------------------------------" +
+                            "----------------------------------------------");
+
                 }
-                System.out.println(vehicleInventory.size() + 1 + ": Prior Menu");
+                //System.out.println(vehicleInventory.size() + 1 + ": Prior Menu");
+                System.out.println(vehicleInventory.size() + 1 + ": Return to prev menu");
 
                 int choice = -1;
 
