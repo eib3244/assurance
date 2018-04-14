@@ -49,13 +49,14 @@ public class userLoginMain {
 
         // logging user in
         if (choice == 1) {
+            cls.clear();
             System.out.println("\n-----Customer Login-----");
 
             // main loop we loop until a user is logged in.
             while (true) {
-                System.out.print("Enter in a email:");
+                System.out.print("Enter in a email: ");
                 String email = userin.nextLine();
-                System.out.print("Enter in a password:");
+                System.out.print("Enter in a password: ");
                 String passwordLogin = userin.nextLine();
 
                 String query = "SELECT * FROM customer WHERE Email=\'" + email + "\' AND Password=\'" + passwordLogin + "\';";
@@ -85,6 +86,7 @@ public class userLoginMain {
                             i++;
                         }
                         currentCustomer = new Customer(data);
+                        cls.clear();
                         break;
                     }
 
@@ -107,13 +109,16 @@ public class userLoginMain {
                                     i++;
                                 }
                                 currentCustomer = new Customer(data);
+                                cls.clear();
                                 break;
                             }
                         }
 
                         // breaking out of loop is user logs in else we go back to the top of the loop
-                        if (currentCustomer != null)
+                        if (currentCustomer != null) {
+                            cls.clear();
                             break;
+                        }
                         else
                             System.out.println("User not found please try again.");
                     }
@@ -124,6 +129,7 @@ public class userLoginMain {
 
         // creating new acct logic, getting info from user....
         else{
+            cls.clear();
             System.out.println("\n-----New Customer Creation-----");
 
             System.out.print("Input SSN (Ex: 000-00-0000): ");
@@ -268,16 +274,19 @@ public class userLoginMain {
 
             switch (option) {
                 case 1:
+                    cls.clear();
                     System.out.println("\n--PAST SALES--");
                     viewPastSales(demo, currentCustomer);
                     break;
 
                 case 2:
+                    cls.clear();
                     System.out.println("\n--VEHICLE SEARCH--");
                     viewVehicles(demo,currentCustomer);
                     break;
 
                 case 3:
+                    cls.clear();
                     System.out.println("\nGoodbye!");
                     break;
             }
@@ -370,6 +379,7 @@ public class userLoginMain {
             System.out.print("Please input a number from the list above: ");
         }
 
+        cls.clear();
         System.out.println(dealers.get(dealerSelected).getName() + " was selected");
 
         boolean stayInLoop = true;
@@ -404,20 +414,24 @@ public class userLoginMain {
             switch (selection) {
 
                 case 1:
+                    cls.clear();
                     System.out.println("\n-----Vehicles to Buy-----");
                     cart = viewVehiclesToBuy(demo, whereClauseArrayList, dealers.get(dealerSelected).getDealer_ID(), cart);
                     break;
 
                 case 2:
+                    cls.clear();
                     whereClauseArrayList =
                             alterWhereClause(demo, whereClauseArrayList, dealers.get(dealerSelected).getDealer_ID());
                     break;
 
                 case 3:
+                    cls.clear();
                     cart = viewCart(demo,cart,currentCustomer,dealers.get(dealerSelected).getDealer_ID());
                     break;
 
                 case 4:
+                    cls.clear();
                     stayInLoop = false;
                     break;
             }
@@ -548,6 +562,9 @@ public class userLoginMain {
                         break;
                     System.out.print("Please input a number from the list above: ");
                 }
+
+                cls.clear();
+
                 if (option != i){
                     viewVehicleInDetail(demo, vehiclesToSelect.get(option-1), cart);
                 }
@@ -649,45 +666,56 @@ public class userLoginMain {
 
             switch (selection) {
                 case 1:
+                    cls.clear();
                     Make = alterVehicleAttOption(demo, "Make",selection + 1, currentDealerID, Make);
                     break;
 
                 case 2:
+                    cls.clear();
                     Model = alterVehicleAttOption(demo, "Model",selection + 1, currentDealerID, Make);
                     break;
 
                 case 3:
+                    cls.clear();
                     Brand = alterVehicleAttOption(demo, "Brand",selection + 1, currentDealerID, Make);
                     break;
 
                 case 4:
+                    cls.clear();
                     Year = alterVehicleAttOption(demo, "Year",selection + 1, currentDealerID, Make);
                     break;
 
                 case 5:
+                    cls.clear();
                     Engine = alterVehicleAttOption(demo, "Engine",selection + 1, currentDealerID, Make);
                     break;
 
                 case 6:
+                    cls.clear();
                     Color = alterVehicleAttOption(demo, "Color",selection + 1, currentDealerID, Make);
                     break;
 
                 case 7:
+                    cls.clear();
                     Transmission = alterVehicleAttOption(demo, "Transmission",selection + 1, currentDealerID, Make);
                     break;
 
                 case 8:
+                    cls.clear();
                     Drive_Type = alterVehicleAttOption(demo, "Drive_Type",selection + 1, currentDealerID, Make);
                     break;
 
                 case 9:
+                    cls.clear();
                     Price = alterVehicleNumericAtt(demo,selection + 1, currentDealerID, "Price");
                     break;
                 case 10:
+                    cls.clear();
                     Miles = alterVehicleNumericAtt(demo, selection + 1, currentDealerID, "Miles");
                     break;
 
                 case 11:
+                    cls.clear();
                     keepAltering = false;
                     break;
             }
@@ -760,10 +788,12 @@ public class userLoginMain {
             System.out.print("Please input a number from the list above: ");
         }
         if(userSelection == optionsToChooseFrom.size()) {
+            cls.clear();
             System.out.println("No preference selected for " + optionToChange + ".");
             return "";
         }
         else {
+            cls.clear();
             System.out.println("You selected " + optionsToChooseFrom.get(userSelection) + " for your " + optionToChange + ".");
             return optionsToChooseFrom.get(userSelection);
         }
@@ -846,6 +876,7 @@ public class userLoginMain {
         else
             optionToChange = "<" +  "\'" + value + "\'";
 
+        cls.clear();
         return optionToChange;
     }
 
@@ -853,6 +884,7 @@ public class userLoginMain {
      * used to view a specific vehicle / add it to the cart
      */
     private static ArrayList<Vehicle> viewVehicleInDetail(H2DemoMain demo, Vehicle vehicleToView,ArrayList<Vehicle> cart){
+        cls.clear();
         System.out.println("\n-----Current Vehicle Selected-----");
         System.out.println("Vin: " + vehicleToView.getVIN());
         System.out.println("Make: " + vehicleToView.getMake());
@@ -884,10 +916,15 @@ public class userLoginMain {
             System.out.print("Please input a number from the list above: ");
         }
 
-        if (option == 1)
+        if (option == 1) {
+            cls.clear();
             cart.add(vehicleToView);
-        System.out.println("Car added to your cart");
-
+            System.out.println("Car added to your cart");
+        }
+        else {
+            cls.clear();
+            System.out.println("Car not added to your cart");
+        }
         return cart;
     }
 
@@ -939,10 +976,12 @@ public class userLoginMain {
 
             switch (option) {
                 case (1):
+                    cls.clear();
                     buyCars(demo,currentCustomer,currentDealerID,cart, total);
                     return (cart = new ArrayList<Vehicle>());
 
                 case (2):
+                    cls.clear();
                     System.out.println("\n-----Current Vehicles in Cart Available to Remove-----");
 
                     System.out.printf("    %-20s %-5s %-20s %-30s %-7s\n",
@@ -974,13 +1013,18 @@ public class userLoginMain {
                     }
 
                     if (option1 < cart.size()) {
+                        cls.clear();
                         System.out.println("\nRemoving " + cart.get(option1).getMake() + " "+
                                 cart.get(option1).getModel());
                         cart.remove(option1);
                     }
+                    else{
+                        cls.clear();
+                    }
                     break;
 
                 case (3):
+                    cls.clear();
                     return cart;
             }
         }
@@ -1015,8 +1059,8 @@ public class userLoginMain {
             VehiclesSoldToCustomerTable.addVehicleSoldToCustomer(demo.getConnection(),newSaleID,cart.get(i).getVIN());
 
             DealerVehicleInventoryTable.removeVehicleFromDealerInventory(demo.getConnection(),cart.get(i).getVIN());
-            System.out.println("\nVehicles bought! Thank you for your purchase!");
         }
+        System.out.println("\nVehicles bought! Thank you for your purchase!");
     }
 
     public static void main(String[] args) {

@@ -4,6 +4,7 @@ import com.sun.corba.se.impl.encoding.BufferManagerWriteCollect;
 import pdm.h2.demo.objects.CustomerSale;
 import pdm.h2.demo.objects.DealerSale;
 import pdm.h2.demo.objects.DealerVehicleInventory;
+import pdm.h2.demo.objects.cls;
 
 import javax.tools.JavaFileManager;
 import java.io.IOException;
@@ -224,10 +225,12 @@ else
 
 		switch (choice) {
 			case(1):
+				cls.clear();
 				userLoginMain.main(null);
 				break;
 
 			case(2):
+				cls.clear();
 				dealerLoginMain.main(null);
 				break;
 
@@ -243,6 +246,7 @@ else
 				break;
 
 			case 4:
+				cls.clear();
 				System.out.println("Goodbye!");
 				break;
 		}
