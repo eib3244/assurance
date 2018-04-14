@@ -2,8 +2,9 @@ package pdm.h2.demo.objects;
 
 import java.io.IOException;
 
-
-
+/*
+ * A simple class used to clear the screen for a cmd prompt.
+ */
 public class cls {
 
 
@@ -16,12 +17,7 @@ public class cls {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-
     }
-
-
-
 
     public static void main(String... arg) throws IOException, InterruptedException {
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();

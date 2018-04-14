@@ -1,7 +1,6 @@
 package pdm.h2.demo;
 
 import pdm.h2.demo.objects.VehicleSoldToDealer;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

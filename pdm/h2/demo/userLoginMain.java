@@ -1,24 +1,14 @@
 package pdm.h2.demo;
 
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
-import com.sun.org.apache.bcel.internal.generic.Select;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import pdm.h2.demo.objects.*;
-
-import javax.jws.WebParam;
-import javax.jws.soap.SOAPBinding;
-import javax.tools.JavaFileManager;
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.sql.*;
 import java.util.*;
 import java.util.Date;
 
 /*
  * Main Driver for user interaction (the "web ui" used to buy cars)
- * TEST - Andrew 4-2-18
+ * Authors: Emerson Bolha
+ *          Andrew Necoechea
  */
 public class userLoginMain {
 
@@ -438,6 +428,9 @@ public class userLoginMain {
         }
     }
 
+    /*
+     * Used to print out vehicles that the customer can buy.
+     */
     private static ArrayList<Vehicle> viewVehiclesToBuy(H2DemoMain demo, ArrayList<String> whereClauseArrayList, String currentDealerID, ArrayList<Vehicle> cart){
         ResultSet result;
         ArrayList<Vehicle> vehiclesToSelect = new ArrayList<Vehicle>();
@@ -498,15 +491,12 @@ public class userLoginMain {
 
             Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             result = stmt.executeQuery(query);
-//TODO make all prints that involeve data that works with colums like this !!!!
             System.out.printf("%2s: %20s %10s %20s %30s %15s %15s %15s %15s %15s\n",
                     "--","Color","Year","Make","Model","Engine","Transmission","Drive Type","Price","Miles");
 
             System.out.println("----------------------------------------------------------------------------" +
                             "-------------------------------------------------" +
                             "----------------------------------------------");
-
-
 
             while (result.next()){
                 Vehicle newVehicle = new Vehicle(result.getString(1), result.getString(2),
@@ -928,6 +918,9 @@ public class userLoginMain {
         return cart;
     }
 
+    /*
+     * Used to view the cart and its vehicles.
+     */
     public static ArrayList<Vehicle> viewCart(H2DemoMain demo, ArrayList<Vehicle> cart, Customer currentCustomer, String currentDealerID){
         while (true) {
 
@@ -1030,7 +1023,9 @@ public class userLoginMain {
         }
     }
 
-
+    /*
+     * Used to buy vehicles for the cart and do all the sql we need to update the database.
+     */
     private static void buyCars(H2DemoMain demo, Customer ccurrentCustomer, String currentDealer, ArrayList<Vehicle> cart, int total){
         for (int i = 0; i < cart.size(); i++){
             String charsToSelectFrom = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz";
@@ -1063,6 +1058,9 @@ public class userLoginMain {
         System.out.println("\nVehicles bought! Thank you for your purchase!");
     }
 
+    /*
+     * Main method, connects to the database and then starts the customer interaction loop after a customer logs in.
+     */
     public static void main(String[] args) {
 
         H2DemoMain demo = new H2DemoMain();

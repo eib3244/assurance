@@ -1,8 +1,6 @@
 package pdm.h2.demo;
 
-import pdm.h2.demo.objects.CustomerSale;
 import pdm.h2.demo.objects.DealerVehicleInventory;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class DealerVehicleInventoryTable {
 
