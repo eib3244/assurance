@@ -12,8 +12,6 @@ import java.util.Date;
  * TEST 2
  *
  */
-
-
 public class dealerLoginMain {
 
     private static Scanner userIn = new Scanner(System.in);
@@ -67,6 +65,8 @@ public class dealerLoginMain {
 
     private static void dealerInteractionLoop(H2DemoMain demo, Dealer currentDealer) {
         int option;
+
+        cls.clear();
         System.out.println("\n-----" + currentDealer.getName() + " Home-----");
 
         option = -1;
@@ -94,40 +94,33 @@ public class dealerLoginMain {
 
             switch (option) {
                 case 1:
-                    System.out.println("\n-----VEHICLE INVENTORY-----");
+                    cls.clear();
                     viewInventory(demo, currentDealer);
                     break;
 
                 case 2:
-                    System.out.println("\n-----CUSTOMERS-----");
+                    cls.clear();
                     viewCustomers(demo, currentDealer);
                     break;
 
                 case 3:
-                    System.out.println("\n-----Manufacturers-----");
+                    cls.clear();
                     viewManufacturers(demo, currentDealer);
                     break;
 
                 case 4:
-                    System.out.println("\n-----Statistics-----");
+                    cls.clear();
                     statistics(demo, currentDealer);
                     break;
                 case 5:
+                    cls.clear();
                     System.out.println("\nGoodbye!");
                     break;
-
-
-
             }
-
-
         }
-
-
     }
 
     private static void viewInventory(H2DemoMain demo, Dealer currentDealer) {
-
         ArrayList<Vehicle> vehicleInventory = new ArrayList<Vehicle>();
         boolean loopThrough = true;
 
@@ -143,15 +136,17 @@ public class dealerLoginMain {
                         result.getString("Drive_Type"), result.getInt("Price"), result.getInt("Miles"));
                 vehicleInventory.add(newVehicle);
             }
-            System.out.printf("%2s: %20s %10s %20s %30s %15s %15s %15s %15s %15s\n",
-                    "--","Color","Year","Make","Model","Engine","Transmission","Drive Type","Price","Miles");
 
-            System.out.println("----------------------------------------------------------------------------" +
-                    "-------------------------------------------------" +
-                    "----------------------------------------------");
+
+
 
             while (loopThrough) {
-                //System.out.println("\n-----VEHICLE INVENTORY-----");
+                System.out.println("\n-----VEHICLE INVENTORY-----");
+                System.out.printf("%2s: %20s %10s %20s %30s %15s %15s %15s %15s %15s\n",
+                        "--","Color","Year","Make","Model","Engine","Transmission","Drive Type","Price","Miles");
+                System.out.println("----------------------------------------------------------------------------" +
+                        "-------------------------------------------------" +
+                        "----------------------------------------------");
                 for (int i = 0; i < vehicleInventory.size();i++){
                     //System.out.println(i + 1 + ": " + vehicleInventory.get(i).getYear() + " " + vehicleInventory.get(i).getMake() + " " + vehicleInventory.get(i).getModel());
                     System.out.printf("%2d: %20s %10s %20s %30s %15s %15s %15s %15s %15s Mi.",i + 1,
@@ -189,10 +184,12 @@ public class dealerLoginMain {
                     } catch (java.lang.NumberFormatException e){}
 
                     if (choice > 0 && choice <= vehicleInventory.size()) {
+                        cls.clear();
                         showVehicleInformation(vehicleInventory.get(choice - 1));
                         break;
                     }
                     if (choice == vehicleInventory.size() + 1) {
+                        cls.clear();
                         return;
                     }
                     else {
@@ -213,7 +210,6 @@ public class dealerLoginMain {
     }
 
     private static void viewCustomers(H2DemoMain demo, Dealer currentDealer) {
-        //TODO
         ArrayList<Customer> customerList = new ArrayList<Customer>();
         boolean loopThrough = true;
 
@@ -233,16 +229,13 @@ public class dealerLoginMain {
                 customerList.add(newCustomer);
             }
 
-            System.out.printf("%2s: %50s %20s %40s\n",
-            "--","Name","SSN" ,"Email" );
-
-            System.out.println("----------------------------------------------------------------------------" +
-                    "-------------------------------------------------" +
-                    "--------------------------------------");
-
-
             while (loopThrough) {
-
+                System.out.println("\n-----CUSTOMERS-----");
+                System.out.printf("%2s: %50s %20s %40s\n",
+                        "--","Name","SSN" ,"Email" );
+                System.out.println("----------------------------------------------------------------------------" +
+                        "-------------------------------------------------" +
+                        "--------------------------------------");
                 for (int i = 0; i < customerList.size();i++) {
 
                     //System.out.println(i + 1 + ": " + customerList.get(i).getName() + " " + customerList.get(i).getSSN());
@@ -273,26 +266,22 @@ public class dealerLoginMain {
                     } catch (java.lang.NumberFormatException e){}
 
                     if (choice > 0 && choice <= customerList.size()) {
+                        cls.clear();
                         showCustomerInformation(customerList.get(choice - 1), demo);
                         break;
                     }
                     if (choice == customerList.size() + 1) {
+                        cls.clear();
                         return;
                     }
                     else {
                         System.out.print("Please input a number from the list above: ");
                     }
-
                 }
-
             }
-
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
     }
 
     private static void viewManufacturers(H2DemoMain demo, Dealer currentDealer) {
@@ -309,9 +298,6 @@ public class dealerLoginMain {
             }
 
             while (true) {
-
-
-
                 for (int i = 0; i < manufacturers.size(); i++) {
                     System.out.println(i + 1 + ": " + manufacturers.get(i).getName());
                 }
@@ -333,10 +319,10 @@ public class dealerLoginMain {
                     } catch (java.lang.NumberFormatException e){}
 
                     if (choice > 0 && choice <= manufacturers.size()) {
-                        //showCustomerInformation(manufacturers.get(choice - 1), demo);
                         break;
                     }
                     if (choice == manufacturers.size() + 1) {
+                        cls.clear();
                         return;
                     }
                     else {
@@ -344,6 +330,7 @@ public class dealerLoginMain {
                     }
                 }
 
+                cls.clear();
                 System.out.println(manufacturers.get(choice - 1).getName() + " was selected");
 
                 boolean stayInLoop = true;
@@ -351,7 +338,6 @@ public class dealerLoginMain {
 
                 for (int i = 0; i < 10; i++) {
                     whereClauseArrayList.add("");
-
                 }
                 ArrayList<Vehicle> cart = new ArrayList<Vehicle>();
 
@@ -362,7 +348,7 @@ public class dealerLoginMain {
                     System.out.println("1: View vehicles");
                     System.out.println("2: Alter search options");
                     System.out.println("3: View cart (" + cart.size() + " cars in cart)");
-                    System.out.println("4: Main menu");
+                    System.out.println("4: Previous menu");
                     System.out.print("Select an option: ");
 
                     while (true) {
@@ -379,39 +365,32 @@ public class dealerLoginMain {
                     switch (selection) {
 
                         case 1:
+                            cls.clear();
                             System.out.println("\n-----Vehicles to Buy-----");
                             cart = viewVehiclesToBuy(demo, whereClauseArrayList, manufacturers.get(choice - 1).getM_ID(), cart);
                             break;
 
                         case 2:
+                            cls.clear();
                             whereClauseArrayList =
                                    alterWhereClause(demo, whereClauseArrayList, manufacturers.get(choice - 1).getM_ID());
                             break;
 
                         case 3:
+                            cls.clear();
                             cart = viewCart(demo,cart,currentDealer,manufacturers.get(choice - 1).getM_ID());
                             break;
 
                         case 4:
+                            cls.clear();
                             stayInLoop = false;
                             break;
                     }
-
                 }
-
-
-
             }
-
-
-
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
-
     }
 
     private static ArrayList<String> alterWhereClause(H2DemoMain demo, ArrayList<String> whereClauseArrayList, String currentManufacturerID){
@@ -426,6 +405,7 @@ public class dealerLoginMain {
         String Price = whereClauseArrayList.get(8);
         String Miles =  whereClauseArrayList.get(9);
 
+        cls.clear();
         boolean keepAltering = true;
         while (keepAltering) {
 
@@ -503,45 +483,57 @@ public class dealerLoginMain {
 
             switch (selection) {
                 case 1:
+                    cls.clear();
                     Make = alterVehicleAttOption(demo, "Make",selection + 1, currentManufacturerID, Make);
                     break;
 
                 case 2:
+                    cls.clear();
                     Model = alterVehicleAttOption(demo, "Model",selection + 1, currentManufacturerID, Make);
                     break;
 
                 case 3:
+                    cls.clear();
                     Brand = alterVehicleAttOption(demo, "Brand",selection + 1, currentManufacturerID, Make);
                     break;
 
                 case 4:
+                    cls.clear();
                     Year = alterVehicleAttOption(demo, "Year",selection + 1, currentManufacturerID, Make);
                     break;
 
                 case 5:
+                    cls.clear();
                     Engine = alterVehicleAttOption(demo, "Engine",selection + 1, currentManufacturerID, Make);
                     break;
 
                 case 6:
+                    cls.clear();
                     Color = alterVehicleAttOption(demo, "Color",selection + 1, currentManufacturerID, Make);
                     break;
 
                 case 7:
+                    cls.clear();
                     Transmission = alterVehicleAttOption(demo, "Transmission",selection + 1, currentManufacturerID, Make);
                     break;
 
                 case 8:
+                    cls.clear();
                     Drive_Type = alterVehicleAttOption(demo, "Drive_Type",selection + 1, currentManufacturerID, Make);
                     break;
 
                 case 9:
+                    cls.clear();
                     Price = alterVehicleNumericAtt(demo,selection + 1, currentManufacturerID, "Price");
                     break;
+
                 case 10:
+                    cls.clear();
                     Miles = alterVehicleNumericAtt(demo, selection + 1, currentManufacturerID, "Miles");
                     break;
 
                 case 11:
+                    cls.clear();
                     keepAltering = false;
                     break;
             }
@@ -609,6 +601,9 @@ public class dealerLoginMain {
                 break;
             System.out.print("Please input a number from the list above: ");
         }
+
+        cls.clear();
+
         if(userSelection == optionsToChooseFrom.size()) {
             System.out.println("No preference selected for " + optionToChange + ".");
             return "";
@@ -696,9 +691,6 @@ public class dealerLoginMain {
         return optionToChange;
     }
 
-
-
-
     private static ArrayList<Vehicle> viewVehiclesToBuy(H2DemoMain demo, ArrayList<String> whereClauseArrayList, String currentMID, ArrayList<Vehicle> cart){
         ResultSet result;
         ArrayList<Vehicle> vehiclesToSelect = new ArrayList<Vehicle>();
@@ -759,7 +751,6 @@ public class dealerLoginMain {
 
             Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             result = stmt.executeQuery(query);
-//TODO make all prints that involeve data that works with colums like this !!!!
             System.out.printf("%2s: %20s %10s %20s %30s %15s %15s %15s %15s %15s\n",
                     "--","Color","Year","Make","Model","Engine","Transmission","Drive Type","Price","Miles");
 
@@ -824,11 +815,11 @@ public class dealerLoginMain {
                     System.out.print("Please input a number from the list above: ");
                 }
                 if (option != i){
+                    cls.clear();
                     viewVehicleInDetail(demo, vehiclesToSelect.get(option-1), cart);
                 }
             }
         } catch (java.sql.SQLException e){}
-
         return cart;
     }
 
@@ -864,10 +855,11 @@ public class dealerLoginMain {
             System.out.print("Please input a number from the list above: ");
         }
 
-        if (option == 1)
+        cls.clear();
+        if (option == 1) {
             cart.add(vehicleToView);
-        System.out.println("Car added to your cart");
-
+            System.out.println("Car added to your cart");
+        }
         return cart;
     }
 
@@ -917,6 +909,7 @@ public class dealerLoginMain {
                 System.out.print("Please input a number from the list above: ");
             }
 
+            cls.clear();
             switch (option) {
                 case (1):
                     buyCars(demo,currentDealer,currentMID,cart, total);
@@ -954,6 +947,7 @@ public class dealerLoginMain {
                         System.out.print("Please input a number from the list above: ");
                     }
 
+                    cls.clear();
                     if (option1 < cart.size()) {
                         System.out.println("\nRemoving " + cart.get(option1).getMake() + " "+
                                 cart.get(option1).getModel());
@@ -1002,11 +996,9 @@ public class dealerLoginMain {
         }
     }
 
-
     private static void showCustomerInformation(Customer currentCustomer, H2DemoMain demo) {
 
         ArrayList<String> phoneNumbers = new ArrayList<String>();
-
 
         try {
 
@@ -1023,7 +1015,6 @@ public class dealerLoginMain {
             e.printStackTrace();
         }
 
-
         System.out.println("\n-----Current Customer Selected-----");
         System.out.println("SSN: " + currentCustomer.getSSN());
         System.out.println("Name: " + currentCustomer.getName());
@@ -1037,13 +1028,6 @@ public class dealerLoginMain {
             System.out.print(" " + phoneNumbers.get(i));
         }
 
-
-
-
-
-
-
-
         System.out.println("\n-----Options-----");
         System.out.println("1: Go back to customer menu");
         int choice = -1;
@@ -1053,6 +1037,7 @@ public class dealerLoginMain {
                 choice = Integer.parseInt(userIn.next());
             } catch (java.lang.NumberFormatException e){}
         }
+        cls.clear();
     }
 
     private static void showVehicleInformation(Vehicle currentVehicle){
@@ -1088,7 +1073,7 @@ public class dealerLoginMain {
                 choice = Integer.parseInt(userIn.next());
             } catch (java.lang.NumberFormatException e){}
         }
-
+        cls.clear();
     }
 
     private static void statistics(H2DemoMain demo, Dealer currentDealer) {
@@ -1100,7 +1085,7 @@ public class dealerLoginMain {
             // Show average amount from a sale
 
             // Extra stats
-            System.out.println("Added Statistics");
+            System.out.println("\n-----Statistics-----");
             System.out.println("1: Sales by Make and Gender");
             System.out.println("2: Overall Sales by Each Dealer");
             System.out.println("3: Vehicles Sold by Each Dealer");
@@ -1124,6 +1109,7 @@ public class dealerLoginMain {
                 System.out.print("Please input a number from the list above: ");
             }
 
+            cls.clear();
             switch (option) {
                 case 1:
                     makeAndGender(demo, currentDealer);
@@ -1141,10 +1127,8 @@ public class dealerLoginMain {
                     brandMakeModelCount(demo);
                     break;
                 case 6:
-                    System.out.println("Prior Menu");
                     return;
             }
-
         }
     }
 
@@ -1158,7 +1142,6 @@ public class dealerLoginMain {
   //      WHERE CUSTOMER_SALE_TABLE.DEALER_ID = 'jctgn'
   //      GROUP BY VEHICLES.MAKE, VEHICLES.VIN, CUSTOMER.GENDER
   //      ORDER BY MAKE
-
 
         try {
 
@@ -1271,7 +1254,6 @@ public class dealerLoginMain {
         }
     }
 
-
     private static void brandMakeModelCount(H2DemoMain demo) {
         String query = "SELECT VEHICLES.brand, vehicles.make, vehicles.model, count(TOTAL) AS \"Cars Sold\"\n" +
                 "FROM VEHICLES\n" +
@@ -1301,10 +1283,6 @@ public class dealerLoginMain {
         }
     }
 
-
-
-
-
     public static void main(String[] args) {
         H2DemoMain demo = new H2DemoMain();
         String location = System.getProperty("user.dir") + "/test";
@@ -1316,5 +1294,4 @@ public class dealerLoginMain {
         Dealer currentDealer = loginDealer(demo);
         dealerInteractionLoop(demo,currentDealer);
     }
-
 }
