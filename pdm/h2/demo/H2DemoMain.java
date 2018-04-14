@@ -204,7 +204,7 @@ else
         System.out.println("1: Customer Login");
         System.out.println("2: Dealer Login");
         System.out.println("3: Admin Login");
-		System.out.println("4: log off");
+		System.out.println("4: Log Off");
 		System.out.print("Select an option: ");
 
 		int choice = -1;
