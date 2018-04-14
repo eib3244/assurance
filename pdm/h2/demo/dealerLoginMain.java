@@ -7,15 +7,21 @@ import java.util.*;
 import java.util.Date;
 
 /**
- * Driver class for the Dealer's login.
- * TESTING GITHUB account
- * TEST 2
- *
+ * Driver class for the Dealer's login. Handles the Dealer UI
+ * after a dealer logs in. Builds a UI for user and handles passing
+ * around of each method called.
+ * @Author Andrew Necoechea
+ * @Author Emerson Bolha
  */
 public class dealerLoginMain {
 
     private static Scanner userIn = new Scanner(System.in);
 
+
+    /**
+     * Creates initial dealer object which is passed through
+     * rest of the program
+     */
     private static Dealer loginDealer(H2DemoMain demo) {
 
         int choice;
@@ -63,6 +69,11 @@ public class dealerLoginMain {
         return currentDealer;
     }
 
+    /**
+     * Dealer interaction loop that handles initial selection of what
+     * option the user wants. Takes a choice in from the user and
+     * uses a switch statement to select the option
+     */
     private static void dealerInteractionLoop(H2DemoMain demo, Dealer currentDealer) {
         int option;
 
@@ -120,6 +131,11 @@ public class dealerLoginMain {
         }
     }
 
+    /**
+     * This method uses an SQL query to gather the vehicles that
+     * the current dealer has and displays them in a menu. The user
+     * can then select a vehicle to view more information about it
+     */
     private static void viewInventory(H2DemoMain demo, Dealer currentDealer) {
         ArrayList<Vehicle> vehicleInventory = new ArrayList<Vehicle>();
         boolean loopThrough = true;
@@ -164,18 +180,15 @@ public class dealerLoginMain {
                             "----------------------------------------------");
 
                 }
-                //System.out.println(vehicleInventory.size() + 1 + ": Prior Menu");
                 System.out.println(vehicleInventory.size() + 1 + ": Return to prev menu");
                 System.out.println("------------------------");
 
                 int choice = -1;
 
 
-                //System.out.println("\n-----Car Selection-----");
                 System.out.print("Please select an option from the list above: ");
                 while (true) {
 
-                    //System.out.print("Please select an option from the list above: ");
                     String input = userIn.next();
 
 
@@ -209,6 +222,11 @@ public class dealerLoginMain {
 
     }
 
+    /**
+     * This method displays the cusomters that each dealership has.
+     * The dealer can select a customer and then view more information
+     * if they desire.
+     */
     private static void viewCustomers(H2DemoMain demo, Dealer currentDealer) {
         ArrayList<Customer> customerList = new ArrayList<Customer>();
         boolean loopThrough = true;
@@ -284,6 +302,11 @@ public class dealerLoginMain {
         }
     }
 
+    /**
+     * This method allows the dealer to view the selection of manufacturers.
+     * Once a manufacturer is selected the dealer can interact to buy vehicles
+     * similar to how the customer can buy vehicles from the dealers.
+     */
     private static void viewManufacturers(H2DemoMain demo, Dealer currentDealer) {
         ArrayList<Manufacturer> manufacturers = new ArrayList<Manufacturer>();
 
@@ -393,6 +416,11 @@ public class dealerLoginMain {
         }
     }
 
+    /**
+     * This allows the user to edit the selections for buying vehicles
+     * from the manufacturer. This method returns an array list so that
+     * the SQL statements can be modified for custom searches.
+     */
     private static ArrayList<String> alterWhereClause(H2DemoMain demo, ArrayList<String> whereClauseArrayList, String currentManufacturerID){
         String Make = whereClauseArrayList.get(0);
         String Model = whereClauseArrayList.get(1);
@@ -552,6 +580,11 @@ public class dealerLoginMain {
         return whereClauseArrayList;
     }
 
+
+    /**
+     * Allows user to alter the SQL query for specific string
+     * custom searches. Eg. make, model, brand, etc.
+     */
     private static String alterVehicleAttOption(H2DemoMain demo, String optionToChange, int thingToChangeColumn, String currentManufacturerID, String currentMake){
         ArrayList<String > optionsToChooseFrom = new ArrayList<String>();
         ArrayList<String > optionsToChooseFromMakes = new ArrayList<String>();
@@ -614,6 +647,10 @@ public class dealerLoginMain {
         }
     }
 
+    /**
+     * This method allows the user to edit specific
+     * numerical values when doing a custom search.
+     */
     private static String alterVehicleNumericAtt(H2DemoMain demo, int thingToChangeColumn, String currentManufacturerID, String thingToChange){
         int value = -1;
         int greaterOrLess = -1;
@@ -691,6 +728,10 @@ public class dealerLoginMain {
         return optionToChange;
     }
 
+    /**
+     * This method creates the vehicles arraylist that the user
+     * can purchase after a query has been performed on them.
+     */
     private static ArrayList<Vehicle> viewVehiclesToBuy(H2DemoMain demo, ArrayList<String> whereClauseArrayList, String currentMID, ArrayList<Vehicle> cart){
         ResultSet result;
         ArrayList<Vehicle> vehiclesToSelect = new ArrayList<Vehicle>();
@@ -823,6 +864,11 @@ public class dealerLoginMain {
         return cart;
     }
 
+    /**
+     * This displays the vehicles that the user can purchase.
+     * It allows the vehicles to be added to the cart or the
+     * user can go back to the prior menu.
+     */
     private static ArrayList<Vehicle> viewVehicleInDetail(H2DemoMain demo, Vehicle vehicleToView,ArrayList<Vehicle> cart){
         System.out.println("\n-----Current Vehicle Selected-----");
         System.out.println("Vin: " + vehicleToView.getVIN());
@@ -863,6 +909,11 @@ public class dealerLoginMain {
         return cart;
     }
 
+    /**
+     * This method displays the user's cart. In the cart
+     * they can view the vehicles, remove them from the cart
+     * or buy the vehicles.
+     */
     public static ArrayList<Vehicle> viewCart(H2DemoMain demo, ArrayList<Vehicle> cart, Dealer currentDealer, String currentMID){
         while (true) {
 
@@ -961,6 +1012,11 @@ public class dealerLoginMain {
         }
     }
 
+    /**
+     * This method takes the cart and then buys the vehicles.
+     * A new sale ID is created and the vehicle data is removed
+     * from the manufacturer's table and placed into the dealer's.
+     */
     private static void buyCars(H2DemoMain demo, Dealer currentDealer, String currentManufacturer, ArrayList<Vehicle> cart, int total){
         for (int i = 0; i < cart.size(); i++){
             String charsToSelectFrom = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz";
@@ -996,6 +1052,10 @@ public class dealerLoginMain {
         }
     }
 
+    /**
+     * This method displays all relevant information about
+     * the customer that was selected.
+     */
     private static void showCustomerInformation(Customer currentCustomer, H2DemoMain demo) {
 
         ArrayList<String> phoneNumbers = new ArrayList<String>();
@@ -1040,6 +1100,12 @@ public class dealerLoginMain {
         cls.clear();
     }
 
+    /**
+     * This method displays the vehicle information
+     * when it is selected from the dealer's inventory.
+     * Option to purchase a vehicle is obviously lacking
+     * in this method.
+     */
     private static void showVehicleInformation(Vehicle currentVehicle){
 
         System.out.println("\n-----Current Vehicle Selected-----");
@@ -1047,15 +1113,6 @@ public class dealerLoginMain {
         System.out.println("Make: " + currentVehicle.getMake());
         System.out.println("Model: " + currentVehicle.getModel());
         System.out.println("Brand: " + currentVehicle.getBrand());
-        /**
-         * int Year;
-         String Engine;
-         String Color;
-         String Transmission;
-         String Drive_Type;
-         int Price;
-         int Miles;
-         */
         System.out.println("Year: " + currentVehicle.getYear());
         System.out.println("Engine: " + currentVehicle.getEngine());
         System.out.println("Color: " + currentVehicle.getColor());
@@ -1076,15 +1133,16 @@ public class dealerLoginMain {
         cls.clear();
     }
 
+    /**
+     * This is the main method for displaying statistics
+     * for the dealerships. Allows user to select an option
+     * and uses a switch statement to call the other needed
+     * methods.
+     */
     private static void statistics(H2DemoMain demo, Dealer currentDealer) {
 
         while (true) {
 
-            // Show total number of sales
-            // Show total amount of money made
-            // Show average amount from a sale
-
-            // Extra stats
             System.out.println("\n-----Statistics-----");
             System.out.println("1: Sales by Make and Gender");
             System.out.println("2: Overall Sales by Each Dealer");
@@ -1132,16 +1190,13 @@ public class dealerLoginMain {
         }
     }
 
+    /**
+     * Displays information for the current dealer
+     * in regards to the sales of vehicles based upon
+     * the make of the vehicles, the gender of the buyer,
+     * and the total amount of money made.
+     */
     public static void makeAndGender(H2DemoMain demo, Dealer currentDealer) {
-
- //       SELECT VEHICLES.MAKE, VEHICLES.VIN, CUSTOMER.GENDER, SUM(CUSTOMER_SALE_TABLE.TOTAL)
- //       FROM VEHICLES
- //       INNER JOIN VEHICLES_SOLD_TO_CUSTOMER ON VEHICLES_SOLD_TO_CUSTOMER.VIN = VEHICLES.VIN
- //       INNER JOIN CUSTOMER_SALE_TABLE ON CUSTOMER_SALE_TABLE.SALE_ID = VEHICLES_SOLD_TO_CUSTOMER.SALE_ID
-  //      INNER JOIN CUSTOMER ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN
-  //      WHERE CUSTOMER_SALE_TABLE.DEALER_ID = 'jctgn'
-  //      GROUP BY VEHICLES.MAKE, VEHICLES.VIN, CUSTOMER.GENDER
-  //      ORDER BY MAKE
 
         try {
 
@@ -1167,6 +1222,10 @@ public class dealerLoginMain {
 
     }
 
+    /**
+     * Displays information about the number
+     * of cars that have been sold by the dealerships.
+     */
     private static void carsSoldStats(H2DemoMain demo) {
 
         try {
@@ -1198,6 +1257,10 @@ public class dealerLoginMain {
         }
     }
 
+    /**
+     * Displays the dealers name as well as the
+     * profit they have made.
+     */
     private static void overAllSalesForAllDealers(H2DemoMain demo){
         String query = "SELECT DEALER.NAME, (SUM(CUSTOMER_SALE_TABLE.TOTAL) - SUM(DEALER_SALE.TOTAL)) AS \"Total income\"\n" +
                 "FROM VEHICLES\n" +
@@ -1229,6 +1292,10 @@ public class dealerLoginMain {
         }
     }
 
+    /**
+     * Displays data based on the brand, make,
+     * and model total sales.
+     */
     private static void brandMakeModelStats(H2DemoMain demo){
         String query = "SELECT VEHICLES.brand, vehicles.make, vehicles.model, SUM(TOTAL) AS \"Total Sales\"\n" +
                 "FROM VEHICLES\n" +
@@ -1254,6 +1321,10 @@ public class dealerLoginMain {
         }
     }
 
+    /**
+     * Displays the number of vehicles sold by
+     * brand, make, and model.
+     */
     private static void brandMakeModelCount(H2DemoMain demo) {
         String query = "SELECT VEHICLES.brand, vehicles.make, vehicles.model, count(TOTAL) AS \"Cars Sold\"\n" +
                 "FROM VEHICLES\n" +
@@ -1283,6 +1354,9 @@ public class dealerLoginMain {
         }
     }
 
+    /**
+     * Main method to run the initial demo and user.
+     */
     public static void main(String[] args) {
         H2DemoMain demo = new H2DemoMain();
         String location = System.getProperty("user.dir") + "/test";
