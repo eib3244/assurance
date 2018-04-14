@@ -1,8 +1,6 @@
 package pdm.h2.demo;
 
-import pdm.h2.demo.objects.Dealer;
 import pdm.h2.demo.objects.Manufacturer;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -12,6 +10,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+/*
+ * Author: Emerson Bolha
+ */
 public class ManufacturerTable {
 
     public static void createManufacturerTable(Connection conn){

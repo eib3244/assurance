@@ -1,21 +1,14 @@
 package pdm.h2.demo;
 
-import com.sun.corba.se.impl.encoding.BufferManagerWriteCollect;
-import pdm.h2.demo.objects.CustomerSale;
-import pdm.h2.demo.objects.DealerSale;
-import pdm.h2.demo.objects.DealerVehicleInventory;
 import pdm.h2.demo.objects.cls;
-
-import javax.tools.JavaFileManager;
 import java.io.IOException;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  * Main Driver for our DataBase
+ * Author: Emerson Bolha
  */
 public class H2DemoMain {
 	private static Scanner userin = new Scanner(System.in);
@@ -80,7 +73,7 @@ public class H2DemoMain {
 		
 		//Create the database connections, basically makes the database
 
-
+ // loads database with csv files if we cant find it
 if (!java.nio.file.Files.exists(Paths.get(System.getProperty("user.dir") + "/test.mv.db"))) {
 	demo.createConnection(location, user, password);
 
