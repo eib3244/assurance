@@ -71,13 +71,14 @@ public class dealerLoginMain {
 
         option = -1;
 
-        while (option != 4) {
+        while (option != 5) {
 
             System.out.println("\n--Main Menu--");
             System.out.println("1: View Inventory");
             System.out.println("2: View Customers");
             System.out.println("3: View Manufacturers");
-            System.out.println("4: Logout");
+            System.out.println("4: View Statistics");
+            System.out.println("5: Logout");
             System.out.print("Select an option: ");
 
             while (true) {
@@ -86,7 +87,7 @@ public class dealerLoginMain {
                 try{
                     option = Integer.parseInt(input);
                 } catch (NumberFormatException e){}
-                if ((option > 0) && (option <= 4))
+                if ((option > 0) && (option <= 5))
                     break;
                 System.out.print("Please input a number from the list above: ");
             }
@@ -108,6 +109,10 @@ public class dealerLoginMain {
                     break;
 
                 case 4:
+                    System.out.println("\n-----Statistics-----");
+                    statistics(demo, currentDealer);
+                    break;
+                case 5:
                     System.out.println("\nGoodbye!");
                     break;
 
@@ -1085,6 +1090,60 @@ public class dealerLoginMain {
         }
 
     }
+
+    private static void statistics(H2DemoMain demo, Dealer currentDealer) {
+
+        while (true) {
+
+            // Show total number of sales
+            // Show total amount of money made
+            // Show average amount from a sale
+
+            // Extra stats
+            System.out.println("Added Statistics");
+            System.out.println("1: Sales broken down by make and gender");
+            System.out.println("2: Option 2");
+            System.out.println("3: Option 3");
+            System.out.println("4: Option 4");
+            System.out.println("5: Prior Menu");
+
+            System.out.println("-------------------");
+            System.out.print("Make a selection: ");
+
+            int option = - 1;
+
+            while (true) {
+                String input = userIn.next();
+
+                try{
+                    option = Integer.parseInt(input);
+                } catch (NumberFormatException e){}
+                if ((option > 0) && (option <= 5))
+                    break;
+                System.out.print("Please input a number from the list above: ");
+            }
+
+            switch (option) {
+                case 1:
+                    System.out.println("Option 1");
+                    break;
+                case 2:
+                    System.out.println("Option 2");
+                    break;
+                case 3:
+                    System.out.println("Option 3");
+                    break;
+                case 4:
+                    System.out.println("Option 4");
+                    break;
+                case 5:
+                    System.out.println("Option 5");
+                    return;
+            }
+
+        }
+    }
+
 
     public static void main(String[] args) {
         H2DemoMain demo = new H2DemoMain();
