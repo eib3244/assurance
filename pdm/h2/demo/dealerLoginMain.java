@@ -1101,9 +1101,9 @@ public class dealerLoginMain {
 
             // Extra stats
             System.out.println("Added Statistics");
-            System.out.println("1: Sales broken down by make and gender");
-            System.out.println("2: Overall Sales by each dealer");
-            System.out.println("3: Vehicles Sold by each dealer");
+            System.out.println("1: Sales by Make and Gender");
+            System.out.println("2: Overall Sales by Each Dealer");
+            System.out.println("3: Vehicles Sold by Each Dealer");
             System.out.println("4: Brand, Make, Model Stats");
             System.out.println("5: Brand, Make, Model Count");
             System.out.println("6: Prior Menu");
@@ -1170,6 +1170,7 @@ public class dealerLoginMain {
                     + " ORDER BY Make;";
             Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet result = stmt.executeQuery(queryMakeAndGender);
+            System.out.printf("\n-----Sales by Make and Gender-----\n");
             System.out.printf("%-20s %-10s %-20s\n", "Make", "Gender", "Money Made");
             while(result.next()) {
                 System.out.printf("%-20s %-10s $%-20s\n", result.getString(1), result.getString(3), result.getString(4));
@@ -1201,6 +1202,7 @@ public class dealerLoginMain {
                     "GROUP BY DEALER.NAME\n";
             Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet result = stmt.executeQuery(queryCarsSold);
+            System.out.printf("\n-----Vehicles Sold by Each Dealer-----\n");
             System.out.printf("%-40s %-20s\n","Dealer", "Vehicles Sold");
 
             while(result.next()){
@@ -1232,6 +1234,7 @@ public class dealerLoginMain {
             Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet result = stmt.executeQuery(query);
 
+            System.out.printf("\n-----Overall Sales by Each Dealer-----\n");
             System.out.printf("%-40s %-20s\n","Dealer", "Money Made");
             while (result.next()){
                 System.out.printf("%-40s $%-20d\n",result.getString(1), result.getInt(2));
