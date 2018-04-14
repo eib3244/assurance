@@ -1125,7 +1125,7 @@ public class dealerLoginMain {
 
             switch (option) {
                 case 1:
-                    System.out.println("Option 1");
+                    makeAndGender(demo, currentDealer);
                     break;
                 case 2:
                     System.out.println("Option 2");
@@ -1143,6 +1143,41 @@ public class dealerLoginMain {
 
         }
     }
+
+    public static void makeAndGender(H2DemoMain demo, Dealer currentDealer) {
+
+
+//        SELECT VEHICLES.MAKE, VEHICLES.VIN, CUSTOMER.GENDER, SUM(TOTAL)
+//        FROM VEHICLES
+//        INNER JOIN VEHICLES_SOLD_TO_CUSTOMER ON VEHICLES_SOLD_TO_CUSTOMER.VIN = VEHICLES.VIN
+//        INNER JOIN CUSTOMER_SALE_TABLE ON CUSTOMER_SALE_TABLE.SALE_ID = VEHICLES_SOLD_TO_CUSTOMER.SALE_ID
+//        INNER JOIN CUSTOMER ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN
+//        GROUP BY VEHICLES.MAKE, VEHICLES.VIN, CUSTOMER.GENDER
+//        ORDER BY MAKE
+
+
+        try {
+
+            String queryMakeAndGender = "SELECT vehicles.Make, vehicles.VIN, customer.Gender, SUM(TOTAL) FROM vehicles"
+                    + " INNER JOIN vehicles_sold_to_customer ON vehicles_sold_to_customer.VIN = vehicles.VIN"
+                    + " INNER JOIN customer_sale_table ON customer_sale_table.Sale_ID = vehicles_sold_to_customer.Sale_ID"
+                    + " INNER JOIN customer ON customer.SSN = customer_sale_table.SSN"
+                    + " GROUP BY vehicles.Make, vehicles.VIN, customer.Gender"
+                    + " ORDER BY Make;";
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery(queryMakeAndGender);
+            while(result.next()) {
+                System.out.println(result.getString(1) + " " + result.getString(3) + " $" + result.getString(4));
+            }
+
+
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+
+    }
+
+
 
 
     public static void main(String[] args) {
