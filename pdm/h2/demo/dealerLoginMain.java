@@ -1102,10 +1102,11 @@ public class dealerLoginMain {
             // Extra stats
             System.out.println("Added Statistics");
             System.out.println("1: Sales broken down by make and gender");
-            System.out.println("2: Option 2");
-            System.out.println("3: Option 3");
-            System.out.println("4: Option 4");
-            System.out.println("5: Prior Menu");
+            System.out.println("2: Overall Sales by each dealer");
+            System.out.println("3: Vehicles Sold by each dealer");
+            System.out.println("4: Brand, Make, Model Stats");
+            System.out.println("5: Brand, Make, Model Count");
+            System.out.println("6: Prior Menu");
 
             System.out.println("-------------------");
             System.out.print("Make a selection: ");
@@ -1118,7 +1119,7 @@ public class dealerLoginMain {
                 try{
                     option = Integer.parseInt(input);
                 } catch (NumberFormatException e){}
-                if ((option > 0) && (option <= 5))
+                if ((option > 0) && (option <= 6))
                     break;
                 System.out.print("Please input a number from the list above: ");
             }
@@ -1128,16 +1129,19 @@ public class dealerLoginMain {
                     makeAndGender(demo, currentDealer);
                     break;
                 case 2:
-                    System.out.println("Option 2");
+                    overAllSalesForAllDealers(demo);
                     break;
                 case 3:
-                    System.out.println("Option 3");
+                    carsSoldStats(demo);
                     break;
                 case 4:
-                    System.out.println("Option 4");
+                    brandMakeModelStats(demo);
                     break;
                 case 5:
-                    System.out.println("Option 5");
+                    brandMakeModelCount(demo);
+                    break;
+                case 6:
+                    System.out.println("Prior Menu");
                     return;
             }
 
@@ -1166,9 +1170,11 @@ public class dealerLoginMain {
                     + " ORDER BY Make;";
             Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet result = stmt.executeQuery(queryMakeAndGender);
+            System.out.printf("%-20s %-10s %-20s\n", "Make", "Gender", "Money Made");
             while(result.next()) {
-                System.out.println(result.getString(1) + " " + result.getString(3) + " $" + result.getString(4));
+                System.out.printf("%-20s %-10s $%-20s\n", result.getString(1), result.getString(3), result.getString(4));
             }
+            System.out.print("\n");
 
 
         } catch(SQLException e){
@@ -1176,6 +1182,122 @@ public class dealerLoginMain {
         }
 
     }
+
+    private static void carsSoldStats(H2DemoMain demo) {
+
+        try {
+
+            String queryCarsSold = "SELECT DEALER.NAME, count(CUSTOMER_SALE_TABLE.TOTAL) as \"Cars Sold\"\n" +
+                    "FROM VEHICLES\n" +
+                    "\n" +
+                    "INNER JOIN VEHICLES_SOLD_TO_CUSTOMER ON VEHICLES_SOLD_TO_CUSTOMER.VIN = VEHICLES.VIN\n" +
+                    "INNER JOIN CUSTOMER_SALE_TABLE ON CUSTOMER_SALE_TABLE.SALE_ID = VEHICLES_SOLD_TO_CUSTOMER.SALE_ID\n" +
+                    "INNER JOIN CUSTOMER ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN\n" +
+                    "\n" +
+                    "INNER JOIN DEALER ON DEALER.DEALER_ID = CUSTOMER_SALE_TABLE.DEALER_ID\n" +
+                    "\n" +
+                    "INNER JOIN VEHICLESSOLDTODEALERS ON VEHICLESSOLDTODEALERS.VIN = VEHICLES_SOLD_TO_CUSTOMER.VIN\n" +
+                    "INNER JOIN DEALER_SALE ON DEALER_SALE.DEALER_SALE_ID = VEHICLESSOLDTODEALERS.DEALER_SALE_ID\n" +
+                    "GROUP BY DEALER.NAME\n";
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery(queryCarsSold);
+            System.out.printf("%-40s %-20s\n","Dealer", "Vehicles Sold");
+
+            while(result.next()){
+                System.out.printf("%-40s %-20d\n",result.getString(1), result.getInt(2));
+            }
+            System.out.print("\n");
+
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void overAllSalesForAllDealers(H2DemoMain demo){
+        String query = "SELECT DEALER.NAME, (SUM(CUSTOMER_SALE_TABLE.TOTAL) - SUM(DEALER_SALE.TOTAL)) AS \"Total income\"\n" +
+                "FROM VEHICLES\n" +
+                "\n" +
+                "INNER JOIN VEHICLES_SOLD_TO_CUSTOMER ON VEHICLES_SOLD_TO_CUSTOMER.VIN = VEHICLES.VIN\n" +
+                "INNER JOIN CUSTOMER_SALE_TABLE ON CUSTOMER_SALE_TABLE.SALE_ID = VEHICLES_SOLD_TO_CUSTOMER.SALE_ID\n" +
+                "INNER JOIN CUSTOMER ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN\n" +
+                "\n" +
+                "INNER JOIN DEALER ON DEALER.DEALER_ID = CUSTOMER_SALE_TABLE.DEALER_ID\n" +
+                "\n" +
+                "INNER JOIN VEHICLESSOLDTODEALERS ON VEHICLESSOLDTODEALERS.VIN = VEHICLES_SOLD_TO_CUSTOMER.VIN\n" +
+                "INNER JOIN DEALER_SALE ON DEALER_SALE.DEALER_SALE_ID = VEHICLESSOLDTODEALERS.DEALER_SALE_ID\n" +
+                "GROUP BY DEALER.NAME\n" +
+                "order by \"Total income\" desc\n;";
+
+        try{
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery(query);
+
+            System.out.printf("%-40s %-20s\n","Dealer", "Money Made");
+            while (result.next()){
+                System.out.printf("%-40s $%-20d\n",result.getString(1), result.getInt(2));
+            }
+            System.out.print("\n");
+
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    private static void brandMakeModelStats(H2DemoMain demo){
+        String query = "SELECT VEHICLES.brand, vehicles.make, vehicles.model, SUM(TOTAL) AS \"Total Sales\"\n" +
+                "FROM VEHICLES\n" +
+                "INNER JOIN VEHICLES_SOLD_TO_CUSTOMER ON VEHICLES_SOLD_TO_CUSTOMER.VIN = VEHICLES.VIN\n" +
+                "INNER JOIN CUSTOMER_SALE_TABLE ON CUSTOMER_SALE_TABLE.SALE_ID = VEHICLES_SOLD_TO_CUSTOMER.SALE_ID\n" +
+                "INNER JOIN CUSTOMER ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN\n" +
+                "GROUP BY VEHICLES.brand, vehicles.make, vehicles.model\n" +
+                "ORDER BY \"Total Sales\" desc\n;";
+
+        try {
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery(query);
+
+            System.out.printf("\n-----Over all Sales for Each Model-----\n");
+            System.out.printf("%-20s %-20s %-30s %-15s\n","Brand","Make","Model", "Total Sales");
+            System.out.printf("----------------------------------------------------------------------------------------\n");
+            while (result.next()){
+                System.out.printf("%-20s %-20s %-30s $%-15d\n", result.getString(1), result.getString(2), result.getString(3), result.getInt(4));
+                System.out.printf("----------------------------------------------------------------------------------------\n");
+            }
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+
+    private static void brandMakeModelCount(H2DemoMain demo) {
+        String query = "SELECT VEHICLES.brand, vehicles.make, vehicles.model, count(TOTAL) AS \"Cars Sold\"\n" +
+                "FROM VEHICLES\n" +
+                "INNER JOIN VEHICLES_SOLD_TO_CUSTOMER ON VEHICLES_SOLD_TO_CUSTOMER.VIN = VEHICLES.VIN\n" +
+                "INNER JOIN CUSTOMER_SALE_TABLE ON CUSTOMER_SALE_TABLE.SALE_ID = VEHICLES_SOLD_TO_CUSTOMER.SALE_ID\n" +
+                "INNER JOIN CUSTOMER ON CUSTOMER.SSN = CUSTOMER_SALE_TABLE.SSN\n" +
+                "GROUP BY VEHICLES.brand, vehicles.make, vehicles.model\n" +
+                "ORDER BY \"Cars Sold\" desc\n";
+
+
+        try {
+            Statement stmt = demo.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery(query);
+            System.out.printf("\n-----Over all Count for Each Model-----\n");
+            System.out.printf("%-20s %-20s %-30s %-15s\n", "Brand", "Make", "Model", "Vehicles Sold");
+            System.out.printf("----------------------------------------------------------------------------------------\n");
+
+            while(result.next()) {
+                System.out.printf("%-20s %-20s %-30s %-25d\n", result.getString(1), result.getString(2),result.getString(3),result.getInt(4) );
+                System.out.printf("----------------------------------------------------------------------------------------\n");
+            }
+
+            System.out.print("\n");
+
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
 
