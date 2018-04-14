@@ -4,6 +4,7 @@ import java.io.IOException;
 
 /*
  * A simple class used to clear the screen for a cmd prompt.
+ * Author: Emerson Bolha
  */
 public class cls {
 

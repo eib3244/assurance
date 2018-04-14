@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 /**
  * Main Driver for our DataBase
+ * Author: Emerson Bolha
  */
 public class H2DemoMain {
 	private static Scanner userin = new Scanner(System.in);

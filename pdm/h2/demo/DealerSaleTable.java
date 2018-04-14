@@ -12,6 +12,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 
+/*
+ * Author: Emerson Bolha
+ */
 public class DealerSaleTable {
     public static void createDealerSaleTable(Connection conn){
         try{

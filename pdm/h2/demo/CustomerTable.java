@@ -10,6 +10,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+/*
+ * Author: Emerson Bolha
+ */
 public class CustomerTable {
 
     public static void createCustomerTable(Connection conn){
